@@ -1,0 +1,27 @@
+주제 : 게시판 관리(등록, 전체검색, 부분검색, 수정, 삭제(x))
+
+게시물 속성 : 글번호, 제목, 작성자, 내용 
+
+class Board {
+
+글번호, 제목, 작성자, 내용
+}
+
+class BoardService{
+*배열로 게시물 관리 
+Board [] boardArr = new Board[5];
+
+//등록메소드
+//검색메소드
+//수정메소드 
+
+}
+
+class BoardMain{
+	public static void main(String [] args){
+
+
+	}
+
+
+}

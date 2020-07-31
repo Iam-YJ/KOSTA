@@ -1,0 +1,10 @@
+1. Student.java 문서 완성
+:setter, getter 추가
+:컴파일. 해야함 
+
+2.StudentService.java를 컴파일한다
+:오류가 난다면 오류 해결하고 
+컴파일 성공시킨다
+
+3.StudentMainApp.java를 컴파일하고 
+실행시켜서 결과화면을 확인한다
