@@ -1,0 +1,12 @@
+double no  = Math.random(); //호출
+
+
+public class Math(){
+	public static double random(){
+		return 값;
+
+	}
+	
+
+
+}

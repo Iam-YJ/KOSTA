@@ -1,0 +1,63 @@
+0728 쪽지시험
+
+@@@1. access modifier의 종류 4개 크기순서와 뜻
+public - 어디서나 아무나 접근 가능
+protected - 상속관계라면 폴더가 달라도 접근 가능 
+생략 - 같은 package 내 접근 가능 
+private - 은닉, 같은 class 내 접근 간으
+
+: 클래스, 메소드, field(전역변수) 앞에 쓸 수 있다.
+
+
+@@@2. 메소드 작성법(선언방법)
+modifiers returnType method이름(dataType 변수이름, dataType 변수이름 ... ){
+	기능작성;
+}
+
+
+
+@@@3. 메소드 호출방법
+1) 가장일반적인 방법 - 객체를 생성해서 접근한다
+	*객체 생성 방법 ----- 메모리의 heap 영역에 저장공간이 생김
+	클래스이름 변수 = new 클래스이름 ();
+
+	* 생성된 객체안에 있는 메소드를 호출한다.
+	변수.메소드이름(값, 값..);
+
+2) static이 붙은 메소드 호출 ex) Math.random();
+*굳이 객체 생성하지 않아도 클래스이름.메소드이름(값, 값..);
+
+
+
+@@@4. ~.java 문서에 클래스는 여러개 올 수 있다. 
+이런 경우 특징에 대해서 작성
+
+-public 클래스는 딱 한개만 작성가능하고 반드시 public class 이름으로 파일명을
+설정한다. 
+-class 앞에 접근제한자는 public of 생략이 올 수 있다. 
+
+
+
+@@@5. 정수값을 인수로 전달 받아 그 수가 짝수인지 홀수인지를 
+체크하여 리턴하는 메소드를 작성하에요.
+그리고 호출도 하세요.
+반드시 클래스 내부에 선언한다.
+
+public class Test{
+	public String aa(int i){
+		if(i%2==0){
+			return "짝수";
+		}else{
+			return "홀수";
+		}
+
+	}
+
+public class MainApp{
+	public static void main(String [] args){
+		Test t = new Test();
+		String result = t.aa(3);
+
+	}
+	}
+}

@@ -1,0 +1,13 @@
+public class Integer{ //public이 없으면 같은 폴더 안에서만 사용가능함
+//근데 우리가 실행했을 때에는 다른 폴더에서도 했기 때문에
+//public이 붙음 
+
+	public static int parseInt(String s){
+		return 5;
+	}
+
+	public static String toString(int i){
+		return "야호"	
+	}
+
+}

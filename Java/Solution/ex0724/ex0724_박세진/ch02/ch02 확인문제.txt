@@ -1,0 +1,19 @@
+1. 답: 4번 (변수는 초기값이 저장되지 않은 상태에서 읽을 수 있다.)
+
+2. 답: 1번, 4번 5번 (modelName, $value, _age)
+
+3. 답:
+정수타입: 1byte (byte) 2byte (short, char) 4byte (int) 8byte (long)
+실수타입: 4byte (float) 8byte (double)
+논리타입: 1bit (boolean)
+
+4. 답:
+타입 (int, double)
+변수 이름 (age, price)
+리터럴 (10, 3.14)
+
+5. 답: 3번 (short shortValue = charValue;)
+
+6. 답: 4번 (char var = (char)strValue;)
+
+7. 답: 3번 (char var3 = '';)

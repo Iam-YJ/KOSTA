@@ -1,0 +1,36 @@
+0724 쪽지시험 
+
+1.
+byte < short, char < int < long < float < double 
+* boolean : 어떤 다른 타입으로 형변환 할 수 없다. (true, false)
+* object type은 형변환 안한다. : 단 상속관계가 성립되면 형변환 가능하다 
+			    String은 객체이므로 int로 형변환 하고 싶을 때 형변환 연산자를 쓰는게 아니라
+			    전용 메소드를 사용한다.
+
+2. 
+다른타입으로 변환 하는 것 (주로 큰타입을 작은타입으로 변환)
+
+3.
+if(조건식){ *조건식은 반드시 결과 boolean이여야 한다.
+ 실행문장
+}else if(조건식){
+ 실행문장
+}else{
+ 실행문장
+}
+
+* if문의 특징은 1~3까지 모두 실행하지 않는다. 
+반드시 조건에 만족하는 블럭만 실행하고 전체를 빠져나온다.
+
+4.
+Math.random();
+// 0.0 ~0.999.. 사이
+
+5.
+double random = Math.random() * 경우의수 + 최소값 ;
+int random = (int) (Math.random() * 10 + 11 ) ;
+
+6. 
+if(숫자 % 10 == 0 ) {
+System.out.println("10의 배수");
+}
