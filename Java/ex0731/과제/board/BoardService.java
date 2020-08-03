@@ -11,6 +11,7 @@ class BoardService
 		for(int i=0; i<data.length; i++){
 	
 			boardArr[i] = this.create(data[i]); //1차원 배열을 가지고 create 호출
+			//boardArr[i]번째에 Board 배열을 담음 
 			count ++;
 		}
 	}
@@ -26,6 +27,11 @@ class BoardService
 	// : 추가전에 배열방에 board를 넣을 수 있는지 체크하고 
 	// : 없으면 " 더 이상 추가할 수 없습니다" / 있으면 추가한다 
 	public void insert(Board board){
+		if(count == boardArr.length){
+			System.out.println("더이상 추가할 수 없습니다.");
+			return; //함수를 빠져나가라 
+		}
+		boardArr[count++] = board;
 		
 	}
 
@@ -49,6 +55,18 @@ class BoardService
 	//			->        없으면 "글번호는 존재하지 않습니다" 출력
 
 	public void searchByNo(int no){
+		for(int i=0; i< count; i++){
+			Board board = boardArr[i];
+			if(board.getNo() == no){
+				System.out.print("글이 존재합니다");
+				System.out.print("no :" + boardArr[i].getNo() + "\t");
+				System.out.print("subject :" + boardArr[i].getSubject() + "\t");
+				System.out.print("writer :" + boardArr[i].getWriter() + "\t");
+				System.out.print("content :" + boardArr[i].getContent() + "\n");
+				return; //함수를 빠져나가
+
+			}
+		}System.out.print("글이 존재하지 않습니다");
 	
 	}
 
@@ -60,6 +78,19 @@ class BoardService
 	//    -> 그 글번호에 해당하는 작성자, 내용을 전달받은 값으로 변경
 	//    -> 없으면 "글번호 오류로 수정할 수 없습니다" 
 	public void update(Board board){
+		for(int i=0; i<count; i++){
+			Board dbBoard = boardArr[i];
+			
+			if(dbBoard.getNo() == board.getNo()){
+				//같으면 수정
+				dbBoard.setNo(board.getNo());  
+				dbBoard.setWriter(board.getWriter());
+				dbBoard.setWriter(board.getContent());
+
+				return;
+			}
+		}//글번호 같지 않음
+		System.out.println(board.getNo() + "는 글번호 오류로 수정할 수 없습니다");
 		
 	
 	}
