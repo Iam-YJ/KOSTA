@@ -11,18 +11,19 @@
             : 키보드 입력을 받아서 메뉴를 통해 동작)
 
       2) EndView.java  -  결과화면
-
+	//success view + fail view 
 
      - Controller : View와 Model사이에서 요청 처리해주는 역할
        1) ElectronicsController.java 
 
 
     - Model : 비지니스로직을 담당
-        2) ElectronicsService.java 
+        1) ElectronicsService.java 
             : 싱글톤 클래스 적용
             : 생성자를 통해서 초기치 데이터를 세팅
 
-
+	Electronics.java
+	 : 속성 관리하는 필드, 생성자, getter, setter 
 
 
 
