@@ -8,11 +8,12 @@ public class MenuView {
 	*/
     public void printMenu(){
 	   while(true){
-		 System.out.println("***** 메뉴를 선택해주세요 *******");
+		 System.out.println();
+		 System.out.println("========== 메뉴를 선택해주세요 ==========");
 		 System.out.println("1.등록  2.전체검색  3.부분검색  4.수정하기   9.종료");
          int no = sc.nextInt();
 		 switch(no){
-             case 1:   inputInsert() ; break;
+             case 1:  this.inputInsert() ; break;
 			 case 2:   controller.selectAll() ;  break;
 			 case 3:   inputSearch() ; break;
 			 case 4:   inputUpdate() ; break;
@@ -34,13 +35,13 @@ public class MenuView {
 	   int modelNo = sc.nextInt();
 
 	   System.out.print("모델이름 ? ");
-	   String modelName = sc.next();
+	   String modelName = sc.nextLine();
 
 	   System.out.print("모델가격 ? ");
 	   int modelPrice = sc.nextInt();
 
 	   System.out.print("모델설명 ? ");
-	   String modelDetail = sc.next();
+	   String modelDetail = sc.nextLine();
 
         // 입력된 정보 4개를 하나의 Electronics객체로 만든다.
          Electronics electronics = 
@@ -66,14 +67,12 @@ public class MenuView {
       System.out.print("수정할 모델번호는 ? ");
 	   int modelNo = sc.nextInt();
 
-	   System.out.print("변경 모델가격 ? ");
-	   int modelPrice = sc.nextInt();
-
-	   System.out.print("변경 모델설명 ? ");
+	   System.out.print("수정할 모델설명은 ? ");
 	   String modelDetail = sc.next();
 
+
        Electronics electronics = 
-			 new Electronics(modelNo, modelPrice,modelDetail);
+			 new Electronics(modelNo,modelDetail);
 
          controller.update(electronics);
 

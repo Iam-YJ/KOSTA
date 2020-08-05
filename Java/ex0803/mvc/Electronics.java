@@ -22,7 +22,7 @@ class Electronics{
 		this.modelDetail = modelDetail;
 	}
 
-	//setter
+	//setter : public void (인수 o)
 	public void setModelNo(int modelNo){
 		this.modelNo = modelNo;
 	}
@@ -39,7 +39,7 @@ class Electronics{
 		this.modelDetail = modelDetail;
 	}
 
-	//getter
+	//getter : public dataType, 인수 x
 
 	public int getModelNo(){
 		return modelNo;
