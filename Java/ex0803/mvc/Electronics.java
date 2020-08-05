@@ -57,6 +57,11 @@ class Electronics{
 		return modelDetail;
 	}
 
+	
+	@Override // ¿Á¡§¿«
+	public String toString(){
+		return (getModelNo() + "\t" + getModelName() + "\t" +  getModelPrice() + "\t" + getModelDetail());
+	}
 
 
 }

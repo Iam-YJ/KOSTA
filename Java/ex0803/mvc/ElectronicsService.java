@@ -88,10 +88,7 @@ class ElectronicsService{
         return true;
    }
 
-   //모델 설명에서 특정 단어가 포함된 전자제품 검색하기 +
-   public Electronics[] searchByContainsWord(String word){
-	
-   }
+
 
 
 }//클래스끝
