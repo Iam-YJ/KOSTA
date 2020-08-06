@@ -35,6 +35,8 @@ public class MainApp {
 		System.out.println("********** Emp 정보 **********");
 		for(int i=0; i<eArr.length; i++){
 			System.out.println(eArr[i]);
+			//System.out.println(eArr[i].toString());
+			//부모쪽에 있어도 재정의된 메소드는 자식꺼가 나온다
 		}
 		System.out.println();
 		

@@ -24,18 +24,35 @@ public class MainApp {
 		System.out.println("********** FullTime 정보 **********");
 		for(int i=0; i<full.length; i++){
 			System.out.println(full[i]);
+			//System.out.println(full[i].toString());
 		}
 		System.out.println();
+
+		/* 개선된 for
+		for(FullTime f : full){
+			System.out.println(f);
+		}
+			
+		*/
 
 		System.out.println("********** PartTime 정보 **********");
 		for(int i=0; i<part.length; i++){
 			System.out.println(part[i]);
 		}System.out.println();
+
+
+
 	
 		ft.message(full);
 		pt.message(part);
 		System.out.println();
 	
+
+		/*
+		for(int i=0; i<full.length; i++){
+			full[i].message();
+		} //단 message()의 파라미터를 없애야 작동 
+		*/
 		
 		
 

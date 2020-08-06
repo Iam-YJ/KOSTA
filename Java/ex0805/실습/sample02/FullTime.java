@@ -1,4 +1,4 @@
-class  FullTime extends Employee
+class  FullTime extends Employee //FullTime is Employee
 {
 	
 	private int salary;

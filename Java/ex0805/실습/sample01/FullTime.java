@@ -20,25 +20,8 @@ class  FullTime
 		this.deptName = deptName;
 		this.salary = salary;
 		this.bonus = bonus;
-	}
+	} //데이터 초기화
 
-/*
-	public void message(FullTime [] ft){
-		System.out.println("**************Full Time 정보*************");
-		for(int i=0; i<ft.length; i++){
-			System.out.print(ft[i].getEmpNo()+" | ");
-			System.out.print(ft[i].getEName()+" | ");
-			System.out.print(ft[i].getJob()+" | ");
-			System.out.print(ft[i].getMgr()+" | ");
-			System.out.print(ft[i].getHiredate()+" | ");
-			System.out.print(ft[i].getDeptName()+" | ");
-			System.out.print(ft[i].getSalary()+" | ");
-			System.out.print(ft[i].getBonus()+" | ");
-			System.out.println();
-
-		}System.out.println();
-	}
-*/
 
 	public void message(FullTime [] ft){
 		System.out.println("**************Message*************");
