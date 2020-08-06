@@ -1,0 +1,11 @@
+차이점
+
+sample 01 
+- fulltime, parttime 내에서 겹치는 코드가 많다 
+- matin에서도 겹치는 코드가 많다
+
+sample 02
+sample01에 비하여 겹치는 코드가 줄어들었다 
+-> 겹치는 코드는 부모 클래스 (employee)에 넣어서 처리함
+
+main이 깔끔해졌다

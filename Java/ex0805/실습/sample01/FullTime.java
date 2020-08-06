@@ -14,7 +14,7 @@ class  FullTime
 	FullTime(int empNo, String eName, String job, int mgr, String hiredate, String deptName, int salary, int bonus){
 		this.empNo = empNo;
 		this.eName = eName;
-		this.job = this.job;
+		this.job = job;
 		this.mgr = mgr;
 		this.hiredate = hiredate;
 		this.deptName = deptName;
@@ -22,6 +22,7 @@ class  FullTime
 		this.bonus = bonus;
 	}
 
+/*
 	public void message(FullTime [] ft){
 		System.out.println("**************Full Time 정보*************");
 		for(int i=0; i<ft.length; i++){
@@ -37,9 +38,20 @@ class  FullTime
 
 		}System.out.println();
 	}
+*/
 
+	public void message(FullTime [] ft){
+		System.out.println("**************Message*************");
+		for(int i=0; i<ft.length; i++){
+			System.out.print(ft[i].getEName());
+			System.out.print("사원은 정규직입니다.");
+			System.out.println();
+		}
+	}
+
+	@Override
 	public String toString(){
-		return null;
+		return( empNo + " | " + eName + " | " + job+ " | " +mgr+ " | " +hiredate+ " | " +deptName+ " | " +salary+ " | " +bonus) ;
 	}
 
 //SETTER

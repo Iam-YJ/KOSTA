@@ -14,13 +14,14 @@ class PartTime{
 	PartTime(int empNo, String eName, String job, int mgr, String hiredate, String deptName, int timePay){
 		this.empNo = empNo;
 		this.eName = eName;
-		this.job = this.job;
+		this.job = job;
 		this.mgr = mgr;
 		this.hiredate = hiredate;
 		this.deptName = deptName;
 		this.timePay = timePay;
 	}
 
+/*
 	public void message(PartTime [] pt){
 		System.out.println("**************Part Time 정보*************");
 		for(int i=0; i<pt.length; i++){
@@ -34,11 +35,20 @@ class PartTime{
 			System.out.println();
 
 		}System.out.println();
+	} */
+
+	public void message(PartTime [] ft){
+		for(int i=0; i<ft.length; i++){
+			System.out.print(ft[i].getEName());
+			System.out.print("사원은 비정규직입니다.");
+			System.out.println();
+
+		}System.out.println();
 	}
 
+	@Override
 	public String toString(){
-		
-		return null;
+		return( empNo + " | " + eName + " | " + job+ " | " +mgr+ " | " +timePay) ;
 	}
 
 //SETTER
