@@ -10,7 +10,7 @@ public class BankApplication {
 		boolean run = true;
 		while (run) {
 			System.out.println("-------------------------------------");
-			System.out.println("1.계좌생성 | 2.계좌목록|3.예금|4.출금|5.종료");
+			System.out.println("1.계좌생성 | 2.계좌목록 | 3.예금 | 4.출금 | 5.종료");
 			System.out.println("-------------------------------------");
 			System.out.println("선택>");
 
@@ -58,11 +58,13 @@ public class BankApplication {
 		System.out.println("계좌목록");
 		System.out.println("-------");
 		for (int i = 0; i < accountArray.length; i++) {
-			if (accountArray[i] == null)
+			if (accountArray[i] == null) {
 				break;
-			System.out.println(
-					accountArray[i].getAno() + "\t" + accountArray[i].getOwner() + "\t" + accountArray[i].getBalance());
+			} else {
+				System.out.println(accountArray[i].getAno() + "\t" + accountArray[i].getOwner() + "\t"
+						+ accountArray[i].getBalance());
 
+			}
 		}
 
 	}
@@ -105,16 +107,16 @@ public class BankApplication {
 
 	// Account배열에서 ano와 동일한 Account객체 찾기
 	private static AccountNew findAccount(String ano) {
-			AccountNew account=null;
-			for(int i=0;i<accountArray.length;i++) {
-				if(accountArray!=null) {
-				if(ano.equals(accountArray[i].getAno())) {
-					account=accountArray[i];
-				break;
+		AccountNew account = null;
+		for (int i = 0; i < accountArray.length; i++) {
+			if (accountArray[i] != null) {
+				if (ano.equals(accountArray[i].getAno())) {
+					account = accountArray[i];
+					break;
 				}
 			}
-			
+
 		}
-			return account;
+		return account;
 	}
 }

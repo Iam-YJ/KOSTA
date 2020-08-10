@@ -7,11 +7,16 @@ public class SnowTireExample {
 		Tire tire = snowTire;
 		
 		snowTire.run();
-		// tire -> snowtire 
-		tire.run();
-		//tire
+		// snowtire 
+		// 생성자가 아니라 method 이기 때문에
+		// super() 가 생략된 것이 아니다.
 		
-		//둘 다 오답인데 이유가 뭐지..?
+		
+		tire.run();
+		// snowtire
+		// 재정의된 메소드는 부모타입이여도 자식타입이 호출된다.
+		
+		
 	}
 
 }
