@@ -1,0 +1,35 @@
+자료구조
+
+class Student{
+	이름, 나이, 주소, 연락처
+}
+
+Strudent st1 = new Student ();
+
+Student [] arr = new Student [21];
+
+
+---> 자료구조 이용
+
+* List 로 변경
+
+
+class A extends ArrayList<Student>{
+	A(){
+		super(21);
+	}
+
+}
+
+new A();    ---> 상속받아서
+
+--------------------------------
+
+class A{
+	ArrayList<Student> list = new ArrayList(21);
+}
+
+ --> 생성해서 
+
+-------------------------------
+

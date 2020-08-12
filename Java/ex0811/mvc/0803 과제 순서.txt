@@ -1,0 +1,12 @@
+0803 과제 순서
+1. Electronics.java 완성해서 컴파일 성공
+
+2. ElectronicsService.java 컴파일 성공
+
+3. 전체검색, 등록, 부분검색, 수정하기 
+하나씩 만들고 수정하기 
+
+* 미완성 코드 : EndView.java
+	        ElectronicsController.java 
+
+* + 그림그려오기 
