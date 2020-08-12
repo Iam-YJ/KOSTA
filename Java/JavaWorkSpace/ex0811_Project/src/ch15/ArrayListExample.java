@@ -1,4 +1,4 @@
-package ch10;
+package ch15;
 
 import java.util.*;
 
@@ -17,7 +17,7 @@ public class ArrayListExample {
         System.out.println("총 객체수 : "+size);
         System.out.println();
 
-        String skill = list.get(2);
+        String skill= list.get(2);
         System.out.println("2: "+skill);
         System.out.println();
 

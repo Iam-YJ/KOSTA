@@ -39,7 +39,7 @@ class SuperClassExam{
 	}
 }
 
-class SubClassExam01 extends SuperClassExam implements InterfaceExam01{
+abstract class SubClassExam01 extends SuperClassExam implements InterfaceExam01{
 	//다형성 형성 - 상속, 구현으로 
 	public void interfaceExam01(int i, int k) {}
 	public void interfaceExam00() {}

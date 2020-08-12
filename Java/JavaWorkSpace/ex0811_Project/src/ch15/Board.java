@@ -1,4 +1,4 @@
-package ch10;
+package ch15;
 
 public class Board {
 

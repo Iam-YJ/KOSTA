@@ -1,4 +1,4 @@
-package ch10;
+package ch15;
 
 import java.util.* ;
 
@@ -16,7 +16,7 @@ public class LinkedListExample {
         }
 
         endTime = System.nanoTime();
-        System.out.println("ArrayList  걸린시간 : "+(endTime - startTime) + " ns");
+        System.out.println("ArrayList  嫄몃┛�떆媛� : "+(endTime - startTime) + " ns");
 
         startTime = System.nanoTime();
         for(int i=0; i<10000; i++){
@@ -24,6 +24,6 @@ public class LinkedListExample {
         }
 
         endTime = System.nanoTime();
-        System.out.println("LinkedList 걸린시간 : "+(endTime - startTime) + " ns");
+        System.out.println("LinkedList 嫄몃┛�떆媛� : "+(endTime - startTime) + " ns");
     }
 }
