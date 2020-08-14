@@ -73,8 +73,7 @@ public class JFrameAnonumousEventExam extends JFrame {
 			public void mouseClicked(MouseEvent e) {
 				int x = e.getX();
 				int y = e.getY();
-				text.setText("x = " + x + " y = " + y);
-				JFrameAnonumousEventExam.this.setTitle(s);
+				JFrameAnonumousEventExam.this.setTitle("x = " + x + " y = " + y);
 			}
 
 		});
