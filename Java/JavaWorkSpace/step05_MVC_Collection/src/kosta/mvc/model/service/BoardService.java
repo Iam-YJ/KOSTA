@@ -50,7 +50,7 @@ public interface BoardService {
     *    @return : true이면 중복, false이면 중복아님.
     *    @param : kind의 게시판의 유형, no는 글번호
     * */
-	void duplicateByNo(String kind, int no);
+	boolean duplicateByNo(String kind, int no);
 	
 	/**
 	 * 6. 게시물 삭제하기
