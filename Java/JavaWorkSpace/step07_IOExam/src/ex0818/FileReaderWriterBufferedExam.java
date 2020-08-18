@@ -29,7 +29,7 @@ public class FileReaderWriterBufferedExam {
 			}
 			////////////////////////////////
 			//파일에 저장하기
-			bw = new BufferedWriter(new FileWriter("src/ex0818/write.txt")); //덮어쓰기
+			//bw = new BufferedWriter(new FileWriter("src/ex0818/write.txt")); //덮어쓰기
 			//bw = new BufferedWriter(new FileWriter("src/ex0818/write.txt",true)); //이어쓰기
 			
 			bw.write("열심히 화이팅~~\n");

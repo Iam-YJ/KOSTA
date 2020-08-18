@@ -8,6 +8,7 @@ import java.io.InputStreamReader;
 public class Chat {
 
 	public Chat() {
+		
 		BufferedReader br = null;
 		BufferedWriter bw = null;
 
