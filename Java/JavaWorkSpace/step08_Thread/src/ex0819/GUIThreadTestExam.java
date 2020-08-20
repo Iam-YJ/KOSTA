@@ -63,10 +63,10 @@ public class GUIThreadTestExam extends JFrame {
 								Thread.sleep(100);
 							}catch (Exception e) {
 								e.printStackTrace();
-							}
+							} 
 						}
 					}
-				}.start(); //thread.start();
+				}.start(); //thread(){}.start();
 				
 			}
 		});
