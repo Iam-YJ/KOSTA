@@ -459,3 +459,31 @@ ORDER BY SAL DESC;
     from (select * from emp order by sal desc);
 
 
+--rownum이 3보다 작은 레코드 검색
+    select rownum, empno, ename, job, sal, mgr
+    from (select * from emp order by sal desc)
+    where rownum < 3;
+    --rownum은 그때그때 자동으로 부여된다. -> where절이 마지막에 실행됨에 따라서 -> 이미 생성되어있는 3 이하만 (1,2)만 나오게 되는 것이다 
+    
+     select  empno, ename, job, sal, mgr
+    from (select * from emp order by sal desc)
+    where rownum < 3;
+    --rownum은 나오기 전에 그 밑에 자동으로 깔려있다 
+
+--rownum이 3보다 큰 레코드 검색
+    select rownum, empno, ename, job, sal, mgr
+    from (select * from emp order by sal desc)
+    where rownum > 3; --결과가 안나온다 
+    
+* 위의 문장을 성공하려면 인라인뷰를 또 사용한다
+select * from (
+    select rownum 번호, empno, ename, job, sal, mgr
+    from (select * from emp order by sal desc))
+    where 번호> 3;
+    
+    
+    * 번호 5~7인 경우 검색
+    select * from 
+    (select rownum 번호, empno, ename, job, sal, mgr
+    from(select * from emp order by sal desc))
+    where 번호 between 5 and 7;
