@@ -54,20 +54,18 @@ INSERT INTO EMP VALUES (7901,'정동길','연구직',NULL, 3000,NULL,NULL,'2001-12-03'
 
 INSERT INTO EMP VALUES (7933,'김철수','사무직',200,  1050,NULL,6361,'2002-01-02');
 
-1.
-COMMIT
-2.
-
-3.
-
-
-
-
 SELECT * FROM EMP;
-
-
 1.
+
 2,
+
+
+
+
+
+
+
+
 
 
 
