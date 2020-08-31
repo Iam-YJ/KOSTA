@@ -307,3 +307,82 @@ SELECT * FROM SCOTT.SALGRADE; --현재 계정이 다른 계정의 테이블을 접근하려면 권한
 -- SYSTEM으로 접속해서 권한 제거한다 
 REVOKE ALL ON SCOTT.SALGRADE FROM JANG;
 
+----------------------------------------------------------------------
+--새로운 계정 만들고 scott에 있는 것 export 하고 새 계정에 import 하기 
+create user jintest identified by 1234;
+
+alter user jintest account unlock;
+
+grant connect, resource to jintest;
+
+
+---------------------------------------------------------
+--계층형 쿼리
+ * 계층형 쿼리
+   
+SELECT LEVEL , empno, mgr, LPAD(' ', 4*(LEVEL-1)) || ename 
+ FROM emp
+ START WITH mgr IS NULL --루트노트
+CONNECT BY PRIOR empno = mgr; 
+
+---------------------
+CREATE TABLE BOM (
+            ITEM_ID     INTEGER NOT NULL,
+            PARENT_ID   INTEGER references BOM(item_id),
+            ITEM_NAME   VARCHAR2(20)  NOT NULL,
+            ITEM_QTY    INTEGER, 
+            PRIMARY KEY (ITEM_ID)
+);
+            
+
+INSERT INTO BOM VALUES ( 1001, NULL, '컴퓨터', 1);
+INSERT INTO BOM VALUES ( 1002, 1001, '본체', 1);
+INSERT INTO BOM VALUES ( 1003, 1001, '모니터', 1);
+INSERT INTO BOM VALUES ( 1004, 1001, '프린터', 1);
+
+INSERT INTO BOM VALUES ( 1005, 1002, 'Mother Board', 1);
+INSERT INTO BOM VALUES ( 1006, 1002, '랜카드', 1);
+INSERT INTO BOM VALUES ( 1007, 1002, 'Power Supply', 1);
+
+INSERT INTO BOM VALUES ( 1008, 1005, 'RAM', 1);
+INSERT INTO BOM VALUES ( 1009, 1005, 'CPU', 1);
+INSERT INTO BOM VALUES ( 1010, 1005, '그래픽장치', 1);
+INSERT INTO BOM VALUES ( 1011, 1005, '기타장치', 1);
+
+  
+ select * from bom;
+
+-- 계층형 쿼리  
+ SELECT  item_id, parent_id, LPAD(' ', 4*(LEVEL-1)) || item_name item_names
+ FROM bom
+ START WITH parent_id IS NULL -- 루트노드
+CONNECT BY  parent_id = PRIOR item_id ;
+---------------------------------------
+--엑셀 -> DB 테이블 가져오기
+
+1) 먼저 SQL 에서 엑셀을 기반으로 TABLE을 만든다
+2) cmd 창에서 ctl 파일이 있는 곳까지 위치를 바꾼다 (cd)
+3) LOAD DATA 
+        INFILE 'zipcode.csv' 
+        APPEND 
+        INTO TABLE zipcode
+        FIELDS TERMINATED BY ','
+(zip,sido,si,dong,ri,doseo,bunji,apt,address)   
+
+ctl 파일에 들어있는 것
+
+4) sqlldr userid=계정이름/비밀번호 control='파일이름.ctl' (ex sqlldr userid=scott/tiger control='test.ctl') 
+
+create table zipcode(
+  zip varchar2(30) ,
+  sido	varchar2(200),
+  si	varchar2(200),
+  dong	varchar2(300),
+  ri	varchar2(200),
+  doseo	 varchar2(200),
+  bunji	varchar2(200),
+  apt	varchar2(200),
+  address varchar2(400)
+)
+
+select * from zipcode;

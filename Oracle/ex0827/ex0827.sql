@@ -306,8 +306,11 @@ SELECT EMPNO, ENAME, SAL, GRADE, LOSAL, HISAL
     select e1.ename, d1.loc, e2.ename, d2.loc
     from (emp e1 join dept d1 on e1.deptno = d1.deptno)
     join (emp e2 join dept d2 on e2.deptno = d2.deptno )
-    on d1.loc = d2.loc
-    where e1.ename='SMITH' AND E2.ENAME!='SMITH';
+    on d1.loc = d2.loc;
+    --where e1.ename='SMITH' AND E2.ENAME!='SMITH';
+    
+    select e1.ename, d1.loc, e2.ename, d2.loc
+    from (emp e2 join dept d2 on e2.deptno = d2.deptno );
     
 -- 11, 사원명, 해당 하는 메니저명 검색
 -- 반드시 모든 사원들(CEO포함) 정보 검색
