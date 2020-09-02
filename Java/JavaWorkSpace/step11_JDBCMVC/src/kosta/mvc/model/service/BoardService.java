@@ -22,8 +22,10 @@ public interface BoardService {
 	BoardDTO boardSelectByNo(int boardNo) throws SQLException;
 
 	/**
-	 * 게시물 등록 (등록하기 전에, 글번호 중복체크 - boardSelectByNo(int boardNo))
+	 * 게시물 등록 
 	 */
+	//sequence 썼기 때문에 글번호 중복될 일 x
+	
 	void boardInsert(BoardDTO boardDTO) throws SQLException;
 
 	/**
