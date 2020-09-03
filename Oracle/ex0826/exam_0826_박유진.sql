@@ -102,3 +102,25 @@ insert into sugagntb(수강코드, 강의실번호, 시간, 강사번호) values('j1005', 905, 
 insert into sugagntb(수강코드, 강의실번호, 시간, 강사번호) values('j1006', 906, 2, 6);
 
 -----------------------------------------------------------------------------------
+
+
+create table reply(
+    reply_no number primary key,
+    content varchar2(100),
+    board_no number references board(board_no),
+    reg_date date
+);
+
+create sequence reply_no_seq nocache;
+
+insert into reply(reply_no, content, board_no, reg_date)
+values (reply_no_seq.nextval, '6-1댓글이다',1,sysdate);
+
+commit;
+
+select * from board;
+select * from reply;
+
+drop table reply;
+
+delete from copy_emp where empno = 7900;

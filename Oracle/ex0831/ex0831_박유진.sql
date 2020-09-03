@@ -10,12 +10,16 @@ select * from sugagntb;
 select *
 from student
 where 수_주민등록번호 like '%-2%';
+--where 수_주민등록번호 like '______-2_____';
 
 
 --2. 생년월일이 1973년인 수강생 정보를 검색(substr)
 select substr(수_주민등록번호, 1,2) as 생년월일, 수강생번호, 수_이름, 수_주민등록번호,수_연락처, 수_주소, 수_이메일
 from student
 where 수_주민등록번호 like '73%';
+
+/* select * from student
+where substr(수_주민등록번호,1,2) ='73'; */
 
 
 --3. 성이 '홍'이 아닌 강사의 정보 검색
@@ -35,6 +39,9 @@ from teacher t join subject s
 on t.수강코드 = s.수강코드
 where s.과목 = 'java';
 
+select * from teacher where 수강코드 = 
+(select 수강코드  from subject where upper(과목) = upper('java'));
+
 
 --6. 주소가 null이 아닌 강사의 정보 검색
 select *
@@ -42,11 +49,22 @@ from teacher
 where 주소 is not null;
 
 --7.sql 수업을 수강하고 있는 학생의 정보를 검색하는 뷰 작성
+create view 학생뷰 as
 select s.수강생번호, s.수_이름, sb.과목
 from (student s join sugagn sg on s.수강생번호 = sg.수강생번호) 
-join (sugagn sg join subject sb on sg.수강코드 = sb.수강코드)
-on s.수강생번호 = sg.수강생번호
+join subject sb on sg.수강코드 = sb.수강코드
 where sb.과목 = 'sql';
+
+--using 사용
+create view 학생뷰 as
+select *
+from student inner join sugagn  using(수강생번호) inner join subject  
+using(수강생코드) where 과목 = 'sql';
+
+-- 서브쿼리 이용
+select * from student
+where 수강생번호 = (select 수강생번호 from sugagn
+where 수강코드=(select 수강코드 from subject where 과목='sql'));
 
 
 --8.강사가 담당하는 과목과 그 과목이 어느 강의실에서 진행되며 
@@ -61,11 +79,18 @@ on tb.강의실번호 = r.강의실번호;
 
 select * from 강사뷰;
 
+create or replace view v_teacherInfo 
+as
+select teacher.강사번호, 강사이름, 수강코드, 과목, 강의실번호, 수용인원 
+from teacher join subject using(수강코드)
+              join sugagntb using (수강코드)
+                join room using(강의실번호);
 
 
 --9. 아래의 그림을 보고 만드세요(학생의 이름, 주민번호,성별을 출력하세요)
 select 수_이름, 수_주민등록번호, decode(substr(수_주민등록번호, 8,1),'1','남자','2','여자')as 성별
 from student;
+
 
 --10. 아래의 그림을 보고 만드세요
 --(teacher 강사의 이름을 기주으로 올림차순으로 정렬하여 
