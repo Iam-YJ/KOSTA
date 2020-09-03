@@ -37,13 +37,12 @@ public class DbUtil {
 	 */
 	public static void dbClose(Connection con, Statement st, ResultSet rs) {
 		try {
-			if (rs != null) //null이 아님 -> 무언가를 썼음 -> 그니까 닫아라 
+			if (rs != null) // null이 아님 -> 무언가를 썼음 -> 그니까 닫아라
 				rs.close(); // 가장 마지막에 생성된 것 부터 닫기
-			/*if (st != null)
-				st.close();
-			if (con != null)
-				con.close();*/ //공통 코드 때문에 아래 메소드 씀
-			dbClose(con, st); 
+			/*
+			 * if (st != null) st.close(); if (con != null) con.close();
+			 */ // 공통 코드 때문에 아래 메소드 씀
+			dbClose(con, st);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -56,8 +55,10 @@ public class DbUtil {
 	 */
 	public static void dbClose(Connection con, Statement st) {
 		try {
-			st.close();
-			con.close();
+			if (st != null)
+				st.close();
+			if (con != null)
+				con.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

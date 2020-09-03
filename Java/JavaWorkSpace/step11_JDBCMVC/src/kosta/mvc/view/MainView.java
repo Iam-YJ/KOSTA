@@ -3,7 +3,9 @@ package kosta.mvc.view;
 public class MainView {
 
 	public static void main(String[] args) {
-		
+
+		MenuView.menuChoice();
+
 		/*
 		 * System.out.println("********** [1] 모든 게시물 검색 ******************");
 		 * BoardController.getAllBoard();
@@ -53,7 +55,6 @@ public class MainView {
 		 * System.out.println(); System.out.println("2. 게시물이 존재하지 않는 경우 삭제");
 		 * BoardController.deleteBoard(15);
 		 */
-		
-		MenuView.menuChoice();
+
 	}
 }

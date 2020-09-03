@@ -22,10 +22,10 @@ public interface BoardService {
 	BoardDTO boardSelectByNo(int boardNo) throws SQLException;
 
 	/**
-	 * 게시물 등록 
+	 * 게시물 등록
 	 */
-	//sequence 썼기 때문에 글번호 중복될 일 x
-	
+	// sequence 썼기 때문에 글번호 중복될 일 x
+
 	void boardInsert(BoardDTO boardDTO) throws SQLException;
 
 	/**
@@ -37,4 +37,9 @@ public interface BoardService {
 	 * 게시물 삭제
 	 */
 	void boardDelete(int boardNo) throws SQLException;
+
+	/**
+	 * 글번호에 해당하는 댓글 정보 가져오기
+	 */
+	BoardDTO replySelectByNo(int boardNo) throws SQLException;
 }

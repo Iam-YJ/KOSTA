@@ -41,5 +41,8 @@ public interface BoardDAO {
 	 * delete from board where board_no = ?
 	 */
 	int boardDelete(int boardNo) throws SQLException;
+
+	
+	BoardDTO replySelectByNo(int boardNo) throws SQLException;
 	
 }
