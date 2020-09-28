@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>애니메이션과 큐</title>
+    <style>
+        p {
+            font-size:1.5em;
+            margin-left:50px;
+        }
+        #num {
+            font-style:italic;
+            color:red;
+            font-weight:700;
+        }
+        button {
+            width: 150px;
+            height: 30px;
+            border: 1px solid #ccc;
+            margin-top:5px;
+            margin-left:150px;      
+        }
+        img {
+            border:2px solid black;
+        }
+        figcaption {
+            margin-top: 15px;
+            margin-left:30px;
+        }
+    </style>
+    <script src="jquery-1.9.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#bttn").click(function () {
+                $("img").animate({ width: "600px" },"slow");
+                $("img").animate({ height: "398px" }, "slow");
+                $("img").animate({ borderRadius: "50px" }, "slow");;
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="gallery">
+        <figure>
+            <img src="winter.jpg" width="400" height="265" alt="눈이 가득 내려앉은 장독대" id="spring">
+            <figcaption><b>한국의 겨울</b> 모두 돌아갔다, 떠나왔던 곳으로.... 너의 부재를 덮어주는 사방의 눈,눈.</figcaption>
+        </figure>
+        <button id="bttn">확대하기</button>
+    </div>
+
+</body>
+</html>

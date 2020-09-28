@@ -1,0 +1,80 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>회원 가입 정보</title>
+<link rel="stylesheet" type="text/css" href="myForm.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script src="myForm.js"></script>
+</head>
+
+<body>
+  <div>
+    <h1>회원 가입 정보</h1>
+    <form id="myForm" method="POST" action="http://localhost:8087/MyWebProject0924/hello.jsp">
+      <fieldset>
+        <legend> 개인정보</legend>
+        <p><label for="username">이름 </label>
+          <input type="text" id="username" size="20" name="username" autofocus></p>
+        <p><label for="email">메일주소</label>
+          <input type="text" id="email" size="20" name="email"></p>
+        <p>
+          <input type="radio" name="gender" value="Man" checked>남
+          <input type="radio" name="gender" value="Woman">여
+        </p>
+        <p>
+          <label for="tel">전화번호</label>
+          <input type="tel" name="tel" placeholder="010-1234-5678" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}">
+        </p>
+        <p>
+          <label for="date">생년월일</label>
+          <input type="datetime-local" name="date" id="date">
+        </p>
+        <p>
+          <select>
+            <option selected>도시명을 선택하세요</option>
+            <option value="seoul">서울</option>
+            <option value="busan">부산</option>
+          </select>
+        </p>
+
+
+
+      </fieldset>
+      <fieldset>
+        <legend> 관심 분야 선택</legend>
+        <ul id="sel2">
+          <li>
+            <input type="checkbox" id="html5" value="semantic" name="tech">
+            <label for="html5">HTML시맨틱</label>
+          </li>
+          <li>
+            <input type="checkbox" id="css3" value="css3" name="tech">
+            <label for="css3">CSS3</label>
+          </li>
+          <li>
+            <input type="checkbox" id="str" value="webstorage" name="tech">
+            <label for="str">Web Storage</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend> 로그인 정보</legend>
+        <p><label for="userid">아이디</label>
+          <input type="text" id="userid" size="20" name="userid"></p>
+        <p><label for="pwd">비밀번호</label>
+          <input type="password" id="pwd" size="20" name="password" required></p>
+      </fieldset>
+
+      <div id="buttons">
+        <input type="button" value="등록" id="myButton">
+        <input type="reset" value="초기화" id="myButton">
+      </div>
+    </form>
+
+  </div>
+</body>
+
+</html>

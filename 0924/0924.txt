@@ -1,0 +1,27 @@
+http 프로토콜 사용
+: GET 방식, POST 방식
+ -> 클라이언트의 화면에서 입력한 FORM DATA를 서버로 보내는 방식 
+
+1) GET 방식
+	:FORM DATA를 url에 append 해서 보내는 방식 (size에 제한이 있다.)
+	? 뒤에 오는 문자열은 query string 
+	ex) memberInsert.jsp?name=test&age=20&userId=tttt
+	: ?는 url과 query string 문자열을 구분할 때 사용
+	: &는 여러개의 query String을 구분할 때 사용
+	: 데이터 조회할 때 주로 사용 
+
+2) POST 방식
+	: form data를 stream의 body에 append해서 보내는 방식 (size에 제한이 없다)
+	: 데이터를 변경할 때 사용 (등록, 수정, 삭제) 할 때 주로 사용
+
+
+
+
+------------------------
+Tomcat은 
+1. web Container? 
+:tomcat은 J2EE API 에서 Servlet과 JSP 기술을 구현한 구현체이다.
+:WAS(Web Application Server) - JEUS(티맥스) , Web Sphere(웹스피어, IBM), Web Logic(웹로직, oracle)
+ 			     - J2EE API의 모든 기술을 구현한 구현체이다.
+
+

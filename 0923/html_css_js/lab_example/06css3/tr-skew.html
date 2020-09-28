@@ -1,0 +1,48 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title>transform</title>
+	 <style>		
+		#container {
+			margin:50px auto;
+		}
+ 		img {
+			border:1px solid black;
+			box-shadow:5px 5px 10px #333;
+			margin:10px;
+		}
+		.skew1 {
+			transform:skewX(20deg);
+			-webkit-transform:skewX(20deg);
+			-moz-transform:skewX(20deg);
+			-ms-transform:skewX(20deg);
+			-o-transform:skewX(20deg);
+		}
+		.skew2 {
+			transform:skewy(20deg);
+			-webkit-transform:skewy(20deg);
+			-moz-transform:skewy(20deg);
+			-ms-transform:skewy(20deg);;
+			-o-transform:skewy(20deg);
+		}
+		.skew3 {
+			transform:skew(20deg, 20deg);
+			-webkit-transform:skew(20deg, 20deg);
+			-moz-transform:skew(20deg, 20deg);
+			-ms-transform:skew(20deg, 20deg);
+			-o-transform:skew(20deg, 20deg);
+		}
+
+	</style>
+</head>
+<body>
+<div id="container">
+	<img src="flower4.jpg"> 
+	<img src="flower4.jpg" class="skew1">
+	<img src="flower4.jpg" class="skew2">
+	<img src="flower4.jpg" class="skew3">
+</div>
+</body>
+</html>

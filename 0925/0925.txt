@@ -1,0 +1,41 @@
+No SQL
+ Not Only A But Also B
+: MongoDB, (JSON 포맷 형태)
+  Redis,
+  Casandra
+
+HTTP 프로토콜
+ : cookie, session을 사용하는 이유
+ : Connectionless
+ : cookie나 session을 사용해서 사용자의 정보를 저장한다.
+
+byte code와 assembley code는 다르다
+: byte code는 플랫폼 중립적인 코드이다
+: assembely code(기계어)는 운영체제(OS)에 특화된 코드이다
+: byte code가 runtime에 실행되어질 때 인터프리터 방식으로 assembely code로 변환되어진다.
+
+
+boilerplate code
+: mybatis는 SQL문은 XML에 저장
+
+
+MVC
+: Model(DAO, DTO, VO)
+: View(JSP, HTML)
+: Controller(Servlet)
+Model 2 Architecture
+
+
+Spring Framework
+: xml 설정
+Spring Boot
+: Spring Framework를 가볍게(lightweight)하게 제공한 프레임워크
+: jar 배포
+
+CSS Selector(선택자)
+1. Tag Selector
+	: 특정 tag 명을 기술해서 css 선언
+2. ID Selector
+	: #ID명을 기술해서 css 선언
+3. Class Selector
+	: .class명을 기술해서 css 선언

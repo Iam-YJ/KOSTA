@@ -1,0 +1,7 @@
+DAO(VO)와 Servlet과 연동
+: DB에 있는 데이터를 읽어서 ArrayList를 JSON으로 변환
+
+XML parsing
+<name>홍길동</name>
+
+JSON {"name":"홍길동"}

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>회원 가입 정보</title>
+<style>
+  fieldset{
+    margin-bottom:15px;
+  }
+  label {
+     width:80px;
+     font-weight:bold;
+  }
+</style>
+</head>
+
+<body>
+<h1>회원 가입 정보</h1>
+<form id="register"  action="register.php">
+<fieldset>
+  <p><label for="username">이름 </label>
+  <input type="text" id="username" size="20">
+  <label for="email">메일주소</label>
+  <input type="text" id="email" size="20"></p>
+  <p><label for="pwd1">비밀번호</label>
+  <input type="password" id="pwd" size="20">
+  <label for="pwd2">비밀번호 확인</label>
+  <input type="password" id="pwd2" size="20"></p>
+</fieldset>
+<fieldset style="text-align:center">
+   <label><input type="submit" value="가입하기"></label>
+   <label><input type="reset" value="다시쓰기"></label>
+</fieldset>
+</form>
+</body>
+</html>
