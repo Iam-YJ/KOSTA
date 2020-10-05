@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		document.write("<h3> == & === , !== </h3>");
+
+		let i = 10, j = "10";
+		document.write("i=" + i + " , " + (typeof i) + "<br>");
+
+		//템플릿 문자열 문법으로 출력하기  - ECMA6 
+		document.write(`j=${j} , ${typeof j}<br>`);
+
+		document.write(`i==j => ${i==j}<br>`); //값만 비교
+		document.write(`i===j => ${i===j}<br>`); // type + 값 모두 비교
+		
+		//type을 변경해보자 (Number(), parseInt(), parseFloat() )
+		document.write(`i===j => ${i===Number(j)}<br>`); 
+		document.write(`i===j => ${i===parseInt(j)}<br>`); 
+		
+		document.write("<hr>");
+		var data = "2019년";
+		document.write(`data = ${data} type = ${typeof data}<br>`);
+		document.write(`data = ${Number(data)} type = ${typeof Number(data)}<br>`);
+		document.write(`data = ${parseInt(data)} type = ${typeof parseInt(data)}<br>`);
+		
+		let a =  5;
+		let b = "10";
+		document.write(`${a+b}')
+		
+	</script>
+
+</body>
+</html>

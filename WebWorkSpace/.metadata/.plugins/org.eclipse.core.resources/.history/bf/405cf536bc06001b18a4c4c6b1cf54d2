@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+</head>
+<body>
+	<h3>JavaScript 변수의 개념 - var & let & const</h3>
+	<script>
+		//자바스크립트 문법 적용 - JavaScript 영역
+		var a;
+		var b = 101;
+		var c = "희정";
+		d=3.14 // var 키워드 생략 
+		
+		//브라우저에 출력
+		
+	</script>
+
+</body>
+</html>

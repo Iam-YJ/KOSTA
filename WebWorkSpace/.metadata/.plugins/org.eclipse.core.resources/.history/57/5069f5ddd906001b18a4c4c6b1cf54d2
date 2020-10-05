@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<script>
+	//함수 만들기
+	function test1() {
+		//메세지창에 메세지 출력
+		window.alert("test1() 함수 호출되었어요");
+	}
+
+	function test2(name, age) {
+		alert(`${name}님 나이는 ${age}살 입니다.`);
+	}
+
+	function test3(color) {
+		//바탕색 변경하기
+		document.bgColor = color;
+		document.write("<h1> test3() 호출되었어요 </h1>");
+
+		return 100;
+	}
+</script>
+</head>
+<body>
+	<h1>함수를 만들어보자 ~~</h1>
+	<script>
+		//함수 호출
+		test1();
+
+		//test2("유진",10);
+		//사용자의 입력값을 받아서 함수 호출 
+		let inputName = prompt("이름은?", "박유진");
+		let inputAge = prompt("나이는?");
+		test2(inputName, inputAge);
+
+		//바탕색 변경하기
+		let result = test3(prompt("색상은?", "sky blue"));
+		document.write("결과 : " + result);
+	</script>
+	
+	<input type="button" value="눌러봐" onmouseover="this.style.backgroundColor='pink'; this.style.color='red'"
+	onmouseOut="this.style.backgroundColor='yellow'"
+	onclick = "test3()" />
+</body>
+</html>

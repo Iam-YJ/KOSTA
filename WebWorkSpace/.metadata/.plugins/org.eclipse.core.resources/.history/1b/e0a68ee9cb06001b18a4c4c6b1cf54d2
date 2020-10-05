@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+</head>
+<body>
+	<h3>JavaScript 변수의 개념 -> ECMA6 - let, const</h3>
+	<script>
+		//자바스크립트 문법 적용 - JavaScript 영역
+		let a;
+		let b = 101;
+		let c = "희정";
+		d = 3.14 // var 키워드 생략 
+
+		//브라우저에 출력
+		document.write("<h4>");
+		document.write("a = " + a + ", " + (typeof a) + "<br>");
+		document.write("b = " + b + ", " + (typeof b) + "<br>");
+		document.write("c = " + c + ", " + (typeof c) + "<br>");
+		document.write("d = " + d + ", " + (typeof d) + "<br>");
+
+		//값 변경 
+		a = new String("배고프다");
+		b = "뭐 먹지";
+		c = 20;
+		d = new Array(3);
+
+		document.write("<hr>");
+		document.write("a = " + a + ", " + (typeof a) + "<br>");
+		document.write("b = " + b + ", " + (typeof b) + "<br>");
+		document.write("c = " + c + ", " + (typeof c) + "<br>");
+		document.write("d = " + d + ", " + (typeof d) + "<br>");
+
+		document.write("</h4>");
+
+		</body>
+		</html>
+	
