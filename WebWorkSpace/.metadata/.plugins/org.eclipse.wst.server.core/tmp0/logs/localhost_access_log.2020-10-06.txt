@@ -469,3 +469,9 @@
 0:0:0:0:0:0:0:1 - - [06/Oct/2020:17:23:07 +0900] "GET /step01_JavaScript/ex1006/ex09_timer.html HTTP/1.1" 304 -
 0:0:0:0:0:0:0:1 - - [06/Oct/2020:17:23:21 +0900] "GET /step01_JavaScript/ex1006/ex09_timer.html HTTP/1.1" 200 898
 0:0:0:0:0:0:0:1 - - [06/Oct/2020:17:23:46 +0900] "GET /step01_JavaScript/ex1006/ex09_timer.html HTTP/1.1" 200 904
+127.0.0.1 - - [06/Oct/2020:19:38:42 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [06/Oct/2020:19:38:44 +0900] "GET /step01_JavaScript/ex1006/ex07_Date.html HTTP/1.1" 200 1518
+0:0:0:0:0:0:0:1 - - [06/Oct/2020:19:38:44 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [06/Oct/2020:19:39:21 +0900] "GET /step01_JavaScript/ex1006/ex09_timer.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [06/Oct/2020:19:39:21 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [06/Oct/2020:19:40:33 +0900] "GET /step01_JavaScript/ex1005/ex05_ifExam2.html HTTP/1.1" 200 1450
