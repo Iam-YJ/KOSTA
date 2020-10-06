@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body onload="todaySet()">
+	<h2>날짜 계산하기</h2>
+
+	<script>
+	
+		function calculate() {
+			//text 박스의 값을 가져오기
+			var fr = document.f; //form 객체 
+			
+			var startDate = new Date(fr.syear.value,fr.smonth.value-1, fr.sday.value);
+			var endDate = new Date(fr.eyear.value, fr.emonth.value-1, fr.eday.value);
+			
+			var cal = (endDate-startDate)/1000/60/60/24;
+			
+			
+			alert(cal);
+		}
+
+		function todaySet() {
+			var today = new Date();
+			var fr = document.f ; //form 객체
+			document.f.eyear.value = today.getFullYear();
+			fr.emonth.value = today.getMonth()+1;
+			fr.eday.value = today.getDay();
+
+		}
+
+		document.write("</h3>");
+	</script>
+
+	<form name="f">
+		시작일 
+		<input type="text" name="syear" size="5" />년
+		 <input type="text"name="smonth" size="5" />월 
+		 <input type="text" name="sday" size="5" />일
+		~ 
+		<input type="text" name="eyear" size="5" />년
+		 <input type="text"name="emonth" size="5" />월
+		  <input type="text" name="eday" size="5" />일
+		  
+		<button type="button"  onclick="calculate()">계산하기</button>
+	</form>
+
+</body>
+</html>

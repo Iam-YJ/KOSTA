@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+ div{width:200px;height:100px; border:1px red solid;}
+</style>
+<script type="text/javascript">
+
+  alert( isNaN(10) );//false
+  alert( isNaN("10") )//false
+  alert( isNaN("A") )//true
+  
+  
+  function operTest(){
+	  var no1 = parseInt(prompt("숫자1?" , 0));
+	  var no2 = parseInt(prompt("숫자1?" , 0));
+	  var operation = prompt("연산기호는?(+,-.,*,/)" ,"+");
+	  
+	  if(isNaN(no1) || isNaN(no2)){ //Not a Number
+		  alert("숫자가 아닙니다.");
+		  confirm("다시할래?") ?  operTest()  : alert("그만해~");    
+	  }else{
+		  var divEle = document.getElementById("div");
+		  switch(operation){
+		   case "+" : 
+			   divEle.innerText = no1+" + " + no2+" =" +(no1+no2) ; 
+			   break;
+		   case "-" : 
+			   divEle.innerText = no1+" - " + no2+" =" +(no1-no2) ; 
+		       break;
+		   case "*" :
+			   divEle.innerText = no1+" * " + no2+" =" +(no1*no2) ; 
+		       break;
+		   case "/" : 
+			   divEle.innerText = no1+" / " + no2+" =" +(no1/no2) ; 
+		       break;
+		   default:
+			   alert(operation+"난 잘못 되었습니다.");
+		       confirm("다시할래?") ?  operTest()  : alert("그만해~");    
+		  }//switch끝
+	  }//else끝
+	  
+  }//함수끝
+
+</script>
+</head>
+<body>
+<input type="button" value="연산하기" onclick="operTest()">
+
+<div id="div"></div>
+
+</body>
+</html>

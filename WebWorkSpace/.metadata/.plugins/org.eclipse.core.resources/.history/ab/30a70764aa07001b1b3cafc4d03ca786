@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body onload="todaySet()">
+	<h2>시간 계산하기</h2>
+
+	<script>
+		function timeStart() {
+			var time = new Date();
+			
+			var status = "AM";
+			var hour = Date.getHours();
+			var min = Date.getMinutes();
+			var sec = Date.getSecondes();
+			
+			if(hour > 12){
+				status = "PM"; 
+				if(hour < 10){
+					hour = 0 + hour;
+				}
+			}
+			
+			document.f.text.value = time;
+			
+			alert(time);
+		}
+	</script>
+
+	<form name="f">
+		<input type="text" name="time" /> 
+		<input type="button" value="시작" onclick="timeStart()" />
+		<input type="button" value="중지" />
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+ <style type="text/css">
+  table{width: 500px; border: 5px double skyblue; }
+  th,td{border:1px gray solid ;padding:3px}
+ </style>
+ <script type="text/javascript">
+   //구구단 출력
+   /* function guguDan(){
+	   var divEle = document.getElementById("div");
+	   var str="";
+	   //구구단 출력
+	   str+="<table style='border:double red 5px;width:400px'>";
+	   for(var i=1; i <= 9; i++){//9행
+		   str+="<tr>";
+		   for(var j=2; j <=9 ; j++){//8열
+			   str+="<td>"+j+"*"+i+"="+(i*j)+"</td>";
+		   }
+		   str+="</tr>";
+	   }
+	   str+="</table>";
+	   
+	   divEle.innerHTML=str;
+	   
+   } */
+   
+   function guguDan(){
+	  
+	   var str="";
+	   //구구단 출력
+	   str+="<table>";
+	   //str+="<table style='border:double red 5px;width:400px'>";
+	   for(var i=1; i <= 9; i++){//9행
+		   str+="<tr>";
+		   for(var j=2; j <=9 ; j++){//8열
+			   str+="<td>"+j+"*"+i+"="+(i*j)+"</td>";
+		   }
+		   str+="</tr>";
+	   }
+	   str+="</table>";
+	   
+	   var divEle = document.getElementById("div");
+	   divEle.innerHTML=str;
+	   
+   }
+ 
+   //guguDan();
+  
+ </script>
+</head>
+<body onload="guguDan()">
+<h1> 구구단을 출력하자-----!</h1>
+  <div id="div"></div>
+</body>
+</html>
+
+
+
+
+

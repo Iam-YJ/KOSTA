@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+ <style type="text/css">
+  table{width: 800px; border: 5px double skyblue; }
+  th,td{border:1px gray solid ;padding:3px}
+ </style>
+ <script type="text/javascript">
+    function gugudan(){
+	   //구구단 출력
+	   document.write("<table>");
+	   for(var i=1; i <= 9; i++){//9행
+		   document.write("<tr>");
+		   for(var j=2; j <=9 ; j++){//8열
+			   document.write(`<td>${j}*${i} = ${i*j}</td>`);
+		   }
+		   document.write("</tr>");
+	   }
+	   document.write("</table>");
+	   
+    }
+ 
+    //함수 호출
+    //gugudan();
+  
+ </script>
+</head>
+<body  onload="gugudan()">
+  <h1> 구구단을 출력하자!</h1>
+</body>
+</html>
+
+
+
+
+

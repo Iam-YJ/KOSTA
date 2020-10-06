@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>Math 관련 함수</h3>
+	<script>
+		document.write("Math.random() = "+Math.random() + "<br>"); //0.0 ~ 0.999
+		
+		var nansu = Math.floor(Math.random()*5);
+		document.write("nansu = "+nansu+"<br>"); 
+		
+	</script>
+</body>
+</html>

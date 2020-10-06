@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	function test() {
+		console.log("hi");
+
+		var color = [ "red", "pink", "purple" ];
+		var num = 0;
+		
+		for (i = 0; i < color.length; i++) {
+			if(num ==3){
+				num = 0;
+			}
+			document.bgColor(color[num]);
+			num++;
+		}
+		setTimeout("test()", 1000); // 1초 후에 test()함수 호출한다
+		//보통 함수 아래 넣어서 재귀 형식으로 쓴다
+		//1초 후에 다시 돌아오고 다시 돌아오는 형식..
+	}
+
+	//setInterval("test()",1000); //1초마다 test()함수 호출한다
+</script>
+
+</head>
+<body onload="test()">
+
+</body>
+</html>

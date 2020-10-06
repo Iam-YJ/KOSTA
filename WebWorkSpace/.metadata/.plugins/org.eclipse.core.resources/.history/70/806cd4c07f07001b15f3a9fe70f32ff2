@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	function backColorChange() {
+		var num = Math.random()*10+1;
+		document.viscolor();
+	}
+</script>
+
+</head>
+<body onload = "backColorChange()">
+</body>
+</html>

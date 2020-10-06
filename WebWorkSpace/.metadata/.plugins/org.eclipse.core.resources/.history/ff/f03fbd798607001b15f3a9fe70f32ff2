@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>Text 객체 접근하기</h3>
+
+	<form action="" method="get" name="f" id="f">
+		<label for="input">입력 : </label> <input type="text" name="input" />
+
+		출력 : <input type="text" name="output" size="10" /> 
+		<input type="button" value="옮기기" /><p>
+			
+		<textarea rows="10" cols="20"></textarea>
+	</form>
+	
+	<div id="result"/>
+</body>
+</html>

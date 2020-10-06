@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+#result {
+	width: 200px;
+	height: 100px;
+	border: solid red 3px;
+}
+</style>
+<script>
+	function textMove() {
+		//alert(1)
+		//input text 박스의 값을 가져온다
+		var inputEle = window.document.f.input ; 
+		if(inputEle.value == ""){
+			alert("값을 입력해주세요");
+			inputEle.focus(); //커서 놓기
+			return; // 함수를 빠져나가라 
+		}
+		
+		//그 값에 output에 넣기
+		document.getElementById("result").innerHTML = inputEle.value;
+		//그 값을 div에 넣기
+		div = documennt.f.output.value;
+		
+		//input의 값은 지우기
+		inputEle.clear;
+		
+		//input에 커서 놓기 
+	}
+</script>
+</head>
+<body>
+	<h3>Text 객체 접근하기</h3>
+
+	<form action="" method="get" name="f" id="f">
+		<label for="input">입력 : </label> <input type="text" name="input" />
+
+		출력 : <input type="text" name="output" size="10" /> <input
+			type="button" value="옮기기" onclick="textMove()" />
+		<p>
+	</form>
+
+	<div id="result"></div>
+</body>
+</html>
