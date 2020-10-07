@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+table {
+	width: 600px; height: 500px; border: 5px solid pink;
+	margin: auto;
+} 
+
+tr, td {
+	width:1px;border: 1px solid black;
+	text-align:center;
+}
+
+td:nth-child(1){
+	width:1px;border: 1px solid black;
+	color:red ;
+	text-align:center;
+}
+
+td:nth-child(7){
+	width:1px;border: 1px solid black;
+	color:blue ;
+	text-align:center;
+}
+</style>
+<script type="text/javascript">
+	var today = new Date();
+	var mfd = new Date(today.getFullYear(), today.getMonth(), 1);
+	var endDays = new Array (31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+	var lastDay = endDays[today.getMonth()];
+	var week = Math.ceil((mfd.getDay()+lastDay)/7);
+	var date = 1;
+	var start = 0;
+
+	document.write("<table>");
+		document.write("<tr>");
+			document.write("<td>");
+				document.write("일");
+			document.write("</td>");
+			document.write("<td>");
+				document.write("월");
+			document.write("</td>");
+			document.write("<td>");
+				document.write("화");
+			document.write("</td>");
+			document.write("<td>");
+				document.write("수");
+			document.write("</td>");
+			document.write("<td>");
+				document.write("목");
+			document.write("</td>");
+			document.write("<td>");
+				document.write("금");
+			document.write("</td>");
+			document.write("<td>");
+				document.write("토");
+			document.write("</td>");
+		document.write("</tr>");
+	for(var i=0; i<week; i++){
+		document.write("<tr>");
+		for(var j=0; j<7; j++){
+			document.write("<td>");
+			if(start < mfd.getDay()){
+		   		document.write("♥");
+           		start++; 
+        	} else if(date > lastDay){
+           		document.write("★"); 
+       		} else if(date == today.getDate()){
+           		document.write("<span style='color:red'>"+date+"<span>");
+           		date++;
+        	} else{
+				document.write(date);
+           		date++;
+			}
+			document.write("</td>");
+		}
+		document.write("</tr>");
+	}
+
+	
+	document.write("</table>");
+</script>
+</head>
+
+<body>
+	<div class="calendar">
+	</div>
+</body>
+</html>

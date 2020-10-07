@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+/*id로 적용하기*/
+#a{}
+#b{}
+#c{}
+
+/*class로 적용하기*/
+.a{}
+.b{}
+.c{}
+
+</style>
+</head>
+<body>
+	<h1>&lt;span&gt;span 태그 - inline 요소</h1>
+	<span id="a">span요소1</span> <span id="b">span요소2</span> <span id="c">span요소2</span>
+
+	<hr>
+
+	<h1>div 태그 - block 요소</h1>
+	<div class="a">div요소1</div><div class="b">div요소2</div><div class="c">div요소3</div>
+
+</body>
+</html>

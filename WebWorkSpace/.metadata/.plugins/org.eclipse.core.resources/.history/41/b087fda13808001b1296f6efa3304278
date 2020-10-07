@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>&lt;span&gt;span 태그 - inline 요소</h1>
+	<span>span요소1</span> <span>span요소2</span> <span>span요소2</span>
+
+	<hr>
+
+	<h1>div 태그 - block 요소</h1>
+	<div>div요소1</div><div>div요소2</div><div>div요소3</div>
+
+</body>
+</html>
