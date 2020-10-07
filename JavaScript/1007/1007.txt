@@ -1,0 +1,9 @@
+
+1) <span></span> : in-line 요소
+
+2) <div></div> : block 요소
+
+css 속성
+ - display
+ - float 
+ - clear
