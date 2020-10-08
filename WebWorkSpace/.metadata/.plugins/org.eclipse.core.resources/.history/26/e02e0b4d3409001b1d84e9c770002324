@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<style>
+table {
+	width: 800px;
+	height: 600px;
+	border: 1px red solid;
+}
+
+th, td {
+	border: 1px gray solid;
+}
+
+table tr:first-child {
+	height: 100px;
+}
+
+table tr:last-child {
+	height: 100px;
+}
+</style>
+
+<body>
+
+	<table>
+		<tr>
+			<td colspan="2">메뉴</td>
+		</tr>
+
+		<tr>
+			<td>왼쪽</td>
+			<td>가운데</td>
+		</tr>
+
+		<tr>
+			<td colspan="2">Programmer 장희정</td>
+		</tr>
+
+	</table>
+
+</body>
+</html>

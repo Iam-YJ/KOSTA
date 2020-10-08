@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+로그인폼 만들기 <br>
+
+<!-- target 속성 = "_blank | _top | _parent " -->
+<a href="register.html" target="">회원가입</a>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<style>
+table : {
+	width: 800px;
+	height: 600px;
+	border: 1px red solid;
+}
+</style>
+
+<body>
+
+	<table>
+		<tr>
+			<td colspan="2">메뉴</td>
+		</tr>
+
+		<tr>
+			<td>왼쪽</td>
+			<td>가운데</td>
+		</tr>
+
+		<tr>
+			<td colspan="2">장희정</td>
+		</tr>
+
+	</table>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+로그인폼 만들기 <br>
+
+<!-- target 속성(창의 위치 제어하게 함) = "_blank | _top | _parent  | 창이름 | self " -->
+<a href="register.html" target="_self">회원가입</a>
+
+</body>
+</html>
