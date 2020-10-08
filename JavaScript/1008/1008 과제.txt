@@ -1,0 +1,11 @@
+1008 과제
+
+* css 속성 중
+  position 속성 
+  left, right, top, bottom 속성 
+
+ 움직일 때 setInterval.. 써서 움직이는게 보이도록 해야함 ..
+
+
+버튼을 또 누르면 이미 실행중입니다 alert
+
