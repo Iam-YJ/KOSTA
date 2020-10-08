@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html  onmousemove="mousePosition()">
+ <head>
+  <title> New Document </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  
+  <script type="text/javascript">
+  function imgChange(imgObj){
+	  var image = ["tiger.gif","dog.gif","cat.gif","monkey.gif"];
+	  
+	  for(i = 0; i<image.length; i++){
+	  	imgObj.src = "image/"+image[i];
+	  }
+	  
+  }
+  
+  </script>
+  
+  
+ </head>
+
+ <body>
+
+ <img src="img/cat.gif" id="img" onMouseover="imgChange(this)"/>
+  
+ </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--  <html  onmousemove="mousePosition()">-->
+ <head>
+  <title> New Document </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  
+  <script type="text/javascript">
+  var im = ["cat.gif","tiger.gif","dog.gif","monkey.gif"];
+  
+  function imgChange(){
+	  
+	 var imgObj = document.getElementById("img");
+	 imgObj.src = "img/"+imgName[0];	  
+  }
+  
+  </script>
+  
+  
+ </head>
+
+ <body onload="imgChange()">
+
+ <img src="img/cat.gif" id="img"/>
+  
+ </body>
+</html>

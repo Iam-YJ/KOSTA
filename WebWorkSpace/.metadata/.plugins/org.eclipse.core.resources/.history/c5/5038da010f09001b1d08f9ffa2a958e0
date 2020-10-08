@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>New Document</title>
+<script>
+	//submit 버튼 클릭했을 때
+	function check(fr) { //fr은 this를 전달받은 form 객체
+		//alert(fr);
+		//유효성 체크(값 입력유무, 비번일치..)
+		if (fr.name.value = "") {
+			alert("이름을 입력하세요");
+			fr.name.focus();
+			return false;
+		}
+
+	}
+</script>
+</head>
+
+<body>
+	<h2>onsubmit 이벤트</h2>
+	<form name="f" action="http://www.daum.net" onsubmit="return check(this)">
+		이름 : <input type="text" name="name" /> <br> 
+		아이디 : <input type="text" name="id" /> <br> 
+		비번 : <input type="text" name="pwd" /> <br> 
+		<input type="submit" value="전송" /> 
+		<input type="reset" value="취소" /> 
+		<input type="button" value="전송하기" onclick="btnCheck(form)" />
+	</form>
+
+</body>
+</html>
