@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+div {
+	width: 300px;
+	height: 200px;
+	border: 1px red solid;
+}
+</style>
+<script>
+//테이블 만들어주는거 - insertRow.. insertCol...
+
+var index = 0;
+	function elementCreate() {
+		var h3 = document.createElement("h3"); //태그 자체를 만드는 것이여서 <> 안넣어도 됨
+		var text = document.createTextNode("쉬고 싶다" + index);
+		
+		//h3에 text를 붙인다
+		//h3.appendChild(text); //<h3>쉬고싶다</h3>
+		
+		//h3에 속성 추가
+		//h3.setAttribute("id", "a"+index); //속성, 값
+		index++;
+		
+		//h3을 화면에 추가한다
+		//document.getElementById("result").appendChild(h3);
+		
+		
+		//innerHTML 변경
+		document.getElementById("result").innerHTML = "<h3 id=a"+index+"> 쉬어용 </h3>";
+		
+	}
+
+	function elementRemove() {
+		
+		var divEle = document.getElementById("result");
+		console.log("divEle.parentNode = "+divEle.parentNode);
+		console.log("divEle.firstChild = "+divEle.firstChild);
+		console.log("divEle.lastChild = "+divEle.lastChild);
+		console.log("divEle.previousSibling = "+divEle.previousSibling);
+		console.log("divEle.nextSibling = "+divEle.nextSibling);
+		
+		console.log("divEle.firstChild.nextSibling = "+ divEle.firstChild.nextSibling);
+		
+		//삭제 -> 부모노드.removeChild(삭제대상)
+		divEle.removeChild(divEle.lastChild);
+		
+		//divEle.parentNode.removeChild(divEle.parentNode.lastChild);
+		
+	}
+
+	onload = function() {
+		var btnCreate = document.getElementById("create");
+		var btnDelete = document.getElementById("delete");
+
+		if (window.addEventListener) { //IE 9이상 지원..
+			btnCreate.addEventListener("click", elementCreate, false);
+			btnDelete.addEventListener("click", elementRemove, false);
+		} else { //IE 8 이하 
+			btnCreate.attachEvent("onclick", elementCreate, false); //버블링 방식만 지원 
+			btnDelete.attachEvent("onclick", elementRemove, false);
+		}
+
+	}
+</script>
+
+</head>
+<body><h1>Dom 생성 및 삭제</h1>
+
+<form>
+	<input type="button" value="생성하기" id="create"> 
+	<input type="button" value="삭제하기" id="delete">
+</form><hr><div id="result"></div>
+
+</body>
+</html>

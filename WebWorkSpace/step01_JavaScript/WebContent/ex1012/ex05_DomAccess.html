@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> New Document </title>
+  
+  <script type="text/javascript">
+  	
+  //name 찾기
+  function nameCheck(){
+	  //alert(1);
+	  var name = prompt("찾을 name은?");
+	  var text = prompt("입력내용?");
+	  
+	  //name으로 element 찾기
+	 var nameList =  document.getElementsByName(name);
+	  //alert(nameList + ", "+nameList.length);
+	  for(var i=0; i<nameList.length; i++){
+		  nameList[i].value = text; //<h1> 안에는 값 변경시에  innerHTML로 들어가야 한다
+		  nameList[i].style.border="double red 5px";
+	  }
+	  
+  }
+  
+  //tag로 찾기
+  function tagCheck(){
+	  //alert(2);
+	  var name = prompt("찾을 태그 이름은?");
+	  var text = prompt("입력내용?");
+	  
+	  //name으로 element 찾기
+	 var nameList =  document.getElementsByTagName(name);
+	  //alert(nameList + ", "+nameList.length);
+	  for(var i=0; i<nameList.length; i++){
+		  nameList[i].value = text;
+		  nameList[i].style.border="double blue 5px";
+	  }
+  }
+  
+  
+  	//이벤트 등록
+  	onload = function(){
+	  	document.getElementById("nameSearch").onclick = nameCheck; //함수 () x --> 함수 이름만 ! o
+	  	document.getElementById("tagSearch").onclick = tagCheck;
+	  	document.getElementById("idSearch").onclick = function(){
+	  		
+	  		var name = prompt("찾을 ID 이름은?");
+	  	  var text = prompt("입력내용?");
+	  	  
+	  	  //name으로 element 찾기
+	  	 var nameList =  document.getElementById(name);
+	  	  //alert(nameList + ", "+nameList.length);
+	  	
+	  	  //for(var i=0; i<nameList.length; i++){
+	  	//	  nameList[i].value = text;
+	  		//  nameList[i].style.border="double purple 5px";
+	  	 // } //배열로 받아들이지 못해서
+	  	  
+	  	   nameList.value = text;
+	  		nameList.style.border="double purple 5px";
+	  		//이렇게하면 첫번째것만(제일 먼저 있는 것) 찾음 
+	  		
+	  	};
+	  	
+  	}
+  	
+  	
+  </script>
+   
+     
+  
+ </head>
+
+ <body >
+ <h1> Dom 접근 방식 실습 </h1>
+
+ <form>
+    ID : <Input type="text" name="id" id="id" /> </p>
+	name : <Input type="text" name="name" id="name" /> </p>
+	age : <Input type="text" name="age" id="age" /> </p>
+
+    addr1 : <Input type="text" name="addr" id="addr" value="dd"/> </p>
+	addr2 : <Input type="text" name="addr" id="addr" /> </p>
+
+	<Input type="button" value="name 찾기"  id="nameSearch" /> 
+	<Input type="button" value="tag 찾기" id="tagSearch" /> 
+	<Input type="button" value="id 찾기" id="idSearch" /> 
+
+
+ </form>
+  
+ </body>
+</html>

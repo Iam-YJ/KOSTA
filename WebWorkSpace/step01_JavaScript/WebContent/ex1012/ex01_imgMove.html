@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html onclick="imgPositionChange()" onmousemove="imgPositionChange()">
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<style>
+/*이미지 원하는 위치로 이동 
+: element를 이동 -> top, left, right, bottom 속성
+					반드시 position 속성과 함께 사용한다. */
+
+img {
+	position: absolute;
+	left: 100px;
+	top: 100px;
+}
+</style>
+
+<script>
+	function imgPositionChange() {
+		//마우스의 좌표 구한다
+		var x = event.clientX;
+		var y = event.clientY;
+		
+		document.images[0].style.left = x + "px";
+		document.images[0].style.top = y + "px";
+
+		console.log("x = " + x + "y = " + y);
+
+	}
+</script>
+<body>
+	<h1>img 움직이기</h1>
+	<img src="../ex1008/img/cat.gif"/ >
+</body>
+</html>
