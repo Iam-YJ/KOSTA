@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.5.1.js"></script>
+<script>
+	$().ready(function() {
+		//alert("hi");
+		/* $("*").css("color","blue");
+		
+		$("li").css("fontFamily","궁서체");
+		$("li").css("font-family","고딕체");
+		 */
+		 
+		//h3, h4에 css 적용, 체인기법..
+		/* $("h3,h4")
+		.css("color","red")
+		.css("fontFamily","궁서체")
+		.css("textDecoration","underline"); */
+		
+		 
+		 //class로 찾기
+		// $("div.div").css("backgroundColor","gold"); // <div class="div">
+		
+		
+		//id로 찾기
+		//$("#tag").css("color","red");
+		
+		//하위 요소 찾기
+	//	$("div ol li:eq(0)").css("color","blue");
+	//	$("div ol li:eq(2)").css("color","blue");
+	//	$("div ol li:gt(1)").css("color","blue");
+	//	$("div ol li:lt(2)").css("color","blue");
+		
+	//	$("div ol li:not(:lt(2))").css("color","blue");
+
+	});
+</script>
+
+</head>
+<body>
+
+	<h3>jQuery 기본 selector</h3>
+	<h4>웹 프로그래밍</h4>
+	<div class="div">
+		<ol>
+			<!-- 순서있는 목차 만드는 태그 ol -->
+			<li>jsp</li>
+			<li id="tag">javaScript</li>
+			<li>jQuery</li>
+			<li>Ajax</li>
+		</ol>
+	</div>
+
+
+</body>
+</html>

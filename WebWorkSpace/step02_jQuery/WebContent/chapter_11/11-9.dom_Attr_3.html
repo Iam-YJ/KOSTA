@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style>
+	div#bigImage{border:1px solid red;width:200px;height:200px;}
+</style>
+<script src="../js/jquery-3.5.1.js"></script>
+</head>
+
+<script>
+
+$(function(){
+	//$("#img").mouseover().mouseout();
+	
+	$("img").attr({width:80, height:80});
+	
+	$("div>img").mouseover(function(){
+			//alert("hi")
+			//이미지 크기(가로, 높이) 변경, src 변경 
+			
+			var name = $(this).attr("src");
+			
+			console.log(name);
+			
+			//bigImage의 width, height 구한다.
+			// $().attr("width")    $.css("width");
+			var w =  $("#bidImage").css("width")
+			var h =  $("#bidImage").css("height")
+			
+			var img = `<img src='${name}' width='${w}' height='${h}'>`;
+			
+			$("#bigImage").empty();
+			$("#bigImage").append(img);
+		
+		});	
+});
+
+
+</script>
+
+<body>
+	
+<div id="product">
+    <img src="img/android.jpg" />
+    <img src="img/spring.jpg" />
+    <img src="img/unity.jpg" />  
+	  
+    <div id="bigImage"> </div>
+</div>
+</body>
+</html>
