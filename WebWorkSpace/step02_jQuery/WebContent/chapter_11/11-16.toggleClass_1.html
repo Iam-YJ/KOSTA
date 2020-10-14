@@ -7,9 +7,14 @@
 	.hidden{display:none;}
 	
 </style>
-<script src="../lib/jquery-1.9.1.min.js"></script>
+<script src="../js/jquery-3.5.1.js"></script>
 <script>
-	
+	$(function(){
+		$("#btn").click(function(){
+			$("#myLayer").toggleClass("hidden");
+		});
+		
+	});
 </script>
 </head>
 <body>

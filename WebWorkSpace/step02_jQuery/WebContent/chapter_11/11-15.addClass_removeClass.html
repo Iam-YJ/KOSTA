@@ -6,9 +6,20 @@
 <style>
 	.h1Css{background-color:yellow;border:1px solid red;}
 </style>
-<script src="../lib/jquery-1.9.1.min.js"></script>
+<script src="../js/jquery-3.5.1.js"></script>
 <script>
 	
+	$(function(){
+		$("h1").mouseover(function(){
+			//$(this).css().css();
+			$(this).addClass("h1Css"); //style 영역에 정의되어 있는 .h1Css 적용한다 
+			
+			
+		}).mouseout(function(){
+			$(this).removeClass("h1Css"); 
+			
+		});
+	});
 </script>
 </head>
 <body>

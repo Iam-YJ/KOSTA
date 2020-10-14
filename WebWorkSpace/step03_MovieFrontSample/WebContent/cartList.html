@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<link  rel="stylesheet" type="text/css" href="css/basic.css"  />
+<style type="text/css">
+.poster {
+	width : 150px;
+	height : 150px;
+	
+}
+
+a{text-decoration: none}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+ $(function(){
+	  //sessionStorage정보 가져오기
+	 
+	 for(var i=0; i < localStorage.length ; i++){
+		 var key = localStorage.key(i);
+		 var value = localStorage.getItem(key);
+		 
+	 	var arr = value.split(",");
+	 	
+	 	
+	 	$("#content").append("<tr>")
+	 	.append("<td><img class=poster src="+arr[1]+"></td>")
+	 	.append("<td>"+key+"</td>")
+	 	.append("<td>"+arr[0]+"</td>")
+	 	.append("<td>"+arr[2]+"</td>")
+	 	.append("<td><input type='button' id='del' name='del' value='삭제'</td></tr>");
+	 	//"<td><button id='delete' vallue'"+key+"'>삭제</button><</td></tr>"
+	 
+	 }
+	
+	  
+	 $("[name=del]").click(function(){
+			// alert("hello")
+		//localStorage.removeItem(this);
+		
+		var clickedRow = $(this).parent().parent();
+		var cls = clickedRow.attr("tbody")
+		clickedRow.remove();
+			
+		});	
+	  
+/* 	 $('#deleteCart').on("click",function(){
+		 var y = confirm($(this).val + "을 삭제하시겠습니까?");
+		 
+		 if(y){
+			 localStorage.removeItem($(this).val());
+			 refreshPage();
+		 }
+	 }); */
+	  
+	  
+ });
+</script>
+</head>
+<body>
+		<article class="main">
+		<section>
+			<table width="80%"  align="center"  >
+			<caption class="caption">찜 리스트</caption>
+			<thead>
+				<tr>
+				<th>이미지</th>
+				<th>상품번호</th>
+				<th>상품이름</th>
+				<th>가격</th>
+				<th>삭제</th>
+				</tr>
+			</thead>
+			<tbody id="content">
+			</tbody>
+			</table>
+		</section>
+		<section  class="toalprice" id="price">
+			
+		</section>
+		<section class="link">
+			<table   align="center">
+			<tr><td align="center">
+				<a href="">주문하러 가기</a> 
+				<a href="index.html">DVD LIST</a> 
+			</td></tr>
+			</table>
+		</section>
+		</article>
+</body>
+</html>
