@@ -6,11 +6,14 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
+		<item key="selection" value="local"/>
 		<list key="findhistory">
+			<item value="session"/>
 			<item value="document.write(&quot;str.substring(0,3) : &quot; + str.slice(0,3) + &quot;&lt;br&quot;);"/>
 			<item value="document.write(&quot;str.substring(0,3) : &quot; + str.slice(0,3) + &quot;&lt;br&gt;&quot;);"/>
 		</list>
 		<list key="replacehistory">
+			<item value="local"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

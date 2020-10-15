@@ -17,11 +17,22 @@
 <script>
 $(function() {
 	$("#next").click(function(){
-		$("img:eq(0)").animate({marginLeft:"-=100px"},1000);
+		if($("#img:eq(0)").css("marginLeft") != "-400px"){
+			$("img:eq(0)").animate({marginLeft:"-=100px"},1000);
+		}else{
+			alert("다음 이미지는 없습니다");
+		}
+	
 	});
 	
 	$("#prev").click(function(){
-		$("img:eq(0)").animate({marginLeft:"+=100px"},1000);
+		
+		
+		if($("#img:eq(0)").css("marginLeft") != "0px"){
+			$("img:eq(0)").animate({marginLeft:"+=100px"},1000);
+		}else{
+			alert("다음 이미지는 없습니다");
+		}
 	});
 	
 	
