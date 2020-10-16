@@ -10,6 +10,7 @@ ex1016 과제
 
 left.html이 아닌 jsp로 바꿔서 로그인폼, 회원가입은 그대로 쓸 것임
 로그인을 하면 left 화면 전체가 로그인 페이지로 바뀌어야 함 
+(left ~님이 접속중입니다.. center 로그인 상태입니다.)
 left.jsp 에서 조건문 써서 조건들 만족시켜야 함
 
 center.html도 center.jsp로 바꿔서 if문 써서 조건들 만족시켜야 한다
