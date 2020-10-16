@@ -1,0 +1,29 @@
+ex1015
+
+-액션태그
+1) include
+  <jsp:include page=""/>
+   :서블릿 문서가 각각 만들어져서
+	그 결과가 메인에 합쳐진다
+	-> 변수 공유 안한다. 각각 독립적으로 실행된다 
+        만약, include된 문서에서 메인의 변수(정보)를 사용하고 싶다면
+		-> param(parameter)의 정보를 넘겨서 사용할 수 있다.
+	<jsp:param name="" value="" />
+
+
+  * 참고 비교 --> include 지시어
+    <%@ include file="" %>
+	: 서블릿 문서 한개만 만들어진다 
+	   -> 즉 include 된 소스가 메인 합쳐진다
+		변수들을 서로 함께 사용할 수 있다 
+		동일한 이름변수 사용할 수 없다 
+
+2) forward 
+  <jsp:forward page="이동페이지"/>
+
+  <jsp:forward page="이동페이지"/>
+	<jsp:param name="" value=""/>
+  </jsp:forward>
+
+: 특정한 페이지를 포워딩 시키는 방법으로 
+기존의 request와 response의 정보가 유지되면서 이동한다 
