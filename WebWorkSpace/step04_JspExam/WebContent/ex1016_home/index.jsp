@@ -34,13 +34,13 @@
 <table>
  <tr>
  <td colspan="2">
- <%@ include file="top.jsp" %><br>
+ <%@ include file="top.jsp" %><br> <!-- top.jsp의 코드가 실행시에 이 안으로 들어옴. 파일이(서블릿문서) 1개로  -->
 
  </td>
  </tr>
  <tr>
   <td><iframe src="left.jsp" name="left" width="100%" height="100%" frameborder="0"></iframe></td>
-  <td><iframe src="" name="center" width="100%" height="100%" frameborder="0"></iframe></td>
+  <td><iframe src="center.jsp" name="center" width="100%" height="100%" frameborder="0"></iframe></td>
  </tr>
  <tr>
   

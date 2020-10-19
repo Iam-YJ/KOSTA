@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="local"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="aler"/>
+			<item value="alert"/>
 			<item value="session"/>
 			<item value="document.write(&quot;str.substring(0,3) : &quot; + str.slice(0,3) + &quot;&lt;br&quot;);"/>
 			<item value="document.write(&quot;str.substring(0,3) : &quot; + str.slice(0,3) + &quot;&lt;br&gt;&quot;);"/>

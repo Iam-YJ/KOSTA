@@ -10,7 +10,8 @@
 <body>
 
 	<%
-		request.setCharacterEncoding("utf-8");
+	
+	request.setCharacterEncoding("utf-8");
 
 	String dbid = "1111";
 	String dbpwd = "1111";
@@ -19,9 +20,20 @@
 	String pwd = request.getParameter("pwd");
 
 	if (dbid.equals(id) && dbpwd.equals(pwd)) {
-		session.setAttribute("sessionId", id);
-		response.sendRedirect("loginOK.jsp");
-
+		//세션에 현재 인증된 사용자 정보 저장하기 
+		session.setAttribute("sessionId",id);	
+		out.println("로그인 중");
+		
+		
+		%>
+		<br>
+		<button type="submit">로그아웃</button> 
+ 		<!-- <script>
+		top.location.href="index.jsp";
+		</script> -->
+		
+		<% 
+		
 	} else {
 	%>
 	<script>

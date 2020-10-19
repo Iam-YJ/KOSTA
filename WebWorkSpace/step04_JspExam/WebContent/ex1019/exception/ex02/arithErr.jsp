@@ -3,11 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
-<script src="../js/jquery-3.5.1.js"></script>
 </head>
 <body>
- <h2>회원가입하기..</h2>
+<h3>0으로 나누지 마세욥</h3>
 </body>
 </html>

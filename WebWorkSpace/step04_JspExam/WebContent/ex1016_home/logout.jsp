@@ -10,7 +10,10 @@
 
 <%
 	session.invalidate();
-	response.sendRedirect("LoginForm.html");
+	//response.sendRedirect("index.jsp");
 %>
+<script>
+top.location.href="index.jsp"; /* 전체가 새로고침 되기 위해 top. 으로 쓴다  */
+</script>
 </body>
 </html>

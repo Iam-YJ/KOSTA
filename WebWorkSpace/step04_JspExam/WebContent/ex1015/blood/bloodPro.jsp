@@ -29,7 +29,7 @@
 		
 <jsp:forward page='<%=blood+".jsp" %>'>
 	<jsp:param value="<%=name %>" name="name"/>
-	<jsp:param value="<%=blood %>" name="blood"/>
+
 	
 </jsp:forward>
 

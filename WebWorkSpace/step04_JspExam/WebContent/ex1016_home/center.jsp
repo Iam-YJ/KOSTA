@@ -7,6 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%
+	if(session.getAttribute("sessionId")==null){
+		out.print("로그인 상태가 아닙니다.");
+	}else{
+		out.print("로그인 상태입니다.");
+	}
+%>
 
 </body>
 </html>
