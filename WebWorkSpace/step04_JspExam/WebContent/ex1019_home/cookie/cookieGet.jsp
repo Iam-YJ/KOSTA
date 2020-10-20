@@ -15,36 +15,33 @@
 Date date = new Date();
 Cookie lastDate= null;
 Cookie currentDate = null;
-boolean exsist = false;
-long oldTime=0;
+boolean exsist = false; //쿠키 존재 여부 
+long oldTime=System.currentTimeMillis();
 String newValue =  "" + System.currentTimeMillis();  //현재 시간을 의미
 
 Cookie [] cookies = request.getCookies();
 
 
 if(cookies != null){
-	%>
-	<h3>hi</h3>
-	<%
     for(Cookie co: cookies){
     	out.println(co.getName());
-        if( co.getName().equals("MyCookie1") ){
+        if( co.getName().equals("lastDate") ){
         	lastDate = co;
-        	oldTime = Long.valueOf(co.getValue());
-            date=new Date(oldTime);
             exsist = true;
             break;
         }
        
     }
    
-}
+} //하기 위한 준비 작업 
 %>
 <%
-	if(!exsist){
-		  lastDate = new Cookie("MyCookie1", newValue); //새로운 쿠키 생성 후 
-	       lastDate.setMaxAge(60*60*24);    //최대 유효기간을 7일로 지정
-	       response.addCookie(lastDate); 
+	if(!exsist){//쿠키가 없다면 
+		  lastDate = new Cookie("lastDate", newValue); //새로운 쿠키 생성 후 
+	       lastDate.setMaxAge(60*60*24);//최대 유효기간을 7일로 지정
+	       lastDate.setPath("/");
+	       
+	     	response.addCookie(lastDate); 
 
 	
 		%>
@@ -56,11 +53,12 @@ if(cookies != null){
 	}else{
 		 lastDate = new Cookie("MyCookie1", newValue); //새로운 쿠키 생성 후 
 	       lastDate.setMaxAge(60*60*24);    //최대 유효기간을 7일로 지정
+	       lastDate.setPath("/");
 	       response.addCookie(lastDate);      //서버에 추가 요청한다(저장은 클라이언트에 )
 
 		
 		%>
-		<h3>당신의 마지막 접속일은 </h3><p><p>
+		<h3>당신의 마지막 접속일은 <%=date.toLocaleString() %> </h3><p><p>
 		<h3>현재 접속 시간 : <%=date %></h3><p>
 		<h3>다시 저장된 시간 : <%=lastDate.getValue() %></h3><p>
 		<%

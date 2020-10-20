@@ -8,8 +8,6 @@
 </head>
 <body>
 
-
-
 	<h3>
 		<%=request.getParameter("getName")%>님 로그인 중
 	</h3>

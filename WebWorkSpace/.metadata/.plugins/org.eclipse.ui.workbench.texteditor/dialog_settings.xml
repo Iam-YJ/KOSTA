@@ -6,12 +6,15 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="newValue"/>
+		<item key="selection" value="session time"/>
 		<list key="findhistory">
+			<item value="session time"/>
+			<item value="session"/>
+			<item value="sessiontime"/>
+			<item value="sessionTime"/>
 			<item value="newValue"/>
 			<item value="aler"/>
 			<item value="alert"/>
-			<item value="session"/>
 			<item value="document.write(&quot;str.substring(0,3) : &quot; + str.slice(0,3) + &quot;&lt;br&quot;);"/>
 			<item value="document.write(&quot;str.substring(0,3) : &quot; + str.slice(0,3) + &quot;&lt;br&gt;&quot;);"/>
 		</list>
@@ -20,7 +23,7 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="637"/>
+		<item key="DIALOG_X_ORIGIN" value="629"/>
 		<item key="DIALOG_Y_ORIGIN" value="222"/>
 		<item key="DIALOG_WIDTH" value="340"/>
 		<item key="DIALOG_HEIGHT" value="454"/>
