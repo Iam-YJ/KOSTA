@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>step06_InitServlet</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+   <!-- 모든 영역(servlet or jsp)에서 공유해서 사용할 init-param설정 -->
+   <context-param>
+     <param-name>fileName</param-name>
+     <param-value>c://Edu</param-value>
+   </context-param>
+   <context-param>
+     <param-name>driverName</param-name>
+     <param-value>jdbc.odbc.oracle.JdbcDriver</param-value>
+   </context-param>
+   
+  
+  <servlet>
+    <servlet-name>InitParamServlet</servlet-name>
+    <servlet-class>ex1020.servlet.InitParamServlet</servlet-class>
+    <init-param>
+      <param-name>id</param-name>
+      <param-value>jang</param-value>
+    </init-param>
+    <init-param>
+      <param-name>addr</param-name>
+      <param-value>서울</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>InitParamServlet</servlet-name>
+    <url-pattern>/init</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
+
+
+
+
+
+
+

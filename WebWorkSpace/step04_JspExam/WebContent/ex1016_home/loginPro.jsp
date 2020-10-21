@@ -6,6 +6,19 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+/* //alert(1);
+$(function(){
+	$("#logout").click(function(){
+		if(confirm("정말 로그아웃 할래?")){
+			//이동하기
+			alert("hi");
+			location.href = "logout.jsp";
+		}	
+	}); 
+	
+}); */
+</script>
 </head>
 <body>
 
@@ -22,15 +35,16 @@
 	if (dbid.equals(id) && dbpwd.equals(pwd)) {
 		//세션에 현재 인증된 사용자 정보 저장하기 
 		session.setAttribute("sessionId",id);	
-		out.println("로그인 중");
+		
+		//out.println("로그인 중");
 		
 		
 		%>
-		<br>
-		<button type="submit">로그아웃</button> 
- 		<!-- <script>
-		top.location.href="index.jsp";
-		</script> -->
+		<!-- <button type="submit" id="logout">로그아웃</button>  -->
+ 		<script>
+ 		/* location.href="left.jsp"; */
+		 top.location.href="index.jsp"; 
+		</script> 
 		
 		<% 
 		

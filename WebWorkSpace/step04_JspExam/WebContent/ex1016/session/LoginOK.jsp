@@ -36,7 +36,7 @@ if (session.getAttribute("sessionName") == null) {
     %>
     <script>
     alert("인증하고 오세요");
-   location.hreg = "LoginForm.html";
+   location.href = "LoginForm.html";
     </script>
     
     <% 

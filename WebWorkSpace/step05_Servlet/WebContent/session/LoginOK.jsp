@@ -47,7 +47,7 @@ if (session.getAttribute("id") == null) {
 }else{
 	%>
 	<h3><%=session.getAttribute("id")%>님 로그인중 <br>
-	<img src="<%=request.getContextPath()%>img/common.jpg"><p>
+	<img src="<%=request.getContextPath()%>/session/img/common.jpg"><p>
 	
 	<fieldset>
 	<legend>취미선택</legend>

@@ -51,7 +51,7 @@ if(cookies != null){
 		<%
 
 	}else{
-		 lastDate = new Cookie("MyCookie1", newValue); //새로운 쿠키 생성 후 
+		lastDate = new Cookie("MyCookie1", newValue); //새로운 쿠키 생성 후 
 	       lastDate.setMaxAge(60*60*24);    //최대 유효기간을 7일로 지정
 	       lastDate.setPath("/");
 	       response.addCookie(lastDate);      //서버에 추가 요청한다(저장은 클라이언트에 )
