@@ -1260,7 +1260,7 @@ create table upLoad(
   1. <c:out value="값 | 변수명" escapeXml="true|false" />
        escapeXml="true" 는 값에 태그 있으면 문자로 출력됨.
 
-  2. <c:set var="이름" value="값" />
+  2. <c:set var="이름" value="값" scope="page | request | session | application"/>
      주의 : value의 값은 무조건 String
             만약 value="${20}" 이면 숫자 20
                  value="${'20'}" 이면 문자 20 
