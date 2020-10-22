@@ -1,0 +1,8 @@
+XxxListener - interface
+
+
+1) ServletRequestListener - 서버가 시작되거나 끝날 때 만들어지는 것 
+
+2) HttpSessionListener - 세션이 만들어지거나 끝날 때 만들어지는 것
+
+3) ServletContextListener 
