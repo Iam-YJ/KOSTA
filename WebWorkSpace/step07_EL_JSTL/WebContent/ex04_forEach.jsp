@@ -92,7 +92,7 @@ ${h}, ${state.index} / ${state.count}<br>
 
 	<!-- 4. map은 radio 출력 -->
 	<fieldset>
-	<legend>나라선택</legend>
+	<legend>나라선택</legend>p
 	<c:forEach items="${bean.map }" var="map" varStatus="state">
 		<input type="radio" name="maoRadio" value="${map.getKey() }">${map.getValue() }
 		<input type="radio" name="maoRadio" value="${map.getKey() }">${map.getKey() }
