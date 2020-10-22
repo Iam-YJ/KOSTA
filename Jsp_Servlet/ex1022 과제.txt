@@ -1,0 +1,12 @@
+ex1022 과제
+
+
+log.txt 파일에 
+접속자 ip, 접속 날짜, 접속시간, 총 요청 걸린 ms
+request.ip                       (사전처리 왔을 때 current.milisecond 
+				사후처리 current.milisecont 사이의 갭 구하기
+
+누군가 접속을 하면 계속 파일에 누적되어서... 
+초기화 될 때 만든 후에 
+사후처리에서 current.,ilisecond 한 다음에 -> writer -> flush 하기 
+사전처리에서 접속자ip.. 등등 구하기
