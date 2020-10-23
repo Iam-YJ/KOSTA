@@ -1,0 +1,64 @@
+* 파일업로드 하기
+  
+   - 파일업로드에 필요한 컴포넌트(라이브러리) 다운로드
+     http://www.servlets.com/cos/
+     
+   -다운로드한 라이브러리를 압축을 풀어 lib폴더에 있는
+    cos.jar를 파일을 이클립스 WEB-INf/lib폴더에 넣는다.
+
+
+  - 파일업로드 폼.
+  <form name="f" action="upLoadPro.jsp" method="post"enctype="multipart/form-data">
+   이름 : <input type="text"  name="name"><br>
+    제목 : <input type="text"  name="subject"><br>
+    파일첨부 : <input type="file"  name="file"><br>
+     <input type="submit"  value="전송">
+    <input type="reset"  value="취소">
+</form>
+
+   *주의 : method는 반드시 post 방식
+           enctype="multipart/form-data"  필수
+
+ 
+  - 폼으로 넘어온 값 받기(파일업로드)
+    
+   MultipartRequest m =
+	  new MultipartRequest(request , 저장폴더 , 최대용량 ,
+             한글인코딩 , 같은이름파일처리방법 );
+
+
+   m.getParameter("name") ;//text박스의 값 가져오기
+   m.getFilesystemName("file"); //file 박스의 첨부파일가져오기
+
+   File f = m.getFile("file") ;//첨부된 파일의 정보 
+
+-------------------------------------------------------------
+ -파일다운로드 기능(Servlet문서 작성)
+ 
+  1. HttpServlet 상속받는다.
+
+  2. 기능 
+  
+   - 업로드된 파일의 경로 알아오기
+   - 한글파일 인코딩 설정(8859_1  -> euc-kr 변환)
+   - 요청된 파일이름을 File객체 변환
+   - ContentType설정
+       => 서버가 클라이언트쪽으로 보낼때 인코딩 설정 , MIMEType설정
+      * 브라우져가 해석가능한 파일을 열지못하도록 설정
+         - 한글인코딩( euc-kr  -> 8859_1 변환)
+         - 헤더설정(헤더란 http에게 자신의 파일의 정체를 알리는것)
+
+     response.setContentType("application/actet-stream");
+     response.setHeader("Content-Disposition",  "attachment;filename=파일이름");
+
+
+   -실제파일을 클라이언트쪽으로 다운로드 한다.
+    (InputStream / OutputStream) 
+
+ 
+*다운로드기능 servlet 링크걸기
+ <a href="/프로젝트명/서블릿클리스이름?fileName=파일이름">
+    파일이름
+ </a>
+
+========================================================
