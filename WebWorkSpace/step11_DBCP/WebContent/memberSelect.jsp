@@ -30,15 +30,15 @@ a {
 <script>
 	$(function() {
 		//alert(1);
-		
+
 		//검색을 클릭했을 때 이벤트
-		$("[value=검색]").click(function(){
-			if($("[name=keyField]").val() == "0"){
+		$("[value=검색]").click(function() {
+			if ($("[name=keyField]").val() == "0") {
 				alert("항목을 선택해주세요");
-				
+
 				return;
 			}
-			if($("[name=keyWord]").val()==""){
+			if ($("[name=keyWord]").val() == "") {
 				alert("검색 단어를 입력해주세요");
 				$("[name=keyWord]").focus();
 				return;
@@ -46,8 +46,22 @@ a {
 
 			//전송하기
 			$("[name=serach]").submit();
+
 		})
-		
+
+		//삭제하기
+		$("[value=삭제]")
+				.click(
+						function() {
+							//alert($(this).attr("name"));
+
+							if (confirm("정말 삭제 할래?")) {
+								location.href = "${pageContext.request.contextPath}/delete?id=" + $(this).attr("name");
+								
+							}
+
+						})
+
 	});
 </script>
 
@@ -61,8 +75,8 @@ a {
 		<table cellspacing="0">
 			<tr>
 				<th colspan="9" style="text-align: right"><a
-					href="memberForm.html">[ 회원가입 ]</a>&nbsp;&nbsp;&nbsp; <a href="#">[
-						새로고침 ]</a>&nbsp;&nbsp;&nbsp;</th>
+					href="memberForm.html">[ 회원가입 ]</a>&nbsp;&nbsp;&nbsp; 
+					<a href="#">[새로고침 ]</a>&nbsp;&nbsp;&nbsp;</th>
 			</tr>
 			<tr bgColor="pink">
 				<th>번호</th>
@@ -82,20 +96,22 @@ a {
 			<c:forEach items="${list}" var="list" varStatus="var">
 				<tr>
 					<td>${var.count}</td>
-					<td>${list.id}</td>
+					<td><a
+						href="${pageContext.request.contextPath}/read.jsp?id=${list.id}">${list.id}</a></td>
 					<td>${list.pwd}</td>
 					<td>${list.name}</td>
 					<td>${list.age}</td>
 					<td>${list.addr}</td>
 					<td>${list.phone}</td>
 					<td>${list.joinDate}</td>
-					<td><input type="button" value="삭제" /></td>
+					<td><input type="button" name="${list.id}" value="삭제" /></td>
 				</tr>
 			</c:forEach>
 
 		</table>
 		<p>
-		<form name="search" action="${pageContext.request.contextPath}/search" method="post">
+		<form name="search" action="${pageContext.request.contextPath}/search"
+			method="post">
 			<select name="keyField">
 				<option value="0">--선택--</option>
 				<option value="id">아이디</option>

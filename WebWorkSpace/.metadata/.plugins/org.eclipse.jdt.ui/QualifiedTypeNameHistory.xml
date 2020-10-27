@@ -15,9 +15,6 @@
 <fullyQualifiedTypeName name="javax.servlet.annotation.WebInitParam"/>
 <fullyQualifiedTypeName name="java.util.Properties"/>
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
-<fullyQualifiedTypeName name="java.util.Map"/>
-<fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
 <fullyQualifiedTypeName name="javax.servlet.annotation.WebListener"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
 <fullyQualifiedTypeName name="java.util.concurrent.atomic.AtomicInteger"/>
@@ -26,8 +23,6 @@
 <fullyQualifiedTypeName name="com.oreilly.servlet.MultipartRequest"/>
 <fullyQualifiedTypeName name="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"/>
 <fullyQualifiedTypeName name="java.io.File"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="kosta.dto.Member"/>
 <fullyQualifiedTypeName name="javax.naming.Context"/>
 <fullyQualifiedTypeName name="javax.naming.InitialContext"/>
 <fullyQualifiedTypeName name="org.apache.tomcat.jdbc.pool.DataSource"/>
@@ -35,4 +30,20 @@
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="kosta.dao.DbUtil"/>
+<fullyQualifiedTypeName name="kosta.dao.MemberDAO"/>
+<fullyQualifiedTypeName name="kosta.servlet.insertServlet"/>
+<fullyQualifiedTypeName name="kosta.dao.MemberDAOImpl"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.apache.catalina.tribes.membership.MemberImpl"/>
+<fullyQualifiedTypeName name="kosta.dto.Member"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+<fullyQualifiedTypeName name="kosta.mvc.controller.insertController"/>
+<fullyQualifiedTypeName name="kosta.mvc.controller.SelectController"/>
+<fullyQualifiedTypeName name="kosta.mvc.controller.ModelAndView"/>
+<fullyQualifiedTypeName name="java.util.ResourceBundle"/>
+<fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
 </qualifiedTypeNameHistroy>

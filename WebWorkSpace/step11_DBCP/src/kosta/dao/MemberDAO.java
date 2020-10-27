@@ -36,5 +36,9 @@ public interface MemberDAO {
 	 */
 	int deleteId(String id);
 	
+	/**
+	 * 상세보기
+	 */
+	Member selectById(String id);
 	
 }

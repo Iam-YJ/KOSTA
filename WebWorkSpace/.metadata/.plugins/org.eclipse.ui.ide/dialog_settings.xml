@@ -7,6 +7,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Edu\WebWorkSpace_Kosta\WebWorkSpace\step12_DBSqlInjection"/>
 			<item value="C:\Edu\WebWorkSpace_Kosta\WebWorkSpace\step06_InitServlet"/>
 			<item value="C:\Edu\WebWorkSpace_Kosta\WebWorkSpace\step05_Servlet"/>
 			<item value="C:\Users\KOSTA\Desktop\step06_InitServlet.folder\step06_InitServlet"/>
