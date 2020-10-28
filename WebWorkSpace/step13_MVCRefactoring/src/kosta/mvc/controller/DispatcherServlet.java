@@ -25,10 +25,9 @@ public class DispatcherServlet extends HttpServlet {
 		Controller controller = null;
 
 		if (key.equals("insert")) {
-			//이런식으로 하는 것은 객체를 자꾸 생성하고 사라지고 반복됨.. 
-			//그래서 우리는 객체를 1번만 생성해서 하고싶다
-			
-			
+			// 이런식으로 하는 것은 객체를 자꾸 생성하고 사라지고 반복됨..
+			// 그래서 우리는 객체를 1번만 생성해서 하고싶다
+
 			// 등록기능
 			controller = new InsertController();
 		} else if (key.equals("select")) {
@@ -43,9 +42,9 @@ public class DispatcherServlet extends HttpServlet {
 		}
 
 		ModelAndView mv = controller.handleRequest(request, response);
-		if(mv.isRedirect()) {
+		if (mv.isRedirect()) {
 			response.sendRedirect(mv.getViewName());
-		}else {
+		} else {
 			request.getRequestDispatcher(mv.getViewName()).forward(request, response);
 		}
 	}
