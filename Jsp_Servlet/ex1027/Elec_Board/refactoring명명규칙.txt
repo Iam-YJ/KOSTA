@@ -32,7 +32,7 @@ Controller:
 
     kosta.controller.InsertElecController.java  - class (Controller을 구현한 클래스)
      => 각 요청에 해당하는 기능을 구현....
-       : 파일첨부 가능성이 있기때문에 request를 할수 없고
+       : 파일첨부 가능성이 있기때문에 request를 할 수 없고
          cos.jar에 있는 MultipartRequest객체를 이용한다.
     
     kosta.controller.SelectElecController.java
@@ -59,7 +59,6 @@ Model :
 
    kosta.util.DBUtil.java - DBCP로드, 연결, 닫기 
             ( META-INF/context.xml문서필요)
-
 
    kosta.listener.HandlerMappingListener.java 
     => ServletContextListener를 implements 한다.
@@ -89,10 +88,34 @@ Model :
 
 
 
+----------------
+프로젝트 옮기려면 DButil. / context.xml(META-INF 안) 
+/ filter / DownloadServlet.java 옮겨야한다 
 
 
+---------------
+HandlerMapping은 properties에 있는 것들을 저장하는 것 
+이후 web.xml에 설정 필요
+ 
+HandlerMapping에 적혀있는 이름 그대로
+String fileName = application.getInitParameter("fileName");
+
+web.xml에 설정 필요 
+  <context-param>
+  <param-name>fileName</param-name>
+  <param-value>kosta/listener/ActionMapping</param-value>
+  </context-param>
 
 
+------------------------
+모델번호에 해당하는 정보 가져오기 호출
+
+1. 상세보기 - flag라는 상태변수 boolean 
+-> true 이면 조회수 증가, false 이면 조회수 증가 x
+
+2. 수정하기를 클릭했을 때
+
+3. 수정이 완료된 후 다시 상세보기 page
 
 
 
