@@ -51,6 +51,10 @@
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Method"/>
 <fullyQualifiedTypeName name="kosta.mvc.controller.ModelAndView"/>
+<fullyQualifiedTypeName name="kosta.dao.CustomerDAO"/>
+<fullyQualifiedTypeName name="net.sf.json.JSONArray"/>
 <fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="kosta.dto.CustomerDTO"/>
+<fullyQualifiedTypeName name="kosta.dao.CustomerDAOImpl"/>
 </qualifiedTypeNameHistroy>

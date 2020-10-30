@@ -6,8 +6,15 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="model_num"/>
+		<item key="selection" value="inForm"/>
 		<list key="findhistory">
+			<item value="inForm"/>
+			<item value="중복결과여부"/>
+			<item value="등록"/>
+			<item value="len"/>
+			<item value="length"/>
+			<item value="`"/>
+			<item value="ㅣ두"/>
 			<item value="model_num"/>
 			<item value="action"/>
 			<item value="session time"/>
@@ -16,9 +23,6 @@
 			<item value="sessionTime"/>
 			<item value="newValue"/>
 			<item value="aler"/>
-			<item value="alert"/>
-			<item value="document.write(&quot;str.substring(0,3) : &quot; + str.slice(0,3) + &quot;&lt;br&quot;);"/>
-			<item value="document.write(&quot;str.substring(0,3) : &quot; + str.slice(0,3) + &quot;&lt;br&gt;&quot;);"/>
 		</list>
 		<list key="replacehistory">
 			<item value="local"/>
