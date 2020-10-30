@@ -20,28 +20,22 @@
 		
 		$.ajax({
 			type:"post" , //전송 방식 선택(get, post, put, delete .. )
-			url :"../suggestServlet" , //서버 주소 
-			dataType: "text" , //응답 데이터의 타입 (text, html, xml, json)
+			url :"../suggestJsonLIB" , //서버 주소 
+			dataType: "json" , //응답 데이터의 타입 (text, html, xml, json)
 			data : {keyWord : $(this).val() } , // 서버에게 보낼 parameter정보 
 			success: function(result){//요청결과가 성공했을 때 호출될 함수
-				console.log(result);
-				
-				var str = result.split("|");
-				if(parseInt(str[0]) > 0){
-					var words = str[1].split(",");
-					var text="";
-				
-					$.each(words, function(index, item){
-						text += "<a href='#'>"+item+"</a><br>";
-					});
+				//console.log(result);
+			
+			var text = "";
+				$.each(result, function(index, item){
+					text += "<a href='#'>"+item+"</a><br>";
+					// '#'을 넣으면 이동 안함 
 					
-					$("#suggest").html(text);
-					$("#suggest").show();
-					
-				}//if
-				else{
-					$("#suggest").hide();
-				}//else
+				});
+				$("#suggest").html(text);
+				$("#suggest").show();
+				
+			
 			} , //success
 			error : function(err){//요청결과가 성공했을 때 호출될 함수
 				
