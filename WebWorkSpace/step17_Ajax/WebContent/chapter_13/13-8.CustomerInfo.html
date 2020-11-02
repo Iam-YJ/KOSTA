@@ -75,20 +75,19 @@ h2 {
 
 			var urlAddr = "../insert";
 			if (state) {
-				
-			if ($(this).val()=="수정하기") {
-				urlAddr = "../update";
 
-				//id 박스 활성화
-				$("#id").removeAttr("readonly");
-				//span 보이기
-				$("span").show();
-				//버튼글씨 변경
-				$("#btn").val("가입하기");
+				if ($(this).val() == "수정하기") {
+					urlAddr = "../update";
 
-			}
+					//id 박스 활성화
+					$("#id").removeAttr("readonly");
+					//span 보이기
+					$("span").show();
+					//버튼글씨 변경
+					$("#btn").val("가입하기");
 
-		
+				}
+
 				$.ajax({
 					type : "post", //전송 방식 선택(get, post, put, delete .. )
 					url : urlAddr, //서버 주소 
@@ -123,27 +122,18 @@ h2 {
 							//alert(result);
 
 							var str = "";
-							$
-									.each(
-											result,
-											function(index, result) {
-												str += "<tr>";
-												str += "<td>" + (index + 1)
-														+ "</td>";
-												str += "<td><a href ='#'>"
-														+ result.id + "</td>";
-												str += "<td>" + result.name
-														+ "</td>";
-												str += "<td>" + result.age
-														+ "</td>";
-												str += "<td>" + result.tel
-														+ "</td>";
-												str += "<td>" + result.addr
-														+ "</td>";
-												str += "<td><input type ='button' value ='삭제' name='"+result.id+"'></td>"
-												str += "</tr>";
+							$.each( result, function(index, result) {
+								str += "<tr>";
+								str += "<td>" + (index + 1)+ "</td>";
+								str += "<td><a href ='#'>"+ result.id + "</td>";
+								str += "<td>" + result.name+ "</td>";
+								str += "<td>" + result.age+ "</td>";
+								str += "<td>" + result.tel+ "</td>";
+								str += "<td>" + result.addr+ "</td>";
+								str += "<td><input type ='button' value ='삭제' name='"+result.id+"'></td>"
+								str += "</tr>";
 
-											});//each끝
+							});//each끝
 
 							$("#listTable tr:gt(0)").remove();
 							//테이블에 추가 필요 
