@@ -12,8 +12,16 @@ public class User {
 	private int attend;
 	private int usage;
 
-	public User() {
+	public User() {}
+	
+	public User( String nickname, String email, String prefer,int userNo) {
+		
+		this.nickname = nickname;
+		this.email = email;
+		this.prefer = prefer;
+		this.userNo = userNo;
 	}
+
 
 	public User(int userNo, String nickname, int age, String email, String gender, String grade, int point,
 			String prefer, int attend, int usage) {

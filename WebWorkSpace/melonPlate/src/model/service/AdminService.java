@@ -1,7 +1,9 @@
+
 package model.service;
 
 import java.sql.SQLException;
 import java.util.List;
+
 import model.dao.AdminDAO;
 import model.dao.AdminDAOImpl;
 import model.dto.Melon;
@@ -15,9 +17,7 @@ public class AdminService {
 	 */
 	public static int insertRes(Melon melon) throws SQLException {
 		int result = adminDAO.insertRes(melon);
-
 		return result;
-
 	}
 
 	/**
@@ -47,7 +47,18 @@ public class AdminService {
 		adminDAO.manageUserGrade(userId, grade);
 
 	}
-
+	/*
+	 * AdminDAOImpl의 공지사항 전체보기 메소드 호출
+	 * */
+	public static List<Noti> selectNoti() throws SQLException{
+		
+		
+		List<Noti> list = adminDAO.selectNoti();
+		
+		return list;
+	}
+	
+	
 	/**
 	 * AdminDAOImpl의 공지사항 작성 메소드 호출
 	 */

@@ -13,6 +13,20 @@ public class Melon {
 
 	public Melon() {}
 
+	
+	
+	public Melon(String resName, String resPlace, String resTel, String resType, String resPhoto, String resPrice) {
+		super();
+		this.resName = resName;
+		this.resPlace = resPlace;
+		this.resTel = resTel;
+		this.resType = resType;
+		this.resPhoto = resPhoto;
+		this.resPrice = resPrice;
+	}
+
+
+
 	public Melon(int resNo, String resName, String resPlace, String resTel, String resType, String resPhoto,
 			int resHits, double resGrade, String resPrice) {
 		this.resNo = resNo;

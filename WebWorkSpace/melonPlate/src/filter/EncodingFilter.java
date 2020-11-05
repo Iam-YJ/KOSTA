@@ -29,6 +29,8 @@ public class EncodingFilter implements Filter {
 		//사전처리
 		request.setCharacterEncoding(encoding);
 		
+		System.out.println(request);
+		System.out.println(response);
 		chain.doFilter(request, response);//요청된 컴포넌트가 호출된다.
 		//사후처리
 		

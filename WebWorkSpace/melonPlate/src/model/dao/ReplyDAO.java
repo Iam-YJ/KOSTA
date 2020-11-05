@@ -1,32 +1,41 @@
 package model.dao;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import model.dto.Reply;
 
 public interface ReplyDAO {
 	/*
-	 * 리뷰 작성
+	 * 식당리뷰 작성
 	 * */
-	int insertReply(Reply reply);
+	int insertReply(Reply reply)throws SQLException;
+	
 	
 	/*
-	 * 리뷰 삭제
+	 * 식당리뷰 삭제
 	 * */
-	int deleteReply(int replNo);
+	int deleteReply(int resNo, int userNo) throws SQLException;
+	
 	
 	/*
-	 * 리뷰 수정
+	 * 식당리뷰 수정
 	 * */
-	int updateReply(Reply reply);
+	int updateReply(Reply reply)throws SQLException;
+	
 	
 	/*
-	 * 리뷰 전체 보기
+	 * 리뷰 전체 보기 - 식당별
 	 * */
-	List<Reply> selectReply();
+	List<Reply> selectReplyByResNo(int resNo)throws SQLException;
+	
+	/*
+	 * 리뷰 전체 보기 - 마이페이지
+	 * */
+	List<Reply> selectReplyByUserNo(int userNo)throws SQLException;
 	
 	/*
 	 * 공감수 증가
 	 * */
-	int incrementLike(int replNo);
+	int incrementLike(int res_no, int user_no)throws SQLException;
 }
