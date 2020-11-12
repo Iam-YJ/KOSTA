@@ -1,0 +1,25 @@
+
+DI 개념 ( Dependency Injection)
+ : 필요한 객체(의존관계)를 주입해준다
+  1. 생성자 이용
+	- value : 기본형
+	- ref : 객체형
+
+  2. setter 이용
+	- value : 기본형 
+	- ref : 객체형
+ex)
+
+class A { }
+ 
+class B { 
+
+  A a = new A(); // B has a A
+
+  B (A a){
+    this.a = a; 
+  }
+}
+
+new B(new A()); 생성될 때 A를 생성해야한다 
+
