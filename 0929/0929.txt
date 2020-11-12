@@ -1,0 +1,17 @@
+Maven library 문제가 생길 경우
+
+1. 해당 project 오른쪽메뉴 -> Maven -> Update Project
+   :force update snapshot release 체크해야함
+1-1. dependency의 minor version 번호를 바꾸어 주는 방법도 있음 
+
+2. C:\Users\kosta\.m2\repository
+   : 하위의 모든 폴더를 삭제
+     단 이클립스를 종료 후에 모든 디렉토리를 삭제해야함 
+
+Angular
+ReactJS
+Vuejs
+
+:SPA(Single Page Application) : index.html
+  서버와 연동할 때 무조건 ajax 방식
+  ECMA Script6 ( javascript 표준)
