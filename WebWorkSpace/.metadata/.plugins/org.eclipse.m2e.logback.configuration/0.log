@@ -47,3 +47,43 @@
 2020-11-04 09:53:23,089 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2020-11-05 09:41:40,965 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2020-11-05 09:53:52,330 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-05 19:19:23,518 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-06 09:08:24,126 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-06 12:13:56,463 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-11-06 12:13:56,717 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2020-11-07 15:01:45,006 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-11-07 21:54:12,933 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-08 18:47:34,789 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-11-08 18:47:38,258 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2020-11-08 20:51:10,885 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-11-09 01:15:03,253 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @15912738ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-11-09 01:15:04,142 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.29.v20200521; built: 2020-05-27T11:26:53.365Z; git: 77c232aed8a45c818fd27232278d9f95a021095e; jvm 1.8.0_261-b12
+2020-11-09 01:15:04,250 [main] INFO  org.eclipse.jetty.server.session - DefaultSessionIdManager workerName=node0
+2020-11-09 01:15:04,251 [main] INFO  org.eclipse.jetty.server.session - No SessionScavenger set, using defaults
+2020-11-09 01:15:04,255 [main] INFO  org.eclipse.jetty.server.session - node0 Scavenging every 600000ms
+2020-11-09 01:15:04,382 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@2bb51da6{/wse,null,AVAILABLE}
+2020-11-09 01:15:04,439 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@2cac35ce{HTTP/1.1, (http/1.1)}{0.0.0.0:60759}
+2020-11-09 01:15:04,440 [main] INFO  org.eclipse.jetty.server.Server - Started @15913933ms
+2020-11-09 01:15:04,440 [main] INFO  org.eclipse.jetty.server.session - node0 Scavenging every 660000ms
+2020-11-09 06:19:34,288 [Framework stop - Equinox Container: 408ceb18-b67c-4d97-b6f1-bc8f9c68dd15] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@2cac35ce{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+2020-11-09 06:19:34,289 [Framework stop - Equinox Container: 408ceb18-b67c-4d97-b6f1-bc8f9c68dd15] INFO  org.eclipse.jetty.server.session - node0 Stopped scavenging
+2020-11-09 06:19:34,369 [Framework stop - Equinox Container: 408ceb18-b67c-4d97-b6f1-bc8f9c68dd15] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@2bb51da6{/wse,null,UNAVAILABLE}
+2020-11-09 09:39:08,461 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-09 11:58:07,458 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-09 18:25:15,362 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-10 09:32:12,742 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-11-10 17:52:19,523 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-10 18:25:26,553 [Framework stop - Equinox Container: 9ab8bce1-789c-4e72-8714-71193ac2bbeb] WARN  org.eclipse.jgit.lib.Repository - close() called when useCnt is already zero for Repository[C:\Users\KOSTA\git\test\.git]
+2020-11-10 18:34:28,671 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-10 18:40:03,954 [Git Repository Closer] WARN  org.eclipse.jgit.lib.Repository - close() called when useCnt is already zero for Repository[C:\Users\KOSTA\git\test\.git]
+2020-11-10 18:57:41,036 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-10 19:55:29,248 [Worker-30: Remove Repositories] WARN  org.eclipse.jgit.lib.Repository - close() called when useCnt is already zero for Repository[C:\Users\KOSTA\git\repository22\.git]
+2020-11-10 19:55:53,717 [Worker-26: Remove Repositories] WARN  org.eclipse.jgit.lib.Repository - close() called when useCnt is already zero for Repository[C:\Users\KOSTA\git\test2\.git]
+2020-11-10 20:04:45,843 [ModalContext] WARN  org.eclipse.jgit.lib.Repository - close() called when useCnt is already zero for Repository[C:\Users\KOSTA\git\repository\.git]
+2020-11-10 20:16:22,987 [Worker-9: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-11 00:24:10,894 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-11 01:50:47,562 [Worker-9: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-11 02:12:34,171 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-11 09:40:31,218 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-11-11 14:03:13,995 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-11 14:20:58,672 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

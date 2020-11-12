@@ -7,6 +7,8 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\KOSTA\Desktop\경은님코드\멜플\melonPlateke"/>
+			<item value=""/>
 			<item value="C:\Edu\WebWorkSpace_Kosta\WebWorkSpace\step12_DBSqlInjection"/>
 			<item value="C:\Edu\WebWorkSpace_Kosta\WebWorkSpace\step06_InitServlet"/>
 			<item value="C:\Edu\WebWorkSpace_Kosta\WebWorkSpace\step05_Servlet"/>
@@ -16,6 +18,8 @@
 			<item value="C:\Edu\WebWorkSpace_Kosta\WebWorkSpace\step01_JavaScript"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="C:\Users\KOSTA\Documents\카카오톡 받은 파일\choipark.zip"/>
+			<item value="C:\Users\KOSTA\Desktop\경은님코드\멜플.zip"/>
 			<item value="C:\Edu\WebWorkSpace_Kosta\WebWorkSpace\kosta_2st_mini_project-master.zip"/>
 			<item value=""/>
 			<item value="C:\Edu\WebWorkSpace_Kosta\WebWorkSpace\step02_jQuery\WebContent\chapter_12\12-10.animate_pre_next.html"/>
@@ -47,6 +51,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\KOSTA\git\test2"/>
 			<item value="C:\Users\KOSTA\git\kosta_2st_mini_project"/>
 		</list>
 	</section>
