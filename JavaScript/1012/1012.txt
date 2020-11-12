@@ -22,4 +22,4 @@ javaScript 내용
   
   5) 내장객체 : Math, String, Date, Array
 
-  6) DOM 접근 !! 
+  6) DOM 접근 !!  
