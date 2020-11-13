@@ -14,6 +14,7 @@
 - 객체를 관리하는 개념이라고 생각하기
 - 서버가 시작될 때 관련된 객체를 생성하고 주입해줌 
 - 전반적인 라이프사이클 관리 
+- BeanFactory, ApplicationContext, WebApplicationContext .. 이들을 실제로 사용하기 위해서는 new ClassPath..나 new FileSystem..으로 불러와야한다
 
 2. spring IOC(Inversion of Control) & DI(Dependency Injection)
 - 제어의 역행  
@@ -24,10 +25,53 @@
     ```
 흐름이 예전에는 소스 내부에서 이루어졌다면 흐름이 역행된 것은 흐름이 외부에서 들어옴 
 이것을 IOC라고 하고 DI(의존관계에 있는 객체를 주입)가 이를 도와줌 
+- DI를 생성자로 주입(value, ref)하는 방법, setter로 주입(value, ref)하는 방법이 있다.
 
-3. spring AOP(Aspect Orlented Programming) -> 관점지향 프로그래밍 (filter랑 비슷)
+```java 생성자로 주입하는 예시
+    	<bean class="sample03.BookVo" id="book">
+		<constructor-arg value="spring" />
+		<constructor-arg value="장희정" />
+		<constructor-arg value="25000" type="int" />
+		<constructor-arg value="2016-11-01" />
+        </bean>
+        <bean class="sample03.BookDAOImpl" id="bookdao" />
 
-4. spring web MVC 
+        <bean class="sample03.BookController" id="controller">
+            <constructor-arg ref="bookdao" />
+            <constructor-arg>
+                <ref bean="book" />
+            </constructor-arg>
+
+        </bean>
+```
+
+```java setter로 주입하는 예시
+    <bean class="sample05.ProductBean" id="pbean">
+		<property name="p_name" value="새우깡"></property>
+		<property name="p_no" value="900"></property>
+		<property name="p_price" value="4000"></property>
+	</bean>
+
+	<bean class="sample05.UserBean" id="ubean">
+		<property name="name" value="장희정"></property>
+		<property name="phone" value="010-1111-1111"></property>
+		<property name="addr" value="판교"></property>
+		<property name="id" value="10"></property>
+	</bean>
+
+	<bean class="sample05.OrderMessageImpl" id="dao">
+		<property name="productbean" ref="pbean"></property>
+		<property name="userbean" ref="ubean"></property>
+		<property name="orderid" value="11"></property>
+		<property name="message" value="주문완룡"></property>
+	</bean>
+```
+
+
+
+1. spring AOP(Aspect Orlented Programming) -> 관점지향 프로그래밍 (filter랑 비슷)
+
+2. spring web MVC 
 - 스프링이 제공하는 모듈 중 하나가 spring web MVC..
 - spring이 웹에서 중요하긴 하지만 java에서도 쓸 수 있다
 
