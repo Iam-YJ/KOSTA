@@ -1,0 +1,15 @@
+package sample01;
+
+public class MainApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//1. 기존 방식
+		MessageBean bean = new MessageBeanenImpl();
+		
+		bean.sayHello("yujin");
+
+	}
+
+}

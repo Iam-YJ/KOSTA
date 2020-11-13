@@ -1,0 +1,16 @@
+package sample04;
+
+public class StudentServiceImpl implements StudentService {
+	private StudentDAO studentDAO;
+
+	
+	public void setStudentDAO(StudentDAO studentDAO) {
+		this.studentDAO = studentDAO;
+	}
+	
+	public void insert(Student student) {
+		//dao의 insert 호출
+
+	}
+
+}

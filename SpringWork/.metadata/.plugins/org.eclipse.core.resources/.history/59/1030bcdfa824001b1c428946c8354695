@@ -1,0 +1,13 @@
+package sample02;
+
+public class MainApp {
+
+	public static void main(String[] args) {
+
+		
+		//service의 insert를 호출해서 그 결과를 확인한다
+		
+		
+	}
+
+}

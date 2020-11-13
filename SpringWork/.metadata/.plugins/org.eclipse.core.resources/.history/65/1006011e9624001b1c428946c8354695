@@ -1,0 +1,22 @@
+package sample01;
+
+public class MainApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		// 1. 기존 방식
+		MessageBean bean = new MessageBeanEnImpl();
+		bean.sayHello("yujin");
+
+		bean = new MessageBeanKoImpl();
+		bean.sayHello("유지닝");
+		
+		
+		//2. spring container 이용(IoC 개념 적용)
+		
+		
+
+	}
+
+}

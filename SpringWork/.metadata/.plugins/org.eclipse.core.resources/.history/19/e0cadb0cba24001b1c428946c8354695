@@ -1,0 +1,10 @@
+package sample04;
+
+public class StudentServiceImpl implements StudentService {
+
+	public void insert(Student student) {
+		//dao의 insert 호출
+
+	}
+
+}

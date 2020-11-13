@@ -1,0 +1,15 @@
+package sample05;
+
+public class ProductBean {
+
+	private int p_no;
+	private int p_price;
+	private String p_name;
+
+	public ProductBean() {
+	System.out.println("ProductBean의 생성자");
+	}
+	
+	
+
+}

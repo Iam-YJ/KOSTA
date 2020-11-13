@@ -1,0 +1,10 @@
+package sample05;
+
+public class OrderMessageImpl implements OrderMessage {
+
+	public void getOrder_Message() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!-- 객체 생성 -->
+	<bean class="sample02.Member" id="m1" /> <!-- 기본생성자가 만들어지는 것 -->
+
+	<bean class="sample02.Member" id="m2">
+		<constructor-arg value="jang" /> <!-- 인수 1개 받는 생성자 호출 -->
+	</bean>
+
+
+	<bean class="sample02.Member" id="m3">
+		<constructor-arg value="kim" /> <!-- 인수 2개 받는 생성자 호출 -->
+		<constructor-arg value="30" type="int" />
+	</bean>
+
+	<bean class="sample02.Member" id="m4">
+		<constructor-arg value="20" index="1" type="int" /> <!-- 나이 -->
+		<constructor-arg value="판교" index="2" /> <!-- 주소 -->
+		<constructor-arg value="king" index="0" /> <!-- 아이디 -->
+	</bean>
+
+
+	<bean class="sample02.Member" id="m5">
+		<constructor-arg>
+			<value>king</value>
+		</constructor-arg>
+
+		<constructor-arg>
+			<value>1234</value>
+		</constructor-arg>
+
+
+		<constructor-arg>
+			<value>33</value>
+		</constructor-arg>
+
+
+		<constructor-arg>
+			<value>제주도</value>
+		</constructor-arg>
+
+	</bean>
+	
+	
+	<bean class="sample02.MemberDAO" id="memberDao"></bean>
+
+</beans>

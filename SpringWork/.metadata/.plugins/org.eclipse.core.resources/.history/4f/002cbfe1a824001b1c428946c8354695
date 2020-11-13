@@ -1,0 +1,16 @@
+package sample02;
+
+public class MainApp {
+
+	public static void main(String[] args) {
+
+		
+		//service의 insert를 호출해서 그 결과를 확인한다
+		
+		MemberDAO dao = new MemberDAO();
+		Member member = new Member("jang","11",20,"서울");
+		MemberService service = new MemberService(memberDAO, member);
+		
+	}
+
+}

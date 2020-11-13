@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!-- 객체 생성 -->
+<bean class="sample02.Member" id="m1"></bean> <!-- 기본생성자가 만들어지는 것  -->
+<bean class="sample02.Member" id="m2">
+<constructor-arg value="jang"></constructor-arg>
+
+</bean> 
+
+
+</beans>

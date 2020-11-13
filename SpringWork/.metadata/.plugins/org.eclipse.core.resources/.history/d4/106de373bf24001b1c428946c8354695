@@ -1,0 +1,55 @@
+package sample05;
+
+public class OrderMessageImpl implements OrderMessage {
+	private int orderid;
+	private String message;
+
+	
+	
+	
+	public OrderMessageImpl() {
+	System.out.println("OrderMessageImpl 생성자 호출");
+	}
+
+	
+
+
+
+	public int getOrderid() {
+		return orderid;
+	}
+
+
+
+
+
+	public void setOrderid(int orderid) {
+		this.orderid = orderid;
+	}
+
+
+
+
+
+	public String getMessage() {
+		return message;
+	}
+
+
+
+
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+
+
+
+
+	public void getOrder_Message() {
+		// TODO Auto-generated method stub
+
+	}
+
+}
