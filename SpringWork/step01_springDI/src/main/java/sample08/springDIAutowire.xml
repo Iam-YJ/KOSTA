@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean class="sample08.BookDTO" id="book1" p:date="2020-11-13"
+		p:price="36000" p:writer="장희정" p:subject="spring 수업" />
+
+	<bean class="sample08.BookDTO" id="book2" p:date="20-11-13"
+		p:price="3" p:writer="장" p:subject="s 수업" />
+
+	<bean class="sample08.DbUtil" id="dbUtil" />
+
+	<bean class="sample08.EmailSender" id="emailSender" />
+	<bean class="sample08.MessageSender" id="messageSender" />
+
+	<bean class="sample08.BookDAOImpl" id="bookDAO"
+		autowire="constructor" />
+	<!-- constructure는 byType먼저 하고 byName 한다 -->
+
+	<bean class="sample08.BookServiceImpl" id="bookService"
+		autowire="byType">
+		<constructor-arg ref="bookDAO"></constructor-arg>
+	</bean>
+
+	<bean class="sample08.BookController" id="bookController"
+		autowire="constructor" />
+
+
+</beans>

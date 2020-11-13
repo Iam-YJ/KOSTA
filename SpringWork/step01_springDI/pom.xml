@@ -23,12 +23,22 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- 메이븐 추가하려고 spring context 라이브러리 추가함  -->
+		<!-- 메이븐 추가하려고 spring context 라이브러리 추가함 -->
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
 			<version>5.2.2.RELEASE</version>
+		</dependency>
+
+
+		<!-- lombok -->
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.12</version>
+			<scope>provided</scope>
 		</dependency>
 
 
