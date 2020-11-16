@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+	<!-- 객체 생성 -->
+	<bean class="kosta.exam.MemberServiceImpl" id="target" />
+	<bean class="kosta.advice.AroundAdvice" id="arAdvice" />
+	<bean class="kosta.advice.SampleAdvice" id="sampleAdvice" />
+
+	<!-- aop 설정 -->
+	<aop:config>
+		<aop:pointcut expression="execution(* kosta.exam.MemberServiceImpl.*(..))" id="pointCut" />
+
+			
+	
+			<aop:aspect id="aspect2" ref="sampleAdvice" order="2">
+				<aop:before method="before" pointcut-ref="pointCut"/>
+				<aop:after method="afterFinally" pointcut-ref="pointCut" />
+				<aop:after-returning method="afterReturning"  pointcut-ref="pointCut" returning="obj"/>
+				<!--  obj는 매개변수로 들어오는(리턴값을 받으려고 준비해둔 애랑) 이름이 똑같아야한다  -->
+				<aop:after-throwing method="afterThrowing" pointcut-ref="pointCut" throwing="e"/>
+			</aop:aspect>
+			
+			<aop:aspect id="aspect1" ref="arAdvice" order="1">
+				<aop:around method="around" pointcut-ref="pointCut" />
+			</aop:aspect>
+
+	</aop:config>
+
+
+
+
+</beans>

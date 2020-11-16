@@ -15,12 +15,13 @@ public class BookServiceImpl implements BookService {
 
 	}
 
-	public void setEmailSender(EmailSender esend) {
-
+	public void setEmailSender(EmailSender emailSender) {
+		this.emailSender = emailSender;
+		
 	}
 
-	public void setMessageSender(MessageSender msend) {
-
+	public void setMessageSender(MessageSender messageSender) {
+		this.messageSender=messageSender;
 	}
 
 	@Override

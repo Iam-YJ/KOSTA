@@ -16,17 +16,19 @@
 	<bean class="sample08.EmailSender" id="emailSender" />
 	<bean class="sample08.MessageSender" id="messageSender" />
 
-	<bean class="sample08.BookDAOImpl" id="bookDAO"
-		autowire="constructor" />
+	<bean class="sample08.BookDAOImpl" id="bookDAO" autowire="constructor" />
 	<!-- constructure는 byType먼저 하고 byName 한다 -->
 
-	<bean class="sample08.BookServiceImpl" id="bookService"
-		autowire="byType">
+	<bean class="sample08.BookServiceImpl" id="bookService">
 		<constructor-arg ref="bookDAO"></constructor-arg>
+		<property name="emailSender" ref="emailSender"></property>
+		<property name="messageSender" ref="messageSender"></property>
+
+<!-- 		<constructor-arg ref="messageSender"></constructor-arg>
+		<constructor-arg ref="emailSender"></constructor-arg> -->
 	</bean>
 
-	<bean class="sample08.BookController" id="bookController"
-		autowire="constructor" />
+	<bean class="sample08.BookController" id="bookController" autowire="constructor" />
 
 
 </beans>

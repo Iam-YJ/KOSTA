@@ -44,11 +44,12 @@
 		</constructor-arg>
 
 	</bean>
-	
-	<bean class="sample02.MemberDAO" id="memberDao"/>
-	<bean class="sample02.MemberService" id = "service">
-	<constructor-arg ref="memberDao"/><!--인수2개받는 생성자 호출  -->
-	<constructor-arg ref="m5"/>
+
+	<bean class="sample02.MemberDAO" id="memberDao" />
+
+	<bean class="sample02.MemberService" id="service">
+		<constructor-arg ref="memberDao" /><!--인수2개받는 생성자 호출 -->
+		<constructor-arg ref="m5" />
 	</bean>
 
 

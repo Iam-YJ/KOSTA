@@ -11,7 +11,8 @@
 	<!-- 외부 properties 파일의 위치를 설정하는 클래스 선언 -->
 
 	<!-- <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"> 
-		<property name="location"> setLocation() 호출되는 것 <value>classpath:sample06/customerInfo.properties</value> 
+		<property name="location"> setLocation() 호출되는 것 
+		<value>classpath:sample06/customerInfo.properties</value> 
 		</property> </bean> -->
 
 	<!-- <bean

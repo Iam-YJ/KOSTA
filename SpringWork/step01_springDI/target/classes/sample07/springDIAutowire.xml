@@ -14,7 +14,7 @@
 	<bean class="sample07.MemberVO" id="member">
 		<property name="age" value="900"></property>
 		<property name="name" value="엣헴이"></property>
-		<property name="addr" value="엣헴마을"></property>
+		<property name="addr" value="엣헴마을" />
 	</bean>
 
 	<!-- autowire 속성 
