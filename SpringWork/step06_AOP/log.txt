@@ -1,0 +1,27 @@
+start호출 / 인수 개수 : 1 / 리턴값 : null/ 총 실행 시간0ms
+pause호출 / 인수 개수 : 0 / 리턴값 : AudioImpl 리턴값/ 총 실행 시간0ms
+stop호출 / 인수 개수 : 0 / 리턴값 : null/ 총 실행 시간0ms
+start호출 / 인수 개수 : 1 / 리턴값 : null/ 총 실행 시간0ms
+pause호출 / 인수 개수 : 0 / 리턴값 : VedioImpl 리턴값/ 총 실행 시간0ms
+stop호출 / 인수 개수 : 0 / 리턴값 : null/ 총 실행 시간0ms
+start호출 / 인수 개수 : 1 / 리턴값 : null/ 총 실행 시간0ms
+pause호출 / 인수 개수 : 0 / 리턴값 : TvImpl 리턴값/ 총 실행 시간0ms
+stop호출 / 인수 개수 : 0 / 리턴값 : null/ 총 실행 시간0ms
+start호출 / 인수 개수 : 1 / 리턴값 : null/ 총 실행 시간0ms
+pause호출 / 인수 개수 : 0 / 리턴값 : AudioImpl 리턴값/ 총 실행 시간0ms
+stop호출 / 인수 개수 : 0 / 리턴값 : null/ 총 실행 시간0ms
+start호출 / 인수 개수 : 1 / 리턴값 : null/ 총 실행 시간0ms
+pause호출 / 인수 개수 : 0 / 리턴값 : VedioImpl 리턴값/ 총 실행 시간0ms
+stop호출 / 인수 개수 : 0 / 리턴값 : null/ 총 실행 시간0ms
+start호출 / 인수 개수 : 1 / 리턴값 : null/ 총 실행 시간0ms
+pause호출 / 인수 개수 : 0 / 리턴값 : TvImpl 리턴값/ 총 실행 시간0ms
+stop호출 / 인수 개수 : 0 / 리턴값 : null/ 총 실행 시간0ms
+start호출 / 인수 개수 : 1 / 리턴값 : null/ 총 실행 시간0ms
+pause호출 / 인수 개수 : 0 / 리턴값 : AudioImpl 리턴값/ 총 실행 시간0ms
+stop호출 / 인수 개수 : 0 / 리턴값 : null/ 총 실행 시간0ms
+start호출 / 인수 개수 : 1 / 리턴값 : null/ 총 실행 시간0ms
+pause호출 / 인수 개수 : 0 / 리턴값 : VedioImpl 리턴값/ 총 실행 시간0ms
+stop호출 / 인수 개수 : 0 / 리턴값 : null/ 총 실행 시간0ms
+start호출 / 인수 개수 : 1 / 리턴값 : null/ 총 실행 시간0ms
+pause호출 / 인수 개수 : 0 / 리턴값 : TvImpl 리턴값/ 총 실행 시간0ms
+stop호출 / 인수 개수 : 0 / 리턴값 : null/ 총 실행 시간0ms

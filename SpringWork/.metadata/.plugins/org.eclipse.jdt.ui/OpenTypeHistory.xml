@@ -5,4 +5,6 @@
 <typeInfo handle="=step01_springDI/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;sample10{BoardService.java[BoardService" modifiers="513" timestamp="1605250412784"/>
 <typeInfo handle="=step01_springDI/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;sample10{BoardDAO.java[BoardDAO" modifiers="513" timestamp="1605250476839"/>
 <typeInfo handle="=step01_springDI/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;sample11{BookDAO.java[BookDAO" modifiers="513" timestamp="1605254566532"/>
+<typeInfo handle="=step02_AOP/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kosta.exam{MessageService.java[MessageService" modifiers="513" timestamp="1605497137221"/>
+<typeInfo handle="=step04_AOP/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kosta.exam{MemberService.java[MemberService" modifiers="513" timestamp="1605514286749"/>
 </typeInfoHistroy>

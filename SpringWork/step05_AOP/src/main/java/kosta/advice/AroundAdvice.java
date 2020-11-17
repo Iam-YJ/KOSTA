@@ -3,6 +3,7 @@ package kosta.advice;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
  */
 @Service("arAdvice")
 @Aspect
+@Order(2)
 public class AroundAdvice {
 
 	@Around("pointCutClass.aa()") //pointCutClass에 있는 aa()를 잡는다

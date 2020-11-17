@@ -25,14 +25,20 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="step06_AOP.step06_AOP"/>
+			<item value="step04_AOP.step04_AOP"/>
 			<item value="step02_AOP.step02_AOP"/>
 			<item value="step01_springDI.step01_springDI"/>
 		</list>
 		<list key="groupId">
+			<item value="step06_AOP"/>
+			<item value="step04_AOP"/>
 			<item value="step02_AOP"/>
 			<item value="step01_springDI"/>
 		</list>
 		<list key="artifactId">
+			<item value="step06_AOP"/>
+			<item value="step04_AOP"/>
 			<item value="step02_AOP"/>
 			<item value="step01_springDI"/>
 		</list>
