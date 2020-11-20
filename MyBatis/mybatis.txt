@@ -1,0 +1,23 @@
+
+ -삭제
+  int result =  delete(String id)
+  int result =  delete(String id , Object param)
+ 
+==> 0 이면 실패 1 이면 성공
+
+--등록
+  int result =  insert(String id)
+  int result =  insert(String id , Object param)
+
+--수정
+  int result =  update(String id)
+  int result =  update(String id , Object param)
+
+
+  -Mybatis에서는 int result = executeUpdate() 실행된다.
+
+
+  * parameter로 전달되는 데이터 처리
+     #{이름} : PreparedStatement형식
+
+     ${이름} : Statement형식 (값이 그대로 연결되어 매핑)

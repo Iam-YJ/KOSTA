@@ -1,0 +1,5 @@
+1. 새로운 메이븐 프로젝트 생성한다.
+2. 필요한 환경설정한다.
+3. 주어진 product.sql 파일 생성한다.
+4. 주어진 ProductMainView.java을 보고
+   dao 클래스, dto클래스, Mapper를 만든다.
