@@ -7,4 +7,7 @@
 <typeInfo handle="=step01_springDI/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;sample11{BookDAO.java[BookDAO" modifiers="513" timestamp="1605254566532"/>
 <typeInfo handle="=step02_AOP/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kosta.exam{MessageService.java[MessageService" modifiers="513" timestamp="1605497137221"/>
 <typeInfo handle="=step04_AOP/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kosta.exam{MemberService.java[MemberService" modifiers="513" timestamp="1605514286749"/>
+<typeInfo handle="=step08_MyFactoryFramework/src&lt;kosta.mvc.controller{Controller.java[Controller" modifiers="513" timestamp="1605582240669"/>
+<typeInfo handle="=step11_WebMVCTest/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kosta.mvc.model.dao{ProductDAO.java[ProductDAO" modifiers="513" timestamp="1605754010026"/>
+<typeInfo handle="=step11_WebMVCTest/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kosta.mvc.model.service{ProductService.java[ProductService" modifiers="513" timestamp="1605753881513"/>
 </typeInfoHistroy>

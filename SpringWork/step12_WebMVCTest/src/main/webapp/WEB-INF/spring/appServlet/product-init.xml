@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<bean class="kosta.mvc.model.dto.ProductDTO" id="p1">
+		<property name="code" value="A01"></property>
+		<property name="name" value="name1"></property>
+		<property name="price" value="1000"></property>
+		<property name="detail" value="detail1"></property>
+	</bean>
+
+	<bean class="kosta.mvc.model.dto.ProductDTO" id="p2">
+		<property name="code" value="A02"></property>
+		<property name="name" value="name2"></property>
+		<property name="price" value="2000"></property>
+		<property name="detail" value="detail2"></property>
+	</bean>
+
+	<bean class="kosta.mvc.model.dto.ProductDTO" id="p3">
+		<property name="code" value="A03"></property>
+		<property name="name" value="name3"></property>
+		<property name="price" value="3000"></property>
+		<property name="detail" value="detail3"></property>
+	</bean>
+
+
+	<!-- 값 등록을 위해 web.xml로 감 -->
+
+</beans>

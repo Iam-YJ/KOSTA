@@ -5,6 +5,8 @@ public class Member {
 	private String name;
 	private int age;
 	private String addr;
+	
+	private boolean state;
 
 	public Member() {
 		System.out.println("Member의 기본 생성자 call");
@@ -53,5 +55,15 @@ public class Member {
 		System.out.println("setAddr(String addr) 호출");
 		this.addr = addr;
 	}
+
+	public boolean isState() {
+		return state;
+	}
+
+	public void setState(boolean state) {
+		this.state = state;
+	}
+	
+	
 
 }

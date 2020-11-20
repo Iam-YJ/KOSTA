@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import kosta.mvc.model.dto.Member;
 
@@ -38,6 +39,7 @@ public class ParameterController {
 	 */
 	@RequestMapping("/a.do")
 	public String aa(String name, Integer age, Model model) {
+		//여기서의 model은 view 쪽으로 전달할 때 필요한 model 이다. -> springFramWork가 알아서 스스로 model and view로 전달해줌
 		System.out.println(name + ", " + age);
 		//null이라는 값은 int에 담을 수 없다  => Integer
 		
@@ -76,6 +78,7 @@ public class ParameterController {
 	
 	@ModelAttribute("hobbys") //뷰에서 ${hobbys} 사용
 	//지금 사용하는 컨트롤러를 들렸다 가는 애들만 사용 가능 
+	//model 이라는 영역에 hobbys라는 이름으로 저장하게 된다 
 	public List<String> hobby(){
 		List<String> list = new ArrayList<String>();
 		list.add("등산");
@@ -90,6 +93,25 @@ public class ParameterController {
 	@ModelAttribute("addr") //${addr}
 	public String addr() {
 		return "경기도 성남시";
+	}
+	
+	/*
+	 * parameter로 넘어오는 name과 매개변수의 이름이 다를 때
+	 * @RequestParam을 사용해서 매핑해줄 수 있다
+	 *  : @RequestParam을 선언하면 required = "true" 이다.
+	 *    즉, 값이 반드시 들어와야 한다 
+	 *     => required = false로 바꾸면 값이 꼭 들어오지 않아도 된다 
+	 *     
+	 *  : defaultValue ="" 를 정해서 들어오지 않았을 때의 값을 정해준다
+	 *    int의 경우에 값이 없으면 null인데 이 때 defaultValue를 사용하면 null로 인해 발생하는 오류 방지 가능하다. 
+	 */
+	@RequestMapping("/d.do")
+	public String dd(@RequestParam(value="id", defaultValue="Guest") String userId, @RequestParam(value="name", required=false) String userName,@RequestParam(defaultValue = "0") int age) {
+		System.out.println("userId : "+userId);
+		System.out.println("userName : "+userName);
+		System.out.println("userAge : "+age);
+		
+		return "result";  //WEB-INF/viwes/result.jsp
 	}
 
 }

@@ -8,8 +8,9 @@ import org.springframework.web.servlet.ModelAndView;
 public class StartController {
 
 	@RequestMapping("/index.do") // index.do라고 오면 이 메소드를 실행해주세요 . handlerMapping 역할 
-	public ModelAndView aa() {
+	public ModelAndView aa(String id) {
 		System.out.println("index.do가 요청되어 aa() 호출됨 ");
+		System.out.println("testController에서 온 id = "+id);
 		
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("message","Spring web mvc 신기하다 "); //view에서 ${message}로 사용가능
