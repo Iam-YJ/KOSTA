@@ -37,7 +37,7 @@
         ex) <select id="a"> => java에서 id 참조(여기서는 a)하여 사용함
 
 
-* 알아야 할 
+* 알아야 할 것
   1. SqlSessionFactoryBuilder => 3을 생성
   2. SqlSessionFactory
   3. SqlSession => 기존의 connection과 동일함
