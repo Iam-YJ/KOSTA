@@ -27,8 +27,8 @@
   
 
   CREATE TABLE reply(
-    reply_no INT PRIMARY KEY, -- underscore
-    comment_No INT REFERENCES commentb(comment_No),
+    reply_no INT PRIMARY KEY, -- underscore (답글번호)
+    comment_No INT REFERENCES commentb(comment_No), --부모글번호
     user_id VARCHAR2(20) REFERENCES users(user_id),
     reply_content VARCHAR2(100),
     reg_date date
