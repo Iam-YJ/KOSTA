@@ -27,4 +27,17 @@
 	<update id="update" parameterType="emp">
 		update emp set ename = #{empName} , job = #{job}, sal=#{sal} where empno = #{empno}
 	</update>
+	
+		<!-- 검색 JOb에 해당하는 레코드 검색 -->
+	<select id="selectByJob" parameterType="string" resultType="emp">
+	<include refid="empSelectMapper.empSelectSql"/> <!-- 다른 쿼리문을 실행시키고 싶을 때 mapper이름.id -->
+		where job=#{_parameter} 
+	</select>
+	
+	
+	<!-- select 할 때 DB의 underscore와 CamelCas 처리 -->
+	<select id="userSelect" resultType="userDTO">
+	 select user_id, user_name, user_age, user_addr 
+	 from test
+	</select>
 </mapper>

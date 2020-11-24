@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+
+<configuration>
+
+	<!-- SqlMapConfig.xml은 환경설정 문서이다 -->
+
+	<!-- dbInfo.properties 파일 읽어오는 것 외부 properties 파일의 위치 설정하기 -->
+	<properties resource="config/dbInfo.properties"></properties>
+
+	<!-- 옵션 설정 -->
+	<settings>
+	<setting name="jdbcTypeForNull" value="NULL"/> <!-- parameter로 넘어온 값이(#{이름}) null이면 DB의 NULL로 전달한다 -->
+	</settings>
+
+	<!-- 객체 별칭 설정하기 -->
+	<typeAliases>
+		<typeAlias type="kosta.dto.ProductList" alias="product" />
+	</typeAliases>
+
+
+
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED"> <!-- UNPOOLED는 웹 기반 방식이다 / POOLED는 자바 기반 방식이다 -->
+				<property name="driver" value="${driver}" />
+				<property name="url" value="${url}" />
+				<property name="username" value="${username}" /> <!-- 외부에 properties 파일 만들고 참조해서 만들기 -->
+				<property name="password" value="${password}" />
+			</dataSource>
+		</environment>
+	</environments>
+
+
+	<mappers>
+		<mapper resource="config/dynamicMapper.xml" />
+	</mappers>
+
+
+</configuration>

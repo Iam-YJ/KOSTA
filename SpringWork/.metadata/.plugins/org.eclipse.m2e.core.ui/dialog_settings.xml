@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Edu\3차\SpringWork_Kosta\SpringWork\step12_WebMVCTest"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -25,18 +26,33 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="step17_MyBatisJoinTest.step17_MyBatisJoinTest"/>
+			<item value="step16_MyBatisDynamicTest.step16_MyBatisDynamicTest"/>
+			<item value="step15_MyBatisJoin.step15_MyBatisJoin"/>
+			<item value="step14_MyBatisDynamic.step14_MyBatisDynamic"/>
+			<item value="step13_MyBatis.step13_MyBatis"/>
 			<item value="step06_AOP.step06_AOP"/>
 			<item value="step04_AOP.step04_AOP"/>
 			<item value="step02_AOP.step02_AOP"/>
 			<item value="step01_springDI.step01_springDI"/>
 		</list>
 		<list key="groupId">
+			<item value="step17_MyBatisJoinTest"/>
+			<item value="step16_MyBatisDynamicTest"/>
+			<item value="step15_MyBatisJoin"/>
+			<item value="step14_MyBatisDynamic"/>
+			<item value="step13_MyBatis"/>
 			<item value="step06_AOP"/>
 			<item value="step04_AOP"/>
 			<item value="step02_AOP"/>
 			<item value="step01_springDI"/>
 		</list>
 		<list key="artifactId">
+			<item value="step17_MyBatisJoinTest"/>
+			<item value="step16_MyBatisDynamicTest"/>
+			<item value="step15_MyBatisJoin"/>
+			<item value="step14_MyBatisDynamic"/>
+			<item value="step13_MyBatis"/>
 			<item value="step06_AOP"/>
 			<item value="step04_AOP"/>
 			<item value="step02_AOP"/>

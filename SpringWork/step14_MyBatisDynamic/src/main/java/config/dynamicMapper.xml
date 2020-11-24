@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dynamicMapper">
+
+<sql id="empSelectSql">
+ select empno, ename, job, sal, hiredate 
+	   from emp
+</sql>
+
+<!-- emp테이블의 컬럼을 EmpDTO에 매핑하기 위한 설정(Map) -->
+<resultMap type="emp" id="empSelectMap">
+	<id column="empno" property="empno"/> <!-- id는 primary key를 설정할 때. column은 db의 명 property는 자바의 명 -->
+	<result column="empname" property="empName"/>
+	<result column="job" property="job"/>
+	<result column="sal" property="sal"/>
+	<result column="hiredate" property="hiredate"/>
+</resultMap>
+
+	
+	
+	<!-- 
+   1. emp테이블에서 조건에 따라 검색하기
+    
+      ename이 들어오면 ename에 해당하는 레코드 검색 or
+      job이 들어오면 job에 해당하는 레코드 검색 
+      둘다 들어오면 ename과 job을 조건으로 사용.
+      
+      select * from emp;
+
+      select * from emp where empName="";
+
+      select * from emp where empName="" and job="";
+
+      select * from emp where  job="";
+      
+   -->
+   
+<!--    <select id="ifSelect" parameterType="emp" resultMap="empSelectMap">
+	   <include refid="empSelectSql"/>
+	 	<where> where절 안에 and나 or가 나오면 그것을(and나 or) 없앰
+	 	  <if test="empName != null"> 자바 안에서 물어보는 것이기 때문에 empName으로(자바 명)
+	   		 ename=#{empName}
+	   	  </if>
+	   	
+	   	<if test="job != null ">
+	  	 and job=#{job}
+	   	</if>
+	 	</where>
+	 
+   </select>
+ -->   
+   
+   
+   
+    <!-- emp테이블에서 조건에 따라 검색하기
+      ename이 들어오면 ename에 해당하는 레코드 검색 or
+      job이 들어오면 job에 해당하는 레코드 검색 
+      둘다 들어오면 ename과 job을 조건으로 사용.
+      
+      *trim 요소
+      prefix="처리후 엘리먼트 내용이 있으면 가장 앞에 붙여준다"  
+      prefixOverrides="처리후 엘리먼트 내용중 가장 앞에 해당 문자들이 있다면 자동삭제" 
+      
+      suffix="처리후 엘리먼트 내용이 있으면 가장 뒤에 붙여준다." 
+      suffixOverrides="처리후 엘리먼트 내용중 가장 뒤에 해당 문자들이 있다면 자동삭제"
+   
+   -->
+   <!-- 위의 문장을 TRIM으로 바꿔보자 -->
+      <select id="ifSelect" parameterType="emp" resultMap="empSelectMap">
+	   <include refid="empSelectSql"/>
+	 	<trim prefix="where" prefixOverrides="and | or">
+		 	<if test="empName != null"> 
+		   		 ename=#{empName}
+		   	  </if>
+		   	
+		   	<if test="job != null ">
+		  	 and job=#{job}
+		   	</if>
+		   	
+		   	<!-- <choose>라는 그렇지않다면 이라는 조건을 넣는 것도 있다. -->
+		   	
+	 	</trim>
+	 
+   </select>
+   
+
+    <!--레코드 수정
+     ename, job, sal 의 항목이 각각 null이 아닐때 empno에 해당하는
+     레코드 수정한다.
+     update emp  set ename=?  where empno=?;
+     update emp  set job=?  where empno=?;
+     update emp  set sal=?  where empno=?; 
+     update emp  set ename=? ,job=? where empno=?;
+      
+    -->
+    
+   <!--  <update id="setUpdate" parameterType="emp">
+    	update emp
+    	<set>
+    		<if test="empName != null">
+    			ename = #{empName}, 
+    		</if>
+    		<if test="job != null">
+    			job = #{job}, 
+    		</if>
+    		<if test="sal > 0">
+    			sal = #{sal}, 
+    		</if>
+    	</set>
+    	where empno=#{empno}
+    </update> -->
+    
+    
+    <!-- set요소를 trim으로 변경 -->
+    <update id="setUpdate" parameterType="emp">
+    	update emp
+    	<trim prefix="set" suffixOverrides=",">
+    		<if test="empName != null">
+    			ename = #{empName}, 
+    		</if>
+    		<if test="job != null">
+    			job = #{job}, 
+    		</if>
+    		<if test="sal > 0">
+    			sal = #{sal}, 
+    		</if>
+    	</trim>
+    	where empno=#{empno}
+    </update>
+    
+    
+     <!-- 
+      select * from emp
+      where empno in (7777);
+      
+       select * from emp
+      where empno in (7777,222,444,....);
+    
+     -->
+     
+     <select id="forSelect" parameterType="list" resultMap="empSelectMap">
+     	<include refid="empSelectSql"/>
+     		<where>
+     			empno in
+	     		<foreach collection="list" item="item" separator="," open="(" close=")">
+	     			#{item}
+	     		</foreach>
+     		</where>
+     </select>
+     
+     
+
+
+</mapper>

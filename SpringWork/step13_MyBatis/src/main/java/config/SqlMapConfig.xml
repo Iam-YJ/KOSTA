@@ -12,10 +12,17 @@
 		외부 properties 파일의 위치 설정하기 -->
 <properties resource="config/dbInfo.properties"></properties>
 
+<!-- 글자 표기법 설정 -->
+<settings>
+<setting name="jdbcTypeForNull" value="NULL"/>
+<setting name="mapUnderscoreToCamelCase" value="true"/>
+</settings>
+
 
 <!-- 객체 별칭 설정하기 -->
 <typeAliases>
 <typeAlias type="kosta.dto.EmpDTO" alias="emp"/>
+<typeAlias type="kosta.dto.UserDTO" alias="userDTO"/>
 </typeAliases>
 
 
@@ -34,6 +41,7 @@
 	
 	<mappers>
 		<mapper resource="config/empMapper.xml" /> <!-- empMapper.xml 문서 읽어보기 -->
+		<mapper resource="config/empSelectMapper.xml" /> 
 	</mappers>
 	
 	
