@@ -14,7 +14,7 @@
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
-	<!-- 이것은 root-context에 루트를 "/"로 설정했기 때문에 걸러줘야 할 애들을 걸러주기 위함이다 -->
+	<!-- 이것은 web.xml에 루트를 "/"로 설정했기 때문에 걸러줘야 할 애들을 걸러주기 위함이다 -->
 	<!-- dispatcherServlet에서 실행되지 않고 밖에서 정적으로 실행된다. -->
 	<!-- webapp 아래 resources 폴더 -->
 
@@ -24,7 +24,8 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="kosta.mvc.controller" />
+	<context:component-scan base-package="kosta.mvc" /> <!-- 원래는 kosta.mvc.controller 였는데 범위를 넓힌 이유는 service, repository 등의
+	패키지도 읽힐 수 있도록 하기 위해 -->
 	
 	
 	

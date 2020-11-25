@@ -10,4 +10,8 @@
 <typeInfo handle="=step08_MyFactoryFramework/src&lt;kosta.mvc.controller{Controller.java[Controller" modifiers="513" timestamp="1605582240669"/>
 <typeInfo handle="=step11_WebMVCTest/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kosta.mvc.model.dao{ProductDAO.java[ProductDAO" modifiers="513" timestamp="1605754010026"/>
 <typeInfo handle="=step11_WebMVCTest/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kosta.mvc.model.service{ProductService.java[ProductService" modifiers="513" timestamp="1605753881513"/>
+<typeInfo handle="=step19_AjaxMyBatis/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kosta.mvc.model.repository{SuggestDao.java[SuggestDao" modifiers="513" timestamp="1606271887447"/>
+<typeInfo handle="=step19_AjaxMyBatis/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kosta.mvc.model.service{SuggestService.java[SuggestService" modifiers="513" timestamp="1606272541202"/>
+<typeInfo handle="=step19_AjaxMyBatis/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kosta.mvc.model.service{StudentService.java[StudentService" modifiers="513" timestamp="1606275547026"/>
+<typeInfo handle="=step19_AjaxMyBatis/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kosta.mvc.model.repository{StudentDao.java[StudentDao" modifiers="513" timestamp="1606275684049"/>
 </typeInfoHistroy>

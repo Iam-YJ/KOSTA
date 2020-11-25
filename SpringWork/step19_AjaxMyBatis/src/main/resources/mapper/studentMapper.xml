@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="studentMapper">
+
+	<!-- 검색 (전체검색 or 조건검색) -->
+	<select id="select" parameterType="String"
+		resultType="studentDTO">
+		select st_no, st_name, st_age, st_addr, st_phone
+		from student
+		<!-- st_no와 stNo가 맞지않아 나는 오류 방지를 위해 classes 아래 SqlMapConfig.xml 넣고 mybatis.xml에 
+			등록함 -->
+		<if test="_parameter != null">
+			<where>
+				st_no=#{stNo}
+			</where>
+		</if>
+
+	</select>
+
+	<!-- 등록 -->
+
+	<insert id="insert" parameterType="studentDTO">
+		insert into student
+		values(#{stNo},#{stName},#{stAge},#{stAddr},#{stPhone})
+	</insert>
+
+
+	<!-- 수정 -->
+	<update id="update" parameterType="studentDTO">
+		update student set st_name=#{stName}, st_age=#{stAge},
+		st_addr=#{stAddr}, st_phone=#{stPhone}
+		<where>
+			st_no = #{stNo}
+		</where>
+	</update>
+
+	<!-- 삭제 -->
+	<delete id="delete" parameterType="string">
+		delete from student
+		<if test="_parameter != null">
+			<where>
+				st_no = #{_parameter}
+			</where>
+		</if>
+	</delete>
+
+</mapper>
