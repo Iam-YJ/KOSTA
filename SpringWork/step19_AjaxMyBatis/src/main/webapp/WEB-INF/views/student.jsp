@@ -114,7 +114,7 @@ h2 {
 				}
 			})
 		});
-	})
+	
 
 	//전체레코드 가져오기
 	function printMember() {
@@ -151,11 +151,12 @@ h2 {
 					error : function(err) {
 						//alert("err : "+err);
 					}
-				})
+				}) 
 	}//전체 레코드 가져오기 끝
 
 	//등록 or 수정
-	$("#btn").click(function() {
+	$('#btn').click(function() {
+		
 		var state = true; //등록 or 수정을 해야하는지 여부 체크(true:한다, false:안한다)
 
 		$("input[type=text]").each(function(index, item) {
@@ -174,7 +175,7 @@ h2 {
 			if ($(this).val() == "수정하기") {
 				urlAddr = "${pageContext.request.contextPath}/update";
 				//id박스 활성화
-				$("#stNo").removeAttr("readonly");s
+				$("#stNo").removeAttr("readonly");
 
 				//span보이기
 				$("span").show();
@@ -205,8 +206,10 @@ h2 {
 			}//error
 
 		});//ajax
-		}
-	});//click insert
+		} 
+	});//등록 수정 끝
+	
+	
 
 	$(document).on("click", "#listTable > tbody > tr > td > a", function() {
 		var idV = $(this).text();
@@ -244,6 +247,7 @@ h2 {
 		$("#btn").val("수정하기")
 
 	})
+	}); //스크립트 괄호 끝
 </script>
 </head>
 

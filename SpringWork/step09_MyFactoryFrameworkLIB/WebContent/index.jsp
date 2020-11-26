@@ -10,7 +10,7 @@
 <body>
 <h1>MyFactory Framework TEST</h1>
 <h3>
-<a href="insert.do?command=insert">등록하기</a><p>
+<a href="insert.do">등록하기</a><p>
 <a href="select.do?command=select">검색하기</a><p>
 <a href="delete.do?command=delete">삭제하기</a><p>
 
