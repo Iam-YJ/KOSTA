@@ -1,3 +1,4 @@
+step22_UserBoardTiles
 
  * 회원관리 및 자료실형태의 게시판
 
@@ -5,9 +6,9 @@
 
 
   2) 자료실 : 등록, 검색 , 읽기, 삭제, 수정
-              (업로드 , 다운로드기능)
+              (업로드 , 다운로드기능) - MultipartFile..
              *전제조건 : 자료실 이용은 반드시
-                         로그인 된 사용자만 접근 가능.
+                         로그인 된 사용자만 접근 가능. - 로그인 체크(session 유무체크 필요 -> AOP로 )
 
 
   * 주요 적용기술
@@ -21,13 +22,13 @@
 
 
   * 필요한 lib
-    - sprint WEB MVC
-    - tiles 3개
-    - aop 1개
-    - 업로드 관련 2개
-    - DB+MyBatis (오라클, mybatis, log4 , spring-mybatis, jdbc, dbcp)
-    - transction적용 : aop
-
+    - spring WEB MVC o
+    - tiles 3개 o
+    - aop 1개 ㅇ
+    - 업로드 관련 2개 o
+    - DB+MyBatis (오라클, mybatis, log4 , spring-mybatis, jdbc, dbcp) ㅇ
+    - transction적용 : aop  o
+    - 롬복 lib ㅇ
 ----------------------------------------------
   *springBean 설정문서
     1) servlet-context.xml : 기본
@@ -38,16 +39,18 @@
   * package구조
 
    회원관리
-     org.kosta.mvc.user.controller
-     org.kosta.mvc.user.service
-     org.kosta.mvc.user.repository
-     org.kosta.mvc.user.domain
+     kosta.web.mvc.user.controller
+     kosta.web.mvc.user.service
+     kosta.web.mvc.user.repository
+     kosta.web.mvc.user.dto
 	
    자료실
-     org.kosta.mvc.board.controller
-     org.kosta.mvc.board.service
-     org.kosta.mvc.board.repository
-     org. kosta.mvc.board.domian
+     kosta.web.mvc.board.controller
+     kosta.web.mvc.board.service
+     kosta.web.mvc.board.repository
+     kosta.web.mvc.board.dto
+
+context-path는 kosta.web.mvc 임
 
 
  * mybatis설정문서
@@ -55,8 +58,9 @@
     - mapper준비 - interface기반의 @Annotation 하면 생략가능
     - SqlMapConfig.xml - springBean에서 property로 설정하면 생략가능
 
+css랑 js는 resources에  o
 
-*Schema
+*Schema o
     1)자료실 : electronics.sql
     2)회원 : member.sql
 
