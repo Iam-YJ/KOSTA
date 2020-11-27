@@ -3,21 +3,20 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt"  prefix="fmt"%>
 <HEAD>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
 
 <SCRIPT language=javascript>
 function sendUpdate(){
-	document.requestForm.command.value ="updateForm";
-	document.requestForm.submit();
+	location.href ="${path}/board/updateForm";
+	//document.requestForm.submit();
 }
 
 
 function sendDelete(){
 	var password = prompt("삭제할 게시물의 비밀번호를 입력하세요");
 	if(password){
-		document.requestForm.command.value ="delete";
+		location.href ="delete";
 		document.requestForm.password.value = password;
-		alert("11")
 		document.requestForm.submit();
 	}else{
 		return false;
@@ -48,13 +47,13 @@ function sendDelete(){
             <p align="right"><b><span style="font-size:9pt;">등록일</span></b></p>
         </td>
         <td width="300" height="20">
-        	<span style="font-size:9pt;"><b>${requestScope.elec.writeday}</b></span>
+        	<span style="font-size:9pt;"><b>${requestScope.elec.writeDay}</b></span>
         </td>
         <td width="100" height="20" >
 			<p align="right"><b><span style="font-size:9pt;">조회수</span></b></p>
 		</td>
         <td width="100" height="20">
-			<p><b><span style="font-size:9pt;"></span>${requestScope.elec.readnum}</b></p>
+			<p><b><span style="font-size:9pt;"></span>${requestScope.elec.readNum}</b></p>
 		</td>
     </tr>
     <tr>
@@ -74,17 +73,17 @@ function sendDelete(){
         <span style="font-size:9pt;"><b><pre>${requestScope.elec.description}</pre></b></span></td>
     </tr>
     
-      <c:if test="${elec.fName!=null}">
+      <c:if test="${elec.fname!=null}">
        <tr>
         <td width="100" height="20">
             <p align="right"><b><span style="font-size:9pt;">다운로드</span></b></p>
         </td>
         <td width="450" height="20" colspan="3">
         	<span style="font-size:9pt;"><b>
-        	<a href='downLoad?fName=${elec.fName}'>
-    			${elec.fName} 
+        	<a href='downLoad?fName=${elec.fname}'>
+    			${elec.fname} 
       		</a>
-      		  ( <fmt:formatNumber value="${elec.fSize}"/> byte)
+      		  ( <fmt:formatNumber value="${elec.fsize}"/> byte)
         </b></span>
         </td>
     </tr>
@@ -103,7 +102,7 @@ function sendDelete(){
     </tr>
 </table>
 <hr>
-<div align=right><span style="font-size:9pt;">&lt;<a href="elec?command=list">리스트로 돌아가기</a>&gt;</span></div>
+<div align=right><span style="font-size:9pt;">&lt;<a href="$redirect:/board/list">리스트로 돌아가기</a>&gt;</span></div>
 
 
 

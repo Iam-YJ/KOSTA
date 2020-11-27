@@ -15,8 +15,10 @@ public class UserDAOImpl implements UserDAO {
 
 	@Override
 	public UserDTO loginCheck(UserDTO userDTO) {
-		// TODO Auto-generated method stub
-		return null;
+		UserMapper mapper = session.getMapper(UserMapper.class);
+		UserDTO dbDTO = mapper.loginCheck(userDTO);
+		
+		return dbDTO;
 	}
 
 }

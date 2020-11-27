@@ -49,12 +49,12 @@
 		class="org.mybatis.spring.SqlSessionFactoryBean">
 		<beans:property name="dataSource" ref="dataSource" />
 		<beans:property name="mapperLocations" value="classpath:mapper/*Mapper.xml" />
-		<beans:property name="typeAliasesPackage" value="kosta.web.mvc.board.dto, kosta.web.mvc.user.dto" />
-		<!-- <beans:property name="configLocation" value="classpath:config/SqlMapConfig.xml"/> -->
+		<beans:property name="typeAliasesPackage" value="kosta.web.mvc.*.dto" />
+		<beans:property name="configLocation" value="classpath:config/SqlMapConfig.xml"/> <!-- 등록시 null 여부 체크 관련 -->
 	</beans:bean>
 
 	<!-- 인터페이스 기반 mapper 만들 때 필요 <beans:bean id="userMapper" class="org.mybatis.spring.mapper.MapperFactoryBean"> 
-		<beans:property name="mapperInterface" value="kosta.mvc.model.repository.StudentMapper" 
+		<beans:property name="mapperInterface" value="kosta.web.mvc.user.repository.UserMapper" 
 		/> <beans:property name="sqlSessionFactory" ref="sqlSessionFactory" /> </beans:bean> -->
 
 
@@ -83,5 +83,6 @@
 		<aop:advisor advice-ref="txAdvice"
 			pointcut="execution(public * kosta.mvc.service.*ServiceImpl.*(..))" />
 	</aop:config> -->
- <tx:annotation-driven transaction-manager="transactionManager"/>
+	
+ <tx:annotation-driven transaction-manager="transactionManager"/> <!-- transaction 처리를 위해 만듬  -->
 </beans:beans>

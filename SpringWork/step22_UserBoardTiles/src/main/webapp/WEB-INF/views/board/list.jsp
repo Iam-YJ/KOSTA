@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="${path}/resources/css/style.css">
 
 <table align="center" border="0" cellpadding="5" cellspacing="2" width="100%" bordercolordark="white" bordercolorlight="black">
 <caption>상품 LIST</caption>
@@ -58,7 +58,7 @@
 		        </td>
 		        <td bgcolor="">
 					<p><span style="font-size:9pt;">
-					<a href="elec?command=detailView&modelNum=${elecDto.modelNum}">
+					<a href="selectByNo/${elecDto.modelNum}">
 					  ${elecDto.modelName}
 					</a>
 					</span></p>
@@ -70,20 +70,20 @@
 		        </td>
 		        <td bgcolor="">
 		            <p align="center"><span style="font-size:9pt;">
-		            ${elecDto.writeday}</span></p>
+		            ${elecDto.writeDay}</span></p>
 		        </td>
 		         
 		         <td bgcolor="">
 		            <p align="center"><span style="font-size:9pt;">
-		            ${elecDto.fName}</span></p>
+		            ${elecDto.fname}</span></p>
 		        </td>
 		         <td bgcolor="">
 		            <p align="center"><span style="font-size:9pt;">
-		            <fmt:formatNumber value="${elecDto.fSize}"/> byte</span></p>
+		            <fmt:formatNumber value="${elecDto.fsize}"/> byte</span></p>
 		        </td>
 		        <td bgcolor="">
 		            <p align="center"><span style="font-size:9pt;">
-		            ${elecDto.readnum}</span></p>
+		            ${elecDto.readNum}</span></p>
 		        </td>
 		    </tr>
     </c:forEach>
@@ -92,7 +92,7 @@
 </table>
 <hr>
 <div align=right>
-<span style="font-size:9pt;">&lt;<a href="elecView/write.html">글쓰기</a>&gt;</span></div>
+<span style="font-size:9pt;">&lt;<a href="${path}/board/write">글쓰기</a>&gt;</span></div>
 
 
 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+
+<configuration>
+
+	<!-- SqlMapConfig.xml은 환경설정 문서이다 -->
+
+	<!-- 글자 표기법 설정 -->
+	<settings>
+		<setting name="jdbcTypeForNull" value="NULL" />
+		<setting name="mapUnderscoreToCamelCase" value="true" />
+	</settings>
+
+<!--  mapper 등록하는 것. SqlMapperConfig에 등록하거나, db 설정하는 mybatis.xml에 등록하거나 둘 중 하나만 해야함 -->
+	<mappers>
+	<mapper class="kosta.web.mvc.user.repository.UserMapper"/>
+	<mapper class="kosta.web.mvc.board.repository.BoardMapper"/>
+	</mappers>
+
+</configuration>

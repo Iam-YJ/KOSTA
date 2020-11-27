@@ -1,5 +1,7 @@
 package kosta.web.mvc.board.dto;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,6 +21,10 @@ public class ElectronicsDTO {
 	private String writeDay;
 	private int readNum;
 	private String fname;
-	private int fsize;
+	private long fsize;
+	
+	private MultipartFile file;
+	//업로드 기능 진행을 위해 MultipartFile 필요하고 
+	// 이것에 대한 이름은 <input type="file" name="???">의 ???와 이름이 같아야 한다 
 
 }

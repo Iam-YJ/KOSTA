@@ -23,6 +23,7 @@
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
+		<beans:property name="order" value="2"/>
 	</beans:bean>
 	
 	
@@ -43,6 +44,16 @@
 	
 	<context:component-scan base-package="kosta.web.mvc" />
 	
-	
+	<!-- 모든 ServletContext 영역에서 발생하는 예외에 대한 처리 -->
+	<beans:bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver"> <!-- 이것을 등록하면 controller 안에서 하던 것은 안됨 -->
+		<beans:property name="exceptionMappings"> <!-- beans:property는 set 설정하는 것 -->
+			<beans:props>
+				<beans:prop key="java.lang.NumberFormaException">
+					error/errorMessage
+				</beans:prop>
+			</beans:props>
+		</beans:property>
+
+	</beans:bean>
 	
 </beans:beans>
