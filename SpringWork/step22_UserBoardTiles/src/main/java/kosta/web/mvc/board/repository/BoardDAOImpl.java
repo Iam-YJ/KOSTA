@@ -51,11 +51,7 @@ public class BoardDAOImpl implements BoardDAO {
 	public int delete(String modelNum, String password, String savePath) {
 		// TODO Auto-generated method stub
 		
-//		파일 삭제하는 것 
-//		if(dbElec.getFname()!=null) {
-//			File file = new File(savePath+"/"+dbElec.getFname());
-//			file.delete();
-//		}
+
 		return 0;
 	}
 

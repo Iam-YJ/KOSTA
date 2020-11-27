@@ -98,7 +98,7 @@ public class BoardController {
 	}
 
 	/**
-	 * 삭제하기
+	 * 삭제하기1.
 	 */
 	// delete 할 때 (modelNum, password, savePath);
 
