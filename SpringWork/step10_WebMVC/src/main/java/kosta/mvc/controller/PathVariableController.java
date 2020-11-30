@@ -14,8 +14,7 @@ public class PathVariableController {
 		// 					없으면 parameter로 쓸거다
 		System.out.println("/{type}/{id}.do 가 요청되었습니다");
 		System.out.println("type = "+type+", id = "+id);
-		
-		
+			
 		return "result";
 	}
 	

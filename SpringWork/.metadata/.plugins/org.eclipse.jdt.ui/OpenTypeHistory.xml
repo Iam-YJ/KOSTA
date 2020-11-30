@@ -15,8 +15,4 @@
 <typeInfo handle="=step19_AjaxMyBatis/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kosta.mvc.model.service{StudentService.java[StudentService" modifiers="513" timestamp="1606282769048"/>
 <typeInfo handle="=step19_AjaxMyBatis/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kosta.mvc.model.repository{StudentDao.java[StudentDao" modifiers="513" timestamp="1606281557107"/>
 <typeInfo handle="=step20_Transaction/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kosta.mvc.service{TransactionService.java[TransactionService" modifiers="513" timestamp="1606367507460"/>
-<typeInfo handle="=step22_UserBoardTiles/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kosta.web.mvc.user.service{UserService.java[UserService" modifiers="513" timestamp="1606440437422"/>
-<typeInfo handle="=step22_UserBoardTiles/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kosta.web.mvc.user.repository{UserDAO.java[UserDAO" modifiers="513" timestamp="1606440335593"/>
-<typeInfo handle="=step22_UserBoardTiles/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kosta.web.mvc.board.service{BoardService.java[BoardService" modifiers="513" timestamp="1606440146376"/>
-<typeInfo handle="=step22_UserBoardTiles/C:\/Program Files\/Java\/jdk1.8.0_261\/jre\/lib\/rt.jar=/owner.project.facets=/java=/=/javadoc_location=/https:\/\/docs.oracle.com\/javase\/8\/docs\/api\/=/&lt;java.lang(RuntimeException.class[RuntimeException" modifiers="33" timestamp="1595394646140"/>
 </typeInfoHistroy>

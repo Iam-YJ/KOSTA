@@ -34,8 +34,6 @@ public class ParameterController {
 	/**
 	 * 매개변수로 전달받은 Model 객체는 뷰쪽으로 전달될 객체이다
 	 * 매개변수 Model에 정보를 저장하면 뷰에서 사용할 수 있다
-	 * 
-	 * 
 	 */
 	@RequestMapping("/a.do")
 	public String aa(String name, Integer age, Model model) {
