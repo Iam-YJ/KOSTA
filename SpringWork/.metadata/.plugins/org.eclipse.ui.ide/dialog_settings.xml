@@ -11,18 +11,19 @@
 	<section name="ExternalProjectImportWizard">
 		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
-		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="true"/>
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
-			<item value="C:\Edu\3차\SpringWork_Kosta\SpringWork\step22_UserBoardTilesTea"/>
 			<item value=""/>
+			<item value="C:\Edu\3차\SpringWork_Kosta\SpringWork\step22_UserBoardTilesTea"/>
 			<item value="C:\Edu\3차\SpringWork_Kosta\SpringWork\step07_AOP"/>
 			<item value="C:\Edu\3차\SpringWork_Kosta\SpringWork\step06_AOP"/>
 			<item value="C:\Edu\3차\SpringWork_Kosta\SpringWork\step02_AOP"/>
 			<item value="C:\Edu\3차\SpringWork_Kosta\SpringWork\step01_springDI"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="C:\Edu\3차\SpringSecurity_Kosta\SpringSecurity\03.springSecurity_DB인증2\step28_springSecurityDBAjax.zip"/>
 			<item value="C:\Edu\3차\SpringWork_Kosta\SpringWork\step22_UserBoardTiles.folder_선생님꺼.tar"/>
 			<item value=""/>
 		</list>
