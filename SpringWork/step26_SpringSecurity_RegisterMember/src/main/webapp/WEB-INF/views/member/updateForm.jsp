@@ -9,7 +9,7 @@
 		아이디 : <input type="text" name="id" value="<sec:authentication property="principal.id"/>" readonly>
 		<br>패스워드 : <input type="text" name="password" >	
 		<br>이름 : <input type="text" name="name" 
-		value="<sec:authentication property="principal.name"/>" >	
+		value="<sec:authentication property="principal.name"/>" >	<!-- 인증된 사용자에 대한 모든 정보를 authentication 에서 꺼냄 -->
 		<br>주소 : <input type="text" name="address" 
 		value="<sec:authentication property="principal.address"/>" >	
 		<br><input type="submit" value="회원정보수정">

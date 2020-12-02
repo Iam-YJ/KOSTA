@@ -46,7 +46,7 @@ $(document).ready(function(){
 		$.ajax({
 			type:"POST",
 			url:"${pageContext.request.contextPath}/idcheckAjax",				
-			data:"${_csrf.parameterName}=${_csrf.token}&id="+id,	
+			data:"${_csrf.parameterName}=${_csrf.token}&id="+id,	 //_csrf 도 ajax 할 때 다 보내야한다 
 			success:function(data){						
 				if(data=="fail"){
 				$("#idCheckView").html("  "+id+" ID Can't Use!! ").css("background","red");

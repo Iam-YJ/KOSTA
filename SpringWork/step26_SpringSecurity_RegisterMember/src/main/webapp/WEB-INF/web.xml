@@ -9,6 +9,7 @@
 		<param-value>
 			classpath:com/domain/config/spring-db.xml
 			classpath:com/domain/config/spring-security.xml
+			<!-- classpath:는 java 기반으로 아래 ..  -->
 		</param-value>
 	</context-param>
 	

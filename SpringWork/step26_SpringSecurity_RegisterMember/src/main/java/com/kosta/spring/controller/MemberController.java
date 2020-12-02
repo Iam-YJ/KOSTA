@@ -69,7 +69,7 @@ public class MemberController {
 	
 	//아이디 중복확인
 	@RequestMapping("idcheckAjax")
-	@ResponseBody
+	@ResponseBody //이거는 ajax 쓰기 위해서 쓴 태그 
 	public String idCheckAjax(HttpServletRequest request) {
 		return memberService.idcheck(request.getParameter("id"));
 	}
@@ -96,7 +96,9 @@ public class MemberController {
 	}
 	
 	
-	@RequestMapping("updateMemberAction")
+	@RequestMapping("updateMemberAction") 
+	//authentication에서 먼저 정보를 update 받고
+	//이 받은 정보를 가지고 진짜 DB의 정보를 수정한다
 	public ModelAndView updateMemberAction(HttpServletRequest request, MemberVO vo) {
 		System.out.println("1. MemberVO  :: "+vo);
 		//회원정보 수정위해 Spring Security 세션 회원정보를 반환받는다

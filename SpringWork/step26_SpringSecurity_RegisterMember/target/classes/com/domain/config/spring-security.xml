@@ -35,6 +35,6 @@
 	<sec:authentication-provider ref="memberAuthenticationProvider"/>
 </sec:authentication-manager>
 
-<context:component-scan base-package="com.kosta.spring.security"/>    
+<context:component-scan base-package="com.kosta.spring.security"/>    <!-- 앞에서 다른 것들은 생성했고, 남은 spring.security도 생성함 -->
 </beans>
 

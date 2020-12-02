@@ -58,6 +58,7 @@
 
 	<tx:annotation-driven
 		transaction-manager="transactionManager" proxy-target-class="true" />
+		<!-- 트렌젝션 :  proxy-target-class="true" 인터페이스 기반으로 해도 오류 안나게 하겠다 설정임  -->
 
 
 
