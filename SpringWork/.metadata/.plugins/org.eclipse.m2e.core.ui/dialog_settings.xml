@@ -26,6 +26,7 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="step27_JPA.step27_JPA"/>
 			<item value="step18_MyBatisAnnotation.step18_MyBatisAnnotation"/>
 			<item value="step17_MyBatisJoinTest.step17_MyBatisJoinTest"/>
 			<item value="step16_MyBatisDynamicTest.step16_MyBatisDynamicTest"/>
@@ -38,6 +39,7 @@
 			<item value="step01_springDI.step01_springDI"/>
 		</list>
 		<list key="groupId">
+			<item value="step27_JPA"/>
 			<item value="step18_MyBatisAnnotation"/>
 			<item value="step17_MyBatisJoinTest"/>
 			<item value="step16_MyBatisDynamicTest"/>
@@ -50,6 +52,7 @@
 			<item value="step01_springDI"/>
 		</list>
 		<list key="artifactId">
+			<item value="step27_JPA"/>
 			<item value="step18_MyBatisAnnotation"/>
 			<item value="step17_MyBatisJoinTest"/>
 			<item value="step16_MyBatisDynamicTest"/>
