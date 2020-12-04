@@ -8,6 +8,10 @@ import javax.transaction.Transactional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.test.annotation.Commit;
 
 import kosta.mvc.domain.Board;
@@ -57,6 +61,67 @@ public class BoardRepositoryTest {
 		Optional<Board> op = rep.findById(202L);
 		Board board = op.orElse(null);
 		System.out.println(board);
+	}
+	
+	/**
+	 * 삭제하기
+	 */
+	@Test
+	public void delete() {
+		rep.deleteById(4L);
+		
+	}
+	
+	/**
+	 * 수정하기
+	 */
+	@Test
+	public void update() {
+		Board board = rep.findById(3L).orElse(null);
+		board.setContent("수정되나?");
+		board.setTitle("불금이다요");
+	}
+	
+	/**
+	 * 전달 받은 글번호 이상인 레코드 삭제
+	 */
+	@Test
+	public void delete2() {
+		rep.deleteGreateThanId(150L);
+	}
+	
+	@Test
+	public void searchSelect() {
+		List<Board> list = rep.searchSelect(130L, "제목12");
+		list.forEach(b->System.out.println(b));
+	}
+	
+	/**
+	 * 메소드 기반 쿼리
+	 */
+	@Test
+	public void findByQuery() {
+		List<Board> list = rep.findByBnoLessThan(50L);
+		list.forEach(b->System.out.println(b));
+	}
+	
+	/**
+	 * 페이징 처리
+	 */
+	@Test
+	public void page() {
+		Pageable page = PageRequest.of(1, 10, Direction.DESC, "bno");
+		Page<Board> pageList = rep.findAll(page);
+		pageList.getContent().forEach(b->System.out.println(b));
+		
+		System.out.println("**********************");
+		System.out.println("pageList.getNumber() : "+ pageList.getNumber());
+		System.out.println("pageList.getSize() : "+ pageList.getSize());
+		System.out.println("pageList.getTotalPages() : "+ pageList.getTotalPages());
+		System.out.println("pageList.previousOrFirstPageable() : "+ pageList.previousOrFirstPageable());
+		System.out.println("pageList.nextPageable() : "+ pageList.nextPageable());
+		
+		System.out.println("**********************");
 	}
 
 }
