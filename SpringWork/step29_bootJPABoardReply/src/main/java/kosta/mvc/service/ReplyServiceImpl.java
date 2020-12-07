@@ -24,12 +24,12 @@ public class ReplyServiceImpl implements ReplyService {
 	
 	@Override
 	public void insert(Reply reply) {
-
+		replyRepo.save(reply);
 	}
 
 	@Override
 	public void delete(Long id) {
-
+		replyRepo.deleteById(id);
 	}
 
 }

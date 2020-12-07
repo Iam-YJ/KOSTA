@@ -26,12 +26,9 @@
 	   
 	   
 	    $("input[value=답변하기]").click(function(){
-		   var pwd = prompt("비밀번호를 입력하세요.");
-		   if(pwd){
-	           $("#password").val(pwd);
-			   $("#requestForm").attr("action", "${pageContext.request.contextPath}/reply/replyForm");
+			   $("#requestForm").attr("action", "${pageContext.request.contextPath}/reply/writeForm");
 			   $("#requestForm").submit();
-		   }
+		   
 	   })
 	   
    })
@@ -101,6 +98,17 @@
 		</td>
     </tr>
 </table>
+
+<h3>Reply Info </h3>
+
+<%-- \${board.replyList} : ${board.replyList}
+ --%>
+ 
+<c:forEach items="${board.replyList}" var="reply">
+	${reply.id} = ${reply.content} <a href="${pageContext.request.contextPath}/reply/delete/${reply.id}/${board.bno}">삭제</a><p>
+</c:forEach>
+
+
 <hr>
 <div align=right><span style="font-size:9pt;">&lt;<a href="${pageContext.request.contextPath}/board/list">리스트로 돌아가기</a>&gt;</span></div>
 

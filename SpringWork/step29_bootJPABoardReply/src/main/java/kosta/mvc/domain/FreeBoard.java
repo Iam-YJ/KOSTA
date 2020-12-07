@@ -47,6 +47,13 @@ public class FreeBoard {
 	// mappedBy = ""에 상대에서 자바단에 설정한 이름을 넣어야한다 
 	private List<Reply> replyList;
 	
+	/**
+	 * 생성자
+	 */
+	public FreeBoard(Long bno) {
+		this.bno = bno;
+	}
+	
 	
 	
 }

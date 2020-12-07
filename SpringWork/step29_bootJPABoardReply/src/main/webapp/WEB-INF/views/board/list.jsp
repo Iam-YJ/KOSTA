@@ -71,7 +71,7 @@
 					onmouseout="this.style.background='white'">
 					<td bgcolor="">
 						<p align="center">
-							<span style="font-size: 9pt;"> ${board.bno}</span>
+							<span style="font-size: 9pt;"> ${board.bno}</span>			
 						</p>
 					</td>
 					<td bgcolor="">
@@ -79,6 +79,7 @@
 							<span style="font-size: 9pt;"> <a
 								href="${pageContext.request.contextPath}/board/read/${board.bno}">
 									${board.subject} </a>
+									Reply count : <b style="color:red"> ${board.replyList.size()} </b>
 							</span>
 						</p>
 					</td>
