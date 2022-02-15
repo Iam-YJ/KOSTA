@@ -1,0 +1,28 @@
+* ORACLE 정리
+
+- DDL 
+	CREATE 문장
+		: 자료형
+		: 제약조건
+	ALTER
+	DROP
+
+- DML
+	INSERT, UPDATE, DELETE
+
+- DQL 
+	DQL
+
+	- 다양한 함수
+	- JOIN
+	- SUBQUERY
+	- VIEW
+	- SEQUENCE
+
+------------------------------------------------------------------------------
+SELECT 문장
+
+CREATE 문장
+INSERT
+UPDATE
+DELETE

@@ -1,0 +1,37 @@
+* Oracle 설치
+
+1. Oracle 설치
+
+2. cmd 열기
+
+3. sqlplus 엔터
+
+4. 계정접속 (system / admin)
+
+5. SQL > 창이 보인다 
+
+6. 샘플DB(scott) 생성하기
+	: 현재 접속된 계정이 system이어야 한다.
+
+7. show user : --현재 접속 계정 확인하기
+
+8. @C:\oraclexe\app\oracle\product\11.2.0\server\rdbms\admin\scott.sql 엔터
+
+9. show user; 해보면 이미 scott 계정으로 접속되어있다
+
+10. 다른 계정으로 접속하기
+     conn 계정명/비밀번호
+
+11. 계정의 비밀번호 변경
+     : 최고관리자로 접속한다. 
+
+   alter user 계정명 identified by 비밀번호;
+
+12. 새로운 계정(DB) 생성하기
+     create user 계정명 identified by 비밀번호;
+
+13. 계정을 생성한 후에 연결과 기본권한 설정.(부여)
+     grant connect , resource to 계정명; - 연결권한 + 기본권한 주는거
+   
+ex)  grant connect , resource, 
+      create view, create sequence to 계정명;   
