@@ -1,0 +1,25 @@
+1) web.xml의 Filter 설정에 의해 모든 경로로의 접근은
+ Spring Security로 우선 접근
+
+2) 인증이 되지않은 사용자는 security-context.xml에서
+ 설정한 login-page(/login)으로 리다이렉션
+
+3) login view의 Form에서 id와 pw를 입력받아
+ security-context.xml에서 설정한
+ login-processing-url(/j_spring_security_check)로 요청
+
+4) login-processiong-url은 컨트롤러 설정이 필요 X,
+ AuthenticationProvider을 구현한 클래스
+(MemberAuthenticationProvider)의 authenticate로 전달
+
+5) authenticate 함수에서 인증 절차를 진행 한 후
+ 반환 값에 따라 security-context.xml에서 설정한
+ default-target-url, authentication-failure-url로 이동 
+
+
+Filter > login-page > view > login-processing-url >
+ Provider(인증 절차 진행) > 
+default-target-url(성공 시) , 
+ authentication-failure-url(실패 시)
+
+

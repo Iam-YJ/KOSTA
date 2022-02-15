@@ -1,0 +1,29 @@
+
+@Transactionl
+class MemberServiceImpl extends MemberService {
+
+	@Autowired
+	private PassswordEncoder passswordEncoder;//<bean clas="Bcrpt...." />
+
+	 MemberDAO mdao;
+	 Authority adao;
+	public int joinMember(Member member){
+ 
+      //비밀번호 암호화
+     member.setPass( passswordEncoder.encode(member.getPasss()));//암호화
+
+      //가입하기 - Membertable insert하기 
+      mdao.insert(member);
+	  
+       //권한 부여
+	    adao.insert(member.getId() , Constnas.ROLE_MEMBER);//기본권한
+     if(member.getUserType().equal("1")){
+         //권한 부여
+	    adao.insert(member.getId() , Constnas.ROLE_ADMIN)//관리자권한
+	 }
+
+	 
+
+
+    }
+}
