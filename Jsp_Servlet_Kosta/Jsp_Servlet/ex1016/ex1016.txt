@@ -1,0 +1,25 @@
+페이지 이동 방식
+1) 서버측에서 이동
+	- forward 방식 : request, response의 정보를 유지
+	   *액션 태그 
+		<jsp:forward page=""/>
+	
+	   * 메소드
+		RequestDispatcher rd = 
+		  request.getRequestDispatcher("이동page");
+		rd.forward(request, response);
+
+	- redirect 방식 : request, response의 정보를 새로 생성
+		response.sendRedirect("이동page");
+
+2) 클라이언트 쪽에서 이동 
+	<a hred=""></a>
+	form의 action 이동 
+	
+	location.href = "이동Page";
+
+
+ex1016
+
+request, response, session 했음
+

@@ -1,0 +1,35 @@
+ex1026 과제
+
+1,정보 누르면 상세보기
+2. 삭제
+3. 아래 선택에서 select 하는 것 oo
+
+- 3번 설명 
+//keyField, keyWord 받기
+		
+//dao 쪽의 검색 메소드 호출한 후 그 결과를 가지고
+//memberSelect.jsp 이동
+		
+//"select * from member where id like '%단어%' ";
+//ps.setString(1, keyField);
+//ps.setString(2,"%"+keyWord+"%");
+		
+		
+//"select * from member where " + keyField + " like ?"
+
+
+
+//"select * from member where id like ?" 
+//"select * from member where name like ?" 
+//"select * from member where addr like ?" 
+이거 세개로 해야한다. 
+조건문 줘서 하는 방식으로 해야함.(만약에 keyField가 이것이라면..)
+
+
+		/*
+		 * if(keyField.equals("id")) { 
+		 * sql += " id like ? "; 
+		 * }else if() { 
+		 * sql += "name like ?"; 
+		 * }
+		 */

@@ -1,0 +1,121 @@
+--명명규칙 정하기
+
+
+view:
+ => elecView폴더 - list.jsp - 모든 게시물 보이기
+                   write.html - 등록
+                   read.jsp - 상세보기(수정버튼, 삭제버튼)
+                   update.jsp - 수정하기
+
+    errorView폴더 - error.jsp - 모든 오류메시지 처리하는 뷰
+
+   /index.html  : 메인!
+
+   /js
+   /css
+
+-----------------------------------------------------------------
+Controller: 
+     kosta.controller.DispatcherServlet.java - HttpServlet상속
+      => 모든 사용자 요청의 진입점(입구)
+      => 사용자 요청방식 - elec?command=key값
+                     elec : 즉 command값이 없으면 default로 list.jsp 
+
+
+
+
+    kosta.controller.Controller.java - interface
+     => 사용자의 요청에 해당하는 기능을 구현하게될 interface
+     => 메소드의 parameter정보로 request, response를 전달받아야함.
+     => 리턴 ModelAndView
+
+
+    kosta.controller.InsertElecController.java  - class (Controller을 구현한 클래스)
+     => 각 요청에 해당하는 기능을 구현....
+       : 파일첨부 가능성이 있기때문에 request를 할 수 없고
+         cos.jar에 있는 MultipartRequest객체를 이용한다.
+    
+    kosta.controller.SelectElecController.java
+    kosta.controller.UpdateElecController.java : 수정하기
+    kosta.controller.UpdateFormElecController.java : 수정하기 전에 수정 폼을 보여주는 부분
+   
+    kosta.controller.DeleteElecController.java
+
+    kosta.controller.ReadElecController.java  : 
+      상품코드에 해당하는 정보 상세보기
+     :상세보기 클릭하면 조회수를 증가시킨다.
+
+    kosta.controller.ModelAndView.java :  이동경로 와 이동방식(redirect, forward)
+
+----------------------------------------------------------------------------
+Model : 
+   kosta.model.dto.Electronics.java 
+
+   kosta.model.service.ElectronicsService.java
+
+   kosta.model.dao.ElectronicsDAO.java  - interface
+   kosta.model.dao.ElectronicsDAOImpl.java - class (ElectronicsDAO 구현)
+
+
+   kosta.util.DBUtil.java - DBCP로드, 연결, 닫기 
+            ( META-INF/context.xml문서필요)
+
+   kosta.listener.HandlerMappingListener.java 
+    => ServletContextListener를 implements 한다.
+
+    => properties파일 읽어서 map에 저장한후 
+       map을 application에 저장한다.
+       사전초기화(미리 객체를 생성해서 map에 저장 -> application영역에 저장)
+   
+   kosta.listener.actionMapping.properties파일
+       : key=vaule의 형태로 생성해야할 객체이름 저장.
+
+
+   kosta.filter.EncodingFilter.java - Filter구현
+    => post방식 한글 인코딩처리.
+
+
+  kosta.down.DownLoadServlet.java => 다운로드(HttpServlet상속)
+-------------------------------------------------------------
+
+ schema폴더 - electronis.sql 
+
+
+ * 라이브러리 :WEB-INF/lib / jstl, standard / 오라클 / cos.jar
+
+
+
+
+
+
+----------------
+프로젝트 옮기려면 DButil. / context.xml(META-INF 안) 
+/ filter / DownloadServlet.java 옮겨야한다 
+
+
+---------------
+HandlerMapping은 properties에 있는 것들을 저장하는 것 
+이후 web.xml에 설정 필요
+ 
+HandlerMapping에 적혀있는 이름 그대로
+String fileName = application.getInitParameter("fileName");
+
+web.xml에 설정 필요 
+  <context-param>
+  <param-name>fileName</param-name>
+  <param-value>kosta/listener/ActionMapping</param-value>
+  </context-param>
+
+
+------------------------
+모델번호에 해당하는 정보 가져오기 호출
+
+1. 상세보기 - flag라는 상태변수 boolean 
+-> true 이면 조회수 증가, false 이면 조회수 증가 x
+
+2. 수정하기를 클릭했을 때
+
+3. 수정이 완료된 후 다시 상세보기 page
+
+
+

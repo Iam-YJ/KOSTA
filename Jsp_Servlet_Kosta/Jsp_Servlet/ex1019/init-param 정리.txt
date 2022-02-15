@@ -1,0 +1,8 @@
+
+1. init-param 전달하기 
+
+1) Servlet 당 전달 되는 param
+ 	- 해당 servlet에서만 사용 가능함
+
+2) application 영역에 전달되는 param
+	- 다른 servlet에서도 사용 가능함 
