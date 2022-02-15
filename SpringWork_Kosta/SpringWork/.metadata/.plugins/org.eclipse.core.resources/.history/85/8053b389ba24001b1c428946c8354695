@@ -1,0 +1,9 @@
+package sample04;
+
+public class StudentController {
+	
+	StudentService service;
+	
+	
+
+}

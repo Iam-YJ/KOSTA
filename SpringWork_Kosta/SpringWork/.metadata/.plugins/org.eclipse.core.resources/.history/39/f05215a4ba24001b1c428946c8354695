@@ -1,0 +1,13 @@
+package sample04;
+
+public class StudentController {
+	
+	StudentService service;
+	
+	public void insert() {
+		//서비스의 insert 호출
+	}
+	
+	
+
+}

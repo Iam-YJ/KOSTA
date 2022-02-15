@@ -1,0 +1,22 @@
+package sample03;
+
+public class BookController {
+
+	private BookDAOImpl bookdao;
+	private BookVo bookvo;
+	
+	public BookController() {
+		
+	}
+	
+	public BookController(BookDAO bookdao, BookVo bookvo) {
+		//생성자임
+		//생성자는 들어오는 값들을 초기화 하는 역할을 함
+		
+	}
+	
+	public void bookInsert() {
+		bookdao.insert(bookvo);
+	}
+
+}

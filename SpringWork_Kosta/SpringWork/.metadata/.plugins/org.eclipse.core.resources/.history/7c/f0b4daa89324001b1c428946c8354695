@@ -1,0 +1,10 @@
+package sample01;
+
+public class MessageBeanenImpl implements MessageBean {
+
+	public void sayHello(String name) {
+		// TODO Auto-generated method stub
+		System.out.println(name+"nice to meet you and you?");
+	}
+
+}

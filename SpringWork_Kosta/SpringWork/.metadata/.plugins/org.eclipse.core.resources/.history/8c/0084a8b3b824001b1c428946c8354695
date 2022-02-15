@@ -1,0 +1,14 @@
+package sample04;
+
+public class Student {
+
+	private String name;
+	private int no;
+	private String phone;
+	private String addr;
+
+	public Student() {
+		System.out.println("Student의 기본 생성자");
+	}
+
+}

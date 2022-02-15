@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Edu\3차\SpringWork_Kosta\SpringWork\step12_WebMVCTest"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="internal"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="step27_JPA.step27_JPA"/>
+			<item value="step18_MyBatisAnnotation.step18_MyBatisAnnotation"/>
+			<item value="step17_MyBatisJoinTest.step17_MyBatisJoinTest"/>
+			<item value="step16_MyBatisDynamicTest.step16_MyBatisDynamicTest"/>
+			<item value="step15_MyBatisJoin.step15_MyBatisJoin"/>
+			<item value="step14_MyBatisDynamic.step14_MyBatisDynamic"/>
+			<item value="step13_MyBatis.step13_MyBatis"/>
+			<item value="step06_AOP.step06_AOP"/>
+			<item value="step04_AOP.step04_AOP"/>
+			<item value="step02_AOP.step02_AOP"/>
+			<item value="step01_springDI.step01_springDI"/>
+		</list>
+		<list key="groupId">
+			<item value="step27_JPA"/>
+			<item value="step18_MyBatisAnnotation"/>
+			<item value="step17_MyBatisJoinTest"/>
+			<item value="step16_MyBatisDynamicTest"/>
+			<item value="step15_MyBatisJoin"/>
+			<item value="step14_MyBatisDynamic"/>
+			<item value="step13_MyBatis"/>
+			<item value="step06_AOP"/>
+			<item value="step04_AOP"/>
+			<item value="step02_AOP"/>
+			<item value="step01_springDI"/>
+		</list>
+		<list key="artifactId">
+			<item value="step27_JPA"/>
+			<item value="step18_MyBatisAnnotation"/>
+			<item value="step17_MyBatisJoinTest"/>
+			<item value="step16_MyBatisDynamicTest"/>
+			<item value="step15_MyBatisJoin"/>
+			<item value="step14_MyBatisDynamic"/>
+			<item value="step13_MyBatis"/>
+			<item value="step06_AOP"/>
+			<item value="step04_AOP"/>
+			<item value="step02_AOP"/>
+			<item value="step01_springDI"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

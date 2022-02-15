@@ -1,0 +1,13 @@
+package sample02;
+
+public class MemberService {
+	
+	private MemberDAO memberDAO;
+	private Member member;
+	
+	public void insert() {
+		System.out.println("MemberService의 insert 호출됨 ");
+		memberDAO.insert(member);
+	}
+
+}

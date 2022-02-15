@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="empMapper">
+
+	<!-- emp테이블의 모든 ename 정보 검색하기 -->
+	<select id="selectEname" resultType="string">
+		<!-- string이라고 쓴 이유는 String의 별칭이 string 이기 때문 -->
+		select ename from emp
+	</select>
+
+	<!-- 등록하기 -->
+	<insert id="insert" parameterType="emp">
+		insert into emp(empno, ename, job, sal, hiredate)
+		values(#{empno},#{empName},#{job},#{sal},sysdate)
+	</insert>
+	
+	
+	<!-- 삭제하기 - 사원번호에 해당하는 정보 삭제 -->
+	<delete id="delete" parameterType="int">
+		delete from emp where empno = #{_parameter}
+		<!-- 어떤 키워드가 들어오든 상관없다 -->
+	</delete>	
+	
+	<!-- 사원번호에 해당하는 사원의 ename, job, sal 수정하기 -->
+	<update id="update" parameterType="emp">
+		update emp set ename = #{empName} , job = #{job}, sal=#{sal} where empno = #{empno}
+	</update>
+	
+		<!-- 검색 JOb에 해당하는 레코드 검색 -->
+	<select id="selectByJob" parameterType="string" resultType="emp">
+	<include refid="empSelectMapper.empSelectSql"/> <!-- 다른 쿼리문을 실행시키고 싶을 때 mapper이름.id -->
+		where job=#{_parameter} 
+	</select>
+	
+	
+	<!-- select 할 때 DB의 underscore와 CamelCas 처리 -->
+	<select id="userSelect" resultType="userDTO">
+	 select user_id, user_name, user_age, user_addr 
+	 from test
+	</select>
+</mapper>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="layout" template="/WEB-INF/views/tiles/layout.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/tiles/header.jsp"/>
+		<put-attribute name="footer" value="/WEB-INF/views/tiles/footer.jsp"/>
+	</definition>
+
+<definition name="boardLayout" template="/WEB-INF/views/tiles/boardLayout.jsp">
+	<put-attribute name="header" value="/WEB-INF/views/tiles/header.jsp"/>
+	<put-attribute name="footer" value="/WEB-INF/views/tiles/footer.jsp"/>
+	<put-attribute name="aside" value="/WEB-INF/views/tiles/aside.jsp"/>
+</definition>
+
+
+
+<!-- 뷰의 정보가 user/* 인 경우  -->
+<definition name="user/*" extends="layout">
+	<put-attribute name="content" value="/WEB-INF/views/user/{1}.jsp"/>
+</definition>
+
+
+<!-- 뷰의 정보가 board/* 인 경우 -->
+<definition name="board/**" extends="boardLayout">
+	<put-attribute name="content" value="/WEB-INF/views/board/{1}.jsp"/>
+</definition>
+	
+	
+	<!-- 
+	controller에서 리턴하는 view의 정보가 */* 이면 아래의 레이아웃 사용 
+	 ex) user/join 리턴하면 /WEB-INF/views/user/join/jsp 이동
+	-->
+<!-- 	<definition name="*/*" extends="layout">
+		<put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp"/>
+	</definition>
+ -->
+ 
+ 	
+</tiles-definitions>

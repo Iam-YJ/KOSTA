@@ -1,0 +1,16 @@
+package sample03;
+
+public class BookController {
+	
+	public BookController() {
+		
+	}
+	
+	public BookController(BookDAO bookdao, BookVo bookvo) {
+	}
+	
+	public void bookInsert() {
+		
+	}
+
+}

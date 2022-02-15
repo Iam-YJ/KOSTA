@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="joinMapper">
+
+	<!-- 1 대 1 의 경우 map 설정 -->
+	<resultMap type="commentbDTO" id="associationMap">
+		<id column="comment_No" property="commentNo" />
+		<result column="user_id" property="userId" />
+		<result column="comment_Content" property="commentContent" />
+
+		<association property="user" javaType="userDTO">
+			<id column="user_id" property="userId" />
+			<result column="user_name" property="userName" />
+
+		</association>
+	</resultMap>
+
+
+	<!-- 1 대 다 의 경우 map 설정 -->
+	<resultMap type="commentbDTO" id="collectionMap">
+		<id column="comment_No" property="commentNo" />
+		<result column="user_id" property="userId" />
+		<result column="comment_Content" property="commentContent" />
+		<result column="reg_Date" property="regDate" /> <!-- 쿼리 문에는 없어도, 여기에는 써도되고 안써도 된다 -->
+		<collection property="replies" ofType="replyDTO"> <!-- ofType은 commentbDTO에 준 제네릭 타입으로 -->
+			<id column="reply_no" property="replyNo" />
+			<result column="reply_content" property="replyContent" />
+			<result column="reply_user_id" property="userId" /> <!-- 작성자 알고싶어서 쿼리에서 as 어쩌구 한거를 넣음 -->
+			<result column="reg_date" property="regDate" />
+			<result column="comment_no" property="commentNo" />
+		</collection>
+
+
+
+	</resultMap>
+
+	<!--1:1의 관계 문제1) 한개의 Comment는 한명의 작성자 정보를 가진다. -->
+
+	<select id="associationTest" resultMap="associationMap">
+		SELECT c.comment_No,
+		c.user_id, u.user_name, c.comment_Content, c.reg_Date
+		FROM commentb c
+		JOIN users u
+		ON c.user_id = u.user_id
+	</select>
+
+	<!-- 1:다의 관계 문제2) 한개의 Comment는 여러명의 유저가 작성할 수 있다. -->
+	<select id="collectionTest" resultMap="collectionMap">
+		SELECT c.comment_no,
+		c.user_id, c.comment_Content, r.reply_no, r.reply_content,r.user_id as
+		reply_user_id,
+		r.reg_date
+		FROM commentB c JOIN reply r ON c.comment_no =
+		r.comment_no
+	</select>
+
+
+</mapper>

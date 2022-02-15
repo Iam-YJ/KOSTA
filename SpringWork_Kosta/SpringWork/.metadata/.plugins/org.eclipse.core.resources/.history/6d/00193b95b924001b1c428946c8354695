@@ -1,0 +1,9 @@
+package sample04;
+
+public class StudentDAOImpl implements StudentDAO {
+
+	public void insert(Student student) {
+		System.out.println("StudentDAOImpl의 insert가 호출되었습니다");
+	}
+
+}

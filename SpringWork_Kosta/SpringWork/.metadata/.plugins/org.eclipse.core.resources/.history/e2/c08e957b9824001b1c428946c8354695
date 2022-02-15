@@ -1,0 +1,34 @@
+package sample01;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MainApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		// 1. 기존 방식
+		/*
+		 * MessageBean bean = new MessageBeanEnImpl(); bean.sayHello("yujin");
+		 * 
+		 * bean = new MessageBeanKoImpl(); bean.sayHello("유지닝");
+		 */
+		
+		//2. spring container 이용(IoC 개념 적용)
+		ApplicationContext context = new ClassPathXmlApplicationContext("sample01/applicationContext.xml");
+		
+		MessageBean bean = context.getBean("en", MessageBean.class);
+		bean.sayHello("park");
+		
+		bean = context.getBean("ko", MessageBean.class);
+		bean.sayHello("융징이");
+		
+		System.out.println("------------------");
+		
+		MessageBean bean2 = context.getBean("ko",MessageBean.class);
+		System.out.println("bean = "+bean);
+		System.out.println("bean2 = "+bean2);
+	}
+
+}

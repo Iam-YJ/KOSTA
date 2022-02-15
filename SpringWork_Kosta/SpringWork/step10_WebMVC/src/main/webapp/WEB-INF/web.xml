@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee https://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	<!-- 모든 servlet, 모든 jsp가 공유하는 영역 -->
+	<!-- The definition of the Root Spring Container shared by all Servlets 
+		and Filters -->
+	<!--  servlet context로 전달되어지는 init param-->
+	<context-param>
+	<param-name>contextConfigLocation</param-name>
+	<param-value>/WEB-INF/spring/root-context.xml</param-value>
+</context-param>
+
+
+
+	<!-- 리스너는 이벤트가 발생할 때 알아서 호출된다 -->
+	<!-- 리스너를 통해서 
+		여러개의 Servlet이나 Filter들이 공유하는 객체가 있다면 listener를 이용하여 공유 할 수 있도록 한다 
+		공유 BEAN을 설정하는 spring container는 기본값이 /WEB-INF/applicationContext.xml 이다.
+		만약, 이름과 위치를 변경하고 싶다면 context-param을 설정한다.
+		 -->
+	<!-- Creates the Spring Container shared by all Servlets and Filters -->
+		<!-- event handler 서버 시작시 자동 호출 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+
+	<!-- post 방식 한글 인코딩 처리하기 -->
+	<filter>
+		<filter-name>charaterEncoding</filter-name>
+		<filter-class>
+			org.springframework.web.filter.CharacterEncodingFilter
+		</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>charaterEncoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+
+
+
+	<!-- Processes application requests -->
+	<servlet>
+		<servlet-name>appServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet
+		</servlet-class>
+		<init-param> <!-- 위치와 이름 변경 가능 -->
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring/appServlet/servlet-context.xml
+				/WEB-INF/spring/appServlet/member-init.xml
+				/WEB-INF/spring/appServlet/updown-context.xml				
+			</param-value>
+			<!-- 값 초기 설정을 위해 param-value에 또 넣었다 -->
+		</init-param>
+
+		<!-- init param이 없으면 servlet을 appServlet 이름으로 찾는데 이런게 없다 init param으로 contextConfigLocation의 
+			이름으로 servlet을 찾게한다 -->
+
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+
+
+	<servlet-mapping>
+		<servlet-name>appServlet</servlet-name>
+		<url-pattern>*.do</url-pattern>
+		<url-pattern>/blog/*</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- 관리자 전용 DispatcherServlet을 등록 -->
+	<servlet>
+		<servlet-name>adminDispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet
+		</servlet-class>
+		<init-param> <!-- 위치와 이름 변경 가능 -->
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring/appServlet/admin-context.xml
+			</param-value>
+			<!-- 값 초기 설정을 위해 param-value에 또 넣었다 -->
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>adminDispatcher</servlet-name>
+		<url-pattern>*.admin</url-pattern>
+	</servlet-mapping>
+
+</web-app>

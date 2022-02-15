@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean class="sample05.ProductBean" id="student">
+		<property name="name" value="박유진"></property>
+		<property name="no" value="1"></property>
+		<property name="phone" value="010-1111-1111"></property>
+		<property name="addr" value="판교~"></property>
+	</bean>
+
+
+</beans>
