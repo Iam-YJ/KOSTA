@@ -1,0 +1,11 @@
+tomcat 실행 후 web.xml 실행
+
+후에 안에서 servlet 생성 -> init param을 통해 servlet-context.xml 설정됨(컨테이너 만들어짐)
+
+....
+
+
+controller가 만들어짐 
+
+
+디스패쳐 서플릿 실행 -> 핸들러매핑 실행 -> 일 실행 -> home.jsp 열림
