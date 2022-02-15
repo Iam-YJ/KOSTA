@@ -1,0 +1,37 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title>transform</title>
+	 <style>		
+		#div1{
+			postion:absolute;
+			left:100px;
+			top:15px;
+		}
+		#div2 {
+			position:absolute;
+			left:200px;
+			top:150px;
+		}
+ 		img {
+			border:1px solid black;
+			box-shadow:5px 5px 10px #333;
+		}
+
+		.rot {
+			transform:rotate(-30deg);
+			-webkit-transform:rotate(-30deg);
+			-moz-transform:rotate(-30deg);
+			-ms-transform:rotate(-30deg);
+			-o-transform:rotate(-30deg);
+		}
+
+	</style>
+</head>
+<body>
+	<div id="div1"><img src="flower1.jpg"> </div>
+	<div id="div2" class="rot"><img src="flower1.jpg"></div>
+</body>
+</html>

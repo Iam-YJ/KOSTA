@@ -1,0 +1,49 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>회원 가입 정보</title>
+<style>
+th{
+	background:#9CC;
+	width:100px;
+	height:50px;	
+	valign:center;
+}
+td, th{
+	border-bottom:1px solid #333;	
+}
+td {
+	padding-left:10px;	
+}
+</style>
+</head>
+
+<body>
+<form method ="GET" action="http://localhost:8087/MyWebProject0924/hello.jsp">
+<table width="400" height="139" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2"><h3>개인 정보</h3></td>
+  </tr>
+  <tr>
+    <th width="100">이름</th>
+    <td width="300"><input type="text" name="username"></td>
+  </tr>
+  <tr>
+    <th>아이디</th>
+    <td><input type="text" name="userid"></td>
+  </tr>
+  <tr>
+    <th>나이</th>
+    <td><input type="text" name="age" required></td>
+  </tr>
+  <tr>
+<td colspan="2">
+  <input type="submit" value="등록">
+</td>
+
+  </tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,62 @@
+WEB, Front End
+ : HTML5, CSS(Bootstrap), JavaScript(jQuery)
+	(Static Web Application)
+
+Back End
+ : Java SE(Standard Edition)
+  - JDBC, I/O, Collection
+ : JavaEE(Enterprise Edition)
+  - Servlet / JSP(Dynamic Web Application 작성)
+  - JSP 페이지내부에 html, css, javascript
+
+
+Static / Dynamic 의 차이점?
+: Static과 Dynamic 구분할때는 DB와 연동여부 
+
+
+
+JSP ... dynamic 
+
+<table>
+<%for(int i=0; i<10; i++) {%>
+	<tr>
+	</tr>
+<%}%>
+</table>
+
+
+-------------------------------------
+<table>
+ <tr></tr>
+ <tr></tr>
+ <tr></tr>
+</table>
+
+
+
+-------------------------------------
+HTML (HyperText Markup Language) -- 태그가 이미 정해져 있음 
+ <table>
+ </table>
+
+
+XML (eXtensible Markup Language) -- 태그를 우리가 정할 수 있음
+ : 설정(configuration)  
+   web.xml
+ :b2b 간의 데이터를 주거나 받을 때 사용하는 문서 포멧 
+
+
+ <name>홍길동</name>
+ <address>서울</address>
+
+-------------------------------------------------------------
+IDE(Intergrated Developement Environment) 통합개발환경
+
+
+
+www.naver.com   : domain service
+203.234.255.244 : ip address
+
+
+http://127.0.0.1:5500
+127.0.0.1 ==> localhost

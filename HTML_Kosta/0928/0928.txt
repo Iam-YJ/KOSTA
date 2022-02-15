@@ -1,0 +1,70 @@
+conn scott/tiger
+start C:\Edu\Html\HTML_Kosta\0928\user.sql
+select * from users;
+
+-Server
+DAO(VO)와 Servlet과 연동
+: DB에 있는 데이터를 읽어서 ArrayList를 JSON으로 변환
+: java object를 Json으로 변환 Json Processer (Gson 사용)
+
+-Client
+:html, javascript만 사용하면 된다(JSP를 사용할 필요가 없다)
+:client는 server가 보내준 json data를 가지고 동적으로 화면을 렌더링하면 된다
+:Ajax(Asyncronous Javascript and XML). 비동기적인 자바스크립트와 XML
+:jquery를 사용해서 server롸 ajax 통신을 할 것 이다.
+
+
+XML parsing
+<name>홍길동</name>
+
+
+JSON {
+"name":"홍길동",
+"addr":['서울','경기도']
+}
+
+
+1.users.sql를 사용해서 scott 계정에 users 테이블 생성
+2. server : 
+   model2.zip 파일을 import
+   maven project로 변환
+   maven repository에서 gson dependency를 pom.xml에 추가
+
+  - UserServlet 객체를 누가 생성하나요?
+  - user.do?cmd=userList 요청을 보냈을 때 doGet() 메서드는 누가 호출할까요?
+  - doGet() 메서드의 인자로 받는 request와 response객체를 누가 생성해서 전달해주나요?
+     ==>> Web Container(tomcat)가 모두 처리한다. 
+
+http://localhost:8087/model2Project/userjson.do?cmd=userJson
+
+
+ajax
+ :같은 origin 내에서만 통신이 가능하다
+
+client
+: origin http://localhost:5500 
+server 
+: origin http://localhost:8087
+
+jsonp
+
+
+
+CSS Selector
+: 1) Tag selector
+  h1 : {
+	front-weight:'bold'
+   }
+: 2) ID Selector 
+   #myDivResult : {
+       color : 'red'
+    }
+
+	<div id='myDivResult'></div>
+
+: 3) Class Selector
+      .container : {
+	vertical-align : 'middle'
+      }
+
+    <div class="container"></div>

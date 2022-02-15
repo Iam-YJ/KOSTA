@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>간단한 포토 앨범</title>
+    <style>
+        ol {
+            margin:20px 10px;
+        }
+		#gallery{
+			width:920px;
+			height:190px;
+			position:relative;
+			background:#808080;
+			border:2px solid black;
+			border-radius:10px;
+		}
+		ul {
+			list-style:none;
+			margin-left:-20px;
+		}
+		ul li{
+			display:inline;
+			float:left;
+			padding:10px;
+		}
+		.bigPic {
+			position:absolute;
+			display:none;
+			margin-left:100px;
+			margin-top:-50px;
+			float:right;
+		}
+    </style>
+    <script src="jquery-1.9.1.js"></script>
+</head>
+<body>
+    <h1>사용법</h1>
+    <ol>
+        <li>작은 이미지를 클릭하면 큰 이미지가 나타납니다.</li>
+        <li>큰 이미지를 클릭하면 큰 이미지가 사라집니다.</li>
+    </ol>
+</body>
+</html>

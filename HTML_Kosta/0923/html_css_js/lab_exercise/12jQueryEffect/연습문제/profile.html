@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>교수 소개</title>
+    <style>
+        ul {
+            list-style:none;
+            margin-top:20px;
+        }
+        ul li {
+            float:left;
+            margin-left:50px;
+            margin-top:20px;           
+        }
+        ul li h2{
+            font-size:1.0em;
+            padding:10px;
+            width:120px;
+            margin-right:100px;
+            background-color:skyblue;
+            box-shadow:1px 1px 1px black;
+        }
+        .card {
+            width:200px;
+            height:250px;
+            padding:10px;         
+            border:1px solid black;
+            border-radius:10px;
+            display:none;
+        }
+        .card ul {
+            margin-left:-70px;
+         }
+        .card ul li{
+            font-size:0.8em; 
+        }
+    </style>
+    <script src="jquery-1.9.1.js"></script>
+
+</head>
+<body>
+    <h1>컴퓨터 공학과 교수 소개</h1>
+        <ul>
+            <li>
+                <h2 id="prof1"> 홍길동 교수 </h2>
+                <div id="intro1" class="card">
+                    <ul>
+                        <li>소속 : 컴퓨터공학과</li>
+                        <li>전공 : 프로그래밍 언어</li>
+                        <li>전화 : xxx-xxx-xxxx</li>
+                        <li>연구실 : 공학관 103호</li>                        
+                    </ul>
+                </div> 
+            </li>
+            <li>
+                <h2 id="prof2"> 한라산 교수 </h2>
+                <div id="intro2" class="card">
+                    <ul>
+                        <li>소속 : 컴퓨터공학과</li>
+                        <li>전공 : 분산처리</li>
+                        <li>전화 : xxx-xxx-xxxx</li>
+                        <li>연구실 : 공학관 101호</li>                        
+                    </ul>
+                </div> 
+            </li>
+        </ul>
+</body>
+</html>

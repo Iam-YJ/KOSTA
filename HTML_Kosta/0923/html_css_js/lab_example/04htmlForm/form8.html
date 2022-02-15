@@ -1,0 +1,88 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>회원 가입 정보</title>
+<style>
+  fieldset{
+    margin-bottom:15px;
+  }
+  ul {
+    list-style:none;
+  }
+  ul li {
+    margin-bottom:5px;
+  }
+  ul li>label {
+     width:80px;
+     float:left;
+  }
+</style>
+</head>
+
+<body>
+<h1>주문서 정보</h1>
+<form action="send.php">
+  <fieldset>
+    <legend> 개인 정보 </legend>
+    <ul>
+      <li>
+        <label for="username">이름 </label>
+        <input type="text" id="username" autofocus placeholder="공백없이 입력하세요" required>
+      </li>
+      <li>
+        <label for="mail">메일주소</label>
+        <input type="email" id="mail" autocomplete="off" placeholder="abcd@abcd.com" required>
+      </li>
+      <li>
+        <label for="homep">홈페이지(URL)</label>
+        <input type="url" id="homep" maxlength="50" placeholder="공백없이 입력하세요">
+      </li>
+    </ul>
+  </fieldset>
+<fieldset>
+  <ul>
+    <li>
+      <label for="mysearch">상품 검색</label>
+      <input type="search" id="mysearch" size="20">
+    </li>
+   </ul>
+</fieldset>
+  <fieldset>
+    <legend> 주문 정보 </legend>
+    <ul>
+      <li>
+        <label for="col">주문 색상</label>
+        <input type="text" id="col" list="color" required>
+        <datalist id="color">
+           <option value="black" label="검정">
+           <option value="gray" label="회색">
+           <option value="olive" label="올리브">
+           <option value="camel" label="카멜">
+        </datalist>
+      </li>
+      <li>
+        <label for="no">주문 개수</label>
+        <input type="range" id="no" min="1" max="10" step="1" value="1" required>
+      </li>
+      <li>
+        <label for="size">사이즈</label>
+        <input type="number" id="size" min="85" max="100" step="5" value="85" required>
+      </li>
+    </ul>
+  </fieldset>
+  <fieldset>
+     <ul>
+       <li>
+         <label for="order"> 주문일 </label>
+         <input type="datetime">
+       </li>
+     </ul>
+  </fieldset>
+  <fieldset style="text-align:center">
+      <input type="submit">
+      <input type="reset">
+  </fieldset>
+</form>
+</body>
+</html>

@@ -1,0 +1,45 @@
+#container {
+    width: 600;
+    border: 2px solid #ccc;
+    /* border-width: 2px;
+      border-style: solid;
+      border-color: rgb(95, 63, 184); */
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: rgb(198, 220, 224);
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  fieldset {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    width: 80px;
+    float: left;
+  }
+  
+  ul#sel2 li {
+    display: inline;
+    float: left;
+  }
+  
+  ul#sel2 li label {
+    width: 150px;
+    float: right;
+  }
+  
+  input[type="checkbox"] {
+    width: 19px;
+    height: 19px;
+    margin: -2px 10px 10px 10px;
+    vertical-align: middle;
+  }
+  
+  #buttons {
+    text-align: center;
+  }

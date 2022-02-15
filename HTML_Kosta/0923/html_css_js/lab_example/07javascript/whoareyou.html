@@ -1,0 +1,35 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Who are you?</title>
+    <style>
+      body {
+        text-align:center;
+      }
+      
+    </style>
+    <script>
+      var urname=prompt("이름을 입력하세요: ");    
+      document.write(urname+"님, 안녕하세요?");
+      
+      function my_func(){
+        var reply = confirm("입장하시겠습니까?");
+        //document.write("Reply "+reply)
+        if(reply){
+          document.getElementById("myDiv").innerHTML = "<h3>YES</h3>";
+        }else{
+          document.getElementById("myDiv").innerHTML = "<h3>NO</h3>";
+        }
+      }
+    </script>
+</head>
+<body>
+  <img src="question.gif">
+  <br> <br>
+  <button onclick="my_func()">확인</button>
+  <div id="myDiv"></div>
+  
+</body>
+</html>
