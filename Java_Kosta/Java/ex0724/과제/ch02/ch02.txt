@@ -1,0 +1,11 @@
+# ch02
+(1) 4
+(2)1,4,5
+(3)1 - byte, boolean // 2 - char, short // 4 - int, float // 8 - long , double
+(4)int, double // age, price // 10, 3.14
+(5)3
+(6)4
+(7)3
+(8)1
+(9)
+(10)

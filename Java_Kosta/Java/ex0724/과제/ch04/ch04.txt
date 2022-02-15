@@ -1,0 +1,39 @@
+# ch04
+(1) if, switch // for, do-while, while
+(2)2
+(3)
+int sum = 0;
+for(int i = 1; i<=100; i++){
+	if (i % 3==0){
+		sum += i;
+	}	
+System.out.println(sum);
+}
+(4) 
+
+		while (true) {
+
+			int a = (int) (Math.random() * 6 + 1);
+			int b = (int) (Math.random() * 6 + 1);
+
+			System.out.println("(" + a + ", " + b + ")");
+
+			if (a + b == 5) {
+				System.out.println("합이 5 입니다");
+				break;
+			} else {
+				continue;
+			}
+		}
+
+(5) 
+double y = 0;
+		double x = 0;
+		for (double i = 1; i <= 10; i++) {
+			y = (60 - 4 * i) / 5;
+			x = i;
+			if (y <= 10) {
+				System.out.println("(" + x + ", " + y + ")");
+			}
+		}
+

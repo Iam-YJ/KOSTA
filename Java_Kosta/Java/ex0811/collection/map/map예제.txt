@@ -1,0 +1,67 @@
+/**
+	 * key에 해당하는 정보 검색
+	 *   :key해당하는 정보를 출력할때 
+	 *    [ Person인경우는 이름만 출력
+	 *     Student인경우는 이름과 총점 출력 ] -> EndView에서 
+	 *     없는경우는 "id는 없습니다." 예외발생
+	 * */
+
+
+
+/**
+	 * 등록 : key와 Person의 정보를 받아 등록하는 메소드
+	 *        등록이 실패하면(id중복체크!!) 예외발생시킨다.("등록되지 않았습니다.")
+	 * */
+
+
+
+	/**
+	 *  삭제
+	 *   : id에 해당하는 value가 삭제되지 않으면 예외발생
+	 *      (삭제되지 않았습니다.)
+	 * */
+
+
+
+/**
+	 * 수정
+	 *   만약, Person인경우 - 이름만 수정
+	 *         Student인경우  - 이름, 국어 ,영어,수학수정(총점 변경)
+	 *         
+	 *    수정이 안된다면 예외발생
+	 *    
+	 * */
+
+-----------------------------------------------------
+*출력
+/**
+	 * key에해당하는 정보 출력
+	 *  [ Person인경우는 이름만 출력
+	 *     Student인경우는 이름과 총점 출력 ] 
+	 * */
+
+
+
+
+public Student(String id, String name, int age, 
+		                       int kor, int eng, int math) {
+		this(id, name, kor,eng,math)	;
+		
+		setAge(age);
+		
+		//총점
+		this.sum = kor+eng+math;
+  }
+  
+	public Student(String id, String name, int kor, int eng, int math) {
+	   super(id, name);
+	   this.kor=kor;
+		this.eng=eng;
+		this.math=math;
+		
+		//총점
+		this.sum = kor+eng+math;
+    }
+
+
+

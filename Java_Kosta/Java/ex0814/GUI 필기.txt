@@ -1,0 +1,86 @@
+* GUI( 화면구성)
+
+1 ) awt : 그래픽을 운영체제에서 가져와서 화면구성을 하기 때문에
+	운영체제마다 느낌이 다르다.
+	import java.awt.*;
+	ex) Frame, Button, TextField...
+
+2) swing : 자체적으로 Look and Feel 을 가지고 있어서
+	어떤 운영체제이든지 상관없이 동일한 느낌으로 나온다.
+	import javax.swing.*;
+	swing의 대부분은 awt를 상속받아서 만들었다.
+	(JXxx로 시작하면 모두 swing이다.)
+	ex) JFrame, JButton, JTextField...
+
+-용어정리
+1) Container : 창의 역할 (반드시 한개 이상의 창이 있어야 화면구성할 수 있다.)
+	JFrame(메인창.. ), JPanel(자리배치 예쁘게, 서브창), JDialog(팝업창..)
+
+-+92) Component : Container 위에 올려져 실제 화면구성을 담당하는 요소들 
+	JButton, JTextField, JTextArea, JComboBox, JCheckBox
+
+3) Layout : Container 위에 Component를 올릴 때 자리배치 하는 방법
+	- BoarderLayoutManager - JFrame, JDialog
+	- FlowLayoutManager -JPanel
+	- GridLayoutManager
+	- GridBagLayoutManager
+
+ex) 화면구성
+	JFrame 1개
+	JButton 2개
+	FlowLayoutManager 1개 
+
+------------------------------------------------------------------------------------------
+
+* Event 처리하기 - import java.awet.event.*;
+ : 사용자의 액션(행동)이 일어났을 대
+   기능을 실행시키는 것 - 메소드가 필요(EventHandler)
+ : 자바에서는 사용자의 액션에 따른 각각의
+ 호출되어지는 메소드들이 이미 정의되어 있다.
+ (추상메소드 ->  interface 기반을 제공한다)
+
+ex) 버튼을 클릭하면 "안녕" 출력한다.
+ - 이벤트를 처리하는 순서!
+1) 이벤트를 발생시키는 주체를 찾는다. (Component 찾기)
+	: JButton
+2)  1)에서 찾은 주체가 어떤 이벤트를 발생시키는지 이벤트 종류를 찾는다
+	:ActionEvent 
+3)  2)에서 찾은 이벤트종류에 해당하는 XxxListener or XxxAdapter를 선택하고
+    구현 또는 상속한다. 그리고, 메소드 재정의해서 기능을 만든다. 
+
+
+* XxxAdapter 클래스는 XxxListener를 미리 구현해놓은 구현 클래스이다. 
+ -> XxxAdapter를 상속해서 필요한 메소드만 오버라이딩 한다. 
+ (구현하는 것은 모든 메소드를 오버라이딩 해야하기 때문에 ㅜㅜ) 
+
+4) 이벤트 등록 
+     이벤트주체.addXxxListener(구현객체);
+	* 인수 구현 객체란..
+	 - this
+	 - 외부객체
+	 - anonymous Inner 클래스 
+
+*anonymous Inner 클래스 
+	이벤트주체.addXxxListener(new XxxAdapter(){
+		메소드 재정의(); 
+	});
+
+** 여기서 new XxxAdapter() 는 생성이 아니라 구현을 위한 영역을 만드는 것이다. 
+-----------------------------------------------------------------------------
+
+* Inner 클래스
+class A{
+	class B{
+	// 객체의 역할을 하면 outer 클래스(A)의 모든 필드와 모든 메소드 접근 가능 특직
+	// 단점 : B라는 이너 클래스는 A라는 클래스 없이는 단독으로 사용할 수 없다.
+	}
+}
+
+* A.class  / A$B.class (중간에 $가 나오면 이너클래스임)
+익명클래스 = Outer이름$숫자.class
+
+
+ : Inner 클래스의 종류 3가지
+1) 정적 inner 클래스
+2) 인스턴스 inner 클래스
+3) 로컬 inner 클래스 

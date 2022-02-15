@@ -1,0 +1,28 @@
+
+String names [] = new String [21];
+int ages [] = new int [21];
+String tels [] = new String[21];
+
+//VO(Value Object) = DTO(Data Transfer Object) = Domain 객체
+//값을 넣고 필요할 때 꺼낼 수 있음 -> setter, getter를 이용
+//setter, getter 메소드를 통해서만이 속성을 접근 할 수 있도록 해야한다
+class Student{
+	private String name;
+	private int age;
+	private 'String tel;
+}
+
+public void setName(String name){
+	this.name = name;
+}
+
+Student st1 = new Student();
+st1.name = "박유진";   --> st1.setName("박준형");
+st1.age = 25;
+st1.tel="010-9731-7033";
+
+Student [] arr = new Student[3];
+arr[0] = new Student();
+arr[1] = new Student();
+arr[2] = new Student();
+

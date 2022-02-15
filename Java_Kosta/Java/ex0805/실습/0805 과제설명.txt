@@ -1,0 +1,9 @@
+0805 과제 설명 
+
+sample01 폴더 안에 사진 보고 만들기 
+package 선언 x
+
+다하고 
+sample02 만들고..
+main은 sample01의 main 이용해서 하기 
+(다형성 이용하기)

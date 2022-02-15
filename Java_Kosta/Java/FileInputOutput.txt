@@ -1,0 +1,49 @@
+Input Output
+
+* 파일에 있는 데이터 byte 단위로 읽기
+ FileInputStream -> read()
+
+* FileInputStream을 속도 향상을 높이기 위해서 Buffered를 이용.
+ BufferedInputStream 객체 사용 -> read()
+
+
+
+* 파일에 있는 데이터 byte 단위로 쓰기
+FileOutputStream -> write()
+
+*FileOutputStream을 속도향상을 높이기 위해서 Buffered를 이용
+BufferedOutputStream -> write()
+
+
+ex) 
+BufferedInputStream bis = new BufferedInputStream(new FileInputStream(경로));
+bis.read(); // close도 bis만 하면된다 
+
+
+----------------------------------------------------
+
+문자 단위로 파일 읽기 -> FileReader -> 입출력 향상 -> BufferedReader
+=> new BufferedReader(new FileReader("읽을 파일 경로"));
+
+문자 단위로 파일 저장 -> FileWriter -> 입출력향상 -> BufferedWriter
+=> new BufferedWriter(new FileWriter("저장할 파일 경로"));
+
+------------------------------------------------------
+
+* 모니터 출력
+System.out
+
+* 키보드 입력
+InputStream is = System.in; //byte 단위로 읽기
+int i = is.read(); //한 바이트 읽기 
+
+byte 단위 읽기 -> 문자 단위 읽기 변경 
+InputStream        Reader           -> InputStreamReader
+
+
+* InputStreamReader isr =  new InputStreamReader(System.in); 
+isr.read();
+
+*Reader를 Buffered 이용
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+String str = br.readLine(); //한줄 읽기 

@@ -1,0 +1,16 @@
+String str = "java";
+String str = new String("java");
+
+class Test{
+
+}
+
+Test t = new Test();
+Test t2 = new Test();
+
+if ( t== t2) // 주소값 비교
+
+if(t.equals(t2)) // Object에 정의된 equals가 호출되어 주소비교 
+
+if(str == str2) // 주소값 비교
+if(str. equals(str2)) // 문자열 비교 

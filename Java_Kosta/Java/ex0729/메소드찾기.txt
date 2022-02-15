@@ -1,0 +1,23 @@
+
+System.out.pritnln(); 메소드 찾기
+
+클래스이름. out
+
+* out 은 static일 것이다
+
+
+class System{
+	속성
+	public static final PrintStream out
+
+	static 타입 out;
+
+	메소드
+}
+
+class PrintStream{
+	public void println(){
+
+	}
+
+}
