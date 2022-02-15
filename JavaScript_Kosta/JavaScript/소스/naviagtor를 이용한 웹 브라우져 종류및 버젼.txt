@@ -1,0 +1,60 @@
+
+* navigator
+ 
+navigator객체는 브라우저 객체
+navigator은 브라우저 종류와 사용언어, 버전
+
+
+ -사용법
+   navigator.속성명
+
+ -속성종류
+
+appCodeName : 브라우저의 코드명을 반환
+appName : 현재 사용중인 브라우저의 이름을 반환
+appVersion : 현재 사용중인 브라우저의 버전을 반환
+userAgent : 브라우저의 이름, 버전, 코드를 포함하는 문자열을 반환
+minetype : mine 형식의 정보를 반환(오브젝트)
+plugins : plugin 정보를 반환(오브젝트)
+language : 현재 브라우저가 사용하는 언어를 반환. 익스플로러에서는 지원하지 않음
+platform : 사용중인 시스템 코드를 반환. 윈도 95/98/NT는 Win32를 반환
+
+----------------------------------------------------------------------
+Opera 10.50
+ 
+> Navigator.appCodeName : Mozilla
+> Navigator.appVersion : 9.80 (Windows NT 5.1; U; ko)
+> Navigator.appName : Opera
+> Navigator.userAgent : Opera/9.80 (Windows NT 5.1; U; ko) Presto/2.5.22 Version/10.50
+ 
+
+IE 7 
+
+> Navigator.appCodeName : Mozilla
+> Navigator.appVersion : 4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 2.0.50727)
+> Navigator.appName : Microsoft Internet Explorer
+> Navigator.userAgent : Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 2.0.50727) 
+
+
+FF 3.6
+ 
+> Navigator.appCodeName : Mozilla
+> Navigator.appVersion : 5.0 (Windows; ko)
+> Navigator.appName : Netscape
+> Navigator.userAgent : Mozilla/5.0 (Windows; U; Windows NT 5.1; ko; rv:1.9.2) Gecko/20100115 Firefox/3.6 
+
+
+Chrome 4.0.249.89
+ 
+> Navigator.appCodeName : Mozilla
+> Navigator.appVersion : 5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/532.5 (KHTML, like Gecko) Chrome/4.0.249.89 Safari/532.5
+> Navigator.appName : Netscape
+> Navigator.userAgent : Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/532.5 (KHTML, like Gecko) Chrome/4.0.249.89 Safari/532.5
+ 
+
+Safari 4.0.4
+ 
+> Navigator.appCodeName : Mozilla
+> Navigator.appVersion : 5.0 (Windows; U; Windows NT 5.1; ko-KR) AppleWebKit/531.21.8 (KHTML, like Gecko) Version/4.0.4 Safari/531.21.10
+> Navigator.appName : Netscape
+> Navigator.userAgent : Mozilla/5.0 (Windows; U; Windows NT 5.1; ko-KR) AppleWebKit/531.21.8 (KHTML, like Gecko) Version/4.0.4 Safari/531.21.10

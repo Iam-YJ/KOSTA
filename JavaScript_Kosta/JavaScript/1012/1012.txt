@@ -1,0 +1,25 @@
+1012
+
+javaScript 내용
+ : 변수개념, 제어문, 연산자, 함수 
+ : 이벤트 처리 
+    1) onXxx="함수"
+    2) 대상.onxxx = 함수
+    3) 대상.addEventListener('xxx', 함수, false);
+
+
+: 기능 구현 하기 위해서 알아야할 문법
+  1) html 요소들을 찾아서 접근(속성, 변경,,)하는 방법
+     * 중요
+	~.value : input 요소들..
+	~.innerText : form양식 제외한 요소들 .. (div, span, h1, a ..)
+  
+  2) inline 요소와 block 요소.. 구분할 줄 알아야 한다
+
+  3) 동적으로 css 적용하는 방법 
+
+  4) 브라우저 내장 객체 : BOM
+  
+  5) 내장객체 : Math, String, Date, Array
+
+  6) DOM 접근 !!  

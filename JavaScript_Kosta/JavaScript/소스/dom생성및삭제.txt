@@ -1,0 +1,147 @@
+
+* DOM(Document Object Model)
+ 
+  - Javascript 에서 DOM객체를 동적으로 생성, 삭제, 추가 등 관리를 할 수가 있다.
+ 
+    1. DOM 객체 접근
+       - 태그의 name 속성의 값으로 접근  [배열]
+        document.getElementsByName("name이름"); <input name="id">
+
+      - 태그의 ID 속성으로 접근 (많이 쓰인다)
+        document.getElementById("태그 id")
+
+     - 태그이름으로 접근
+      document.getElementsByTagName("태그이름");//<input >
+
+
+   ------------------------------------------------------------------
+
+ 
+    2. DOM 객체 생성, 추가 , 삭제 ,수정
+ 
+       - 태그생성
+       document.createElement("태그명");
+        ex) var x = document.createElement('p'); // <p> 태그 생성
+ 
+     
+    -text 생성
+        document.createTextNode("문자열")
+ 
+        ex) var txt = document.createTextNode("heejung")
+
+ 
+      - appendChild() : 자식 노드 추가
+ 
+       :  하위 노드 추가/ 마지막 자식 노드로 추가 한다.
+
+     ex) 부모 노드.appendChild(추가할 자식 노드)
+          => x.appendChild(txt); // <p> heejung </p>
+ 
+
+
+   - insertBefore() : 자식 노드 추가
+ 
+   : 특정 하위 노드 앞에 새 하위 노드를 추가한다.
+ 
+   : 부모노드.insertBefore(추가할 자식 노드, 기존 자식 노드)
+ 
+   
+  
+
+  - .hasChildNodes() : 자식노드 유무
+ 
+  - removeChild() : 자식 노드 삭제
+ 
+  - replaceChild() : 자식노드를 다른 노드로 교체한다.
+ 
+  - settAttribute(속성명, 속성값) : 노드의 속성 추가
+ 
+  - getAttribute(속성명) : 노드의 속성 값 조회
+
+--------------------------------------------------------------------------
+ 3.  태그를 통한 값 출력
+ 
+  - 태그객체.innerHTML;
+ 
+    ex) <div id ="result">
+
+
+       </div>
+ 
+         function exam(){
+            document.getElementById("result").innerHTML = "결과값";
+ 
+          }
+ 
+          하게 되면 <div> </div> 사이에 결과값이라는 String 값이 들어간다.
+
+
+------------------------------------------------------------------------------
+--Dom 제거
+  removeNode(true) - IE만 가능
+ 
+ removeChild(객체) - 모든브라우져가능
+
+
+
+--DOM접근방법
+ 1. parentNode - 부모
+ 2. firstChild - 첫번째자식
+ 3. lastChild - 마지막자식
+ 4. previousSibling- 이전형제노드
+ 5. nextSibling - 다음형제노드
+ 6. childNodes - 자식들
+ 7. attributes -속성들
+
+
+-테이블 생성
+<table id="ta">
+  <tr>
+    <th>ddd</th>
+  </tr>
+</table>
+
+row = ta.insertRow(0);//행생성
+td1 = row.insertCell(0);//td열을 생성(index는 0부터시작함)
+td2 = row.insertCell(1);//td열을 생성(index는 0부터시작함)
+td3 = row.insertCell(2);//td열을 생성(index는 0부터시작함)
+  <td></td>
+
+  td1.innerHTML = "<input type='text'>"
+
+  document.createElement("input")
+
+ td1.appendChild()
+
+
+ta.rows.length => 행의길이
+
+ta.rows[번지수].cells.length => 각행의 열의 길이...
+				
+---------------------------------------------------------------------
+
+<table id="ta">
+
+  <tr>
+
+ </tr>
+
+<tr>
+
+ </tr>
+
+<tr>
+
+ </tr>
+
+</table>
+ 
+
+
+
+
+
+
+
+
+ 
