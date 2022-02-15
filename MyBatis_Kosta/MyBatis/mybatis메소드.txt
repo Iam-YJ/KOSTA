@@ -1,0 +1,39 @@
+ - SqlSession 
+ insert 메소드
+  1) insert(String id)
+  2) insert(String id, Object parameter)
+
+
+ delete 메소드 
+   1) delete(String id)
+   2) delete(String id, Object parameter)
+
+
+ update 메소드 
+   1) update(String id)
+   2) update(String id, Object parameter)
+
+ select 메소드
+  1) 레코드 0개 이상인경우
+     selectList(String id)
+     selectList(String id , Object parameter)
+     selectList(String id , Object parameter , RowBounds rows)
+
+
+
+  2) 레코드가 0 또는 1 인경우 
+     selectOne(String id)
+     selectOne(String id, Object parameter)
+
+
+
+
+
+
+
+
+
+
+
+
+

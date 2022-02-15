@@ -1,0 +1,10 @@
+11월 23일 과제
+
+1) step16_MyBatisDynamicTest
+	: 실습 폴더에 있는 자료 참조
+	main에 있는 1~6번까지 test 해보기
+	db는 product.sql test
+
+2) step17_MyBatisJoinTest
+	: join 문제.txt 참조해서 하기
+	4문제임
