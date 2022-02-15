@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+ table {border: 5px red double ;width:400px}
+ td,th{border:1px pink solid; text-align: center; padding: 5px}
+ table tr:first-child {background-color:orange}
+</style>
+<script type="text/javascript">
+   //javaScript안에서 html + 기능 모두 작성
+   
+   var name = prompt("이름은 ? " , "장희정");
+   var kor = parseInt(prompt("국어점수? " , 80));
+   var eng = parseInt(prompt("영어점수 ? " , 80));
+   var math = parseInt(prompt("수학점수 ? " , 80));
+   
+   //총점
+   var total = kor + eng + math;
+   
+   //평균
+   var avg = total / 3;  //
+   
+   //등급
+   var grade;
+   if(avg>=90) grade="수";
+   else if(avg>=80) grade="우";
+   else if(avg>=70) grade="미";
+   else if(avg>=60) grade="양";
+   else grade="가";
+   
+   
+</script>
+
+</head>
+<body>
+<table>
+ <tr>
+    <th>이름</th>
+    <th>국어</th>
+    <th>영어</th>
+    <th>수학</th>
+    <th>총점</th>
+    <th>평균</th>
+    <th>등급</th>
+ </tr>
+  <tr>
+    <td><script>document.write(name);</script></td>
+    <td><script>document.write(kor);</script></td>
+    <td><script>document.write(eng)</script></td>
+    <td><script>document.write(math)</script></td>
+    <td><script>document.write(total)</script></td>
+    <td><script>document.write(avg)</script></td>
+    <td><script>document.write(grade)</script></td>
+ </tr>
+</table>
+
+</body>
+</html>
+

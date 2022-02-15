@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+table {
+	text-align:center;
+	border: 1px red double;
+	width:400px;
+}
+
+td, th{border: 1px gray solid}
+</style>
+<script>
+//테이블 만들어주는거 - insertRow.. insertCol...
+
+var index = 0;
+	function createRow() {
+
+		
+		objRow = document.all("table").insertRow();
+		
+		var objCell_name = objRow.insertCell();
+		objCell_name.innerHTML = "<input type='text' value='장희정' id='row_name' name='row_name'/>";
+		
+		var objCell_age = objRow.insertCell();
+		objCell_age.innerHTML = "<input type='text'  id='row_age' name='row_age'/>";
+		
+		var objCell_del = objRow.insertCell();
+		objCell_del.innerHTML = "<input type='button' value='삭제' id='row_del' name='row_id' onclick='del(this)'/>";
+		
+	}
+
+	function del(th) {
+		var tr = th.parentNode.parentNode; //-> button -> td -> tr
+		tr.parentNode.removeChild(tr);
+		
+	}
+
+	onload = function() {
+		document.getElementById("create").onclick=createRow;
+
+	}
+</script>
+
+</head>
+<body><h1>테이블 동적으로 생성하기</h1>
+
+<a href="#" id="create">추가하기</a> 
+
+<table id="table">
+<tr>
+<th>이름</th>
+<th>나이</th>
+<th><a href="#">삭제하기</a></th>
+</tr>
+
+</table>
+
+</body>
+</html>

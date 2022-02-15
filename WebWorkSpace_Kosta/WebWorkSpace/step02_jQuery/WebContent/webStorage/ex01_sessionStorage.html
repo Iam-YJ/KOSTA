@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src = "../js/jquery-3.5.1.js"></script>
+<script>
+$(function (){
+	$("#btnSave").click(function(){
+		var key = $("#s_key").val();
+		var value = $("#s_value").val();
+		
+		//sessionStorage 영역에 저장하자
+		sessionStorage.setItem(key,value);
+		
+		//text 박스 지우기
+		$("#s_key").val("");
+		$("#s_value").val("");
+		
+		//저장된 데이터 가져오기
+		getInfo();
+	
+	}); //click 끝
+	
+	$("#btnClear").click(function(){
+		sessionStorage.clear();
+		getInfo();
+	});
+	
+	//정보 가져오기
+	
+	function getInfo(){
+		var str = "저장된 갯수 : " + sessionStorage.length;
+		
+		for(var i=0; i<sessionStorage.length; i++){
+			var key = sessionStorage.key(i);
+			var value = sessionStorage.getItem(key);
+			
+			str+= `${key} = ${value}<br>`; 
+		}
+		
+		$("#result").html(str);
+		
+	}
+}); //ready 끝 
+
+
+
+
+</script>
+
+
+</head>
+<body>
+<h1>sessionStorage TEST</h1>
+<form>
+key : <input type="text" name="s_key" id="s_key"/>
+value : <input type="text" name="s_value" id="s_value"/>
+<input type="button" value="저장하기" id="btnSave"/>
+<input type="button" value="삭제하기" id="btnClear"/>
+</form>
+
+<hr>
+<div id="result"></div>
+
+<a href="ex01_sessionResult.html">정보확인하러가자 </a>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+
+<script src="../js/jquery-3.5.1.js"></script>
+
+<script>
+ $(function(){
+	 $("[value=확인]").click(function(){
+		 
+		 var str = "";
+		 
+		 //$(":checkbox:checked").
+		 
+		 /* jQuery 반복문
+		  1) $(selector).each(function(index, element){});
+	 	  2) $.each(반복대상, function(index, element){});
+		 
+		 */
+		 
+		 //취미
+		 str += " 취미는 "
+		 $(":checkbox:checked").each(function(index, element){
+			// alert(index + "=" + element.value +", "+ $(this).val() +", "+ this.value)
+			str += $(this).val()+", ";
+		 });
+		 //성별
+		str +="성별은 " +  $(":radio:checked").val();
+		 
+		 //div영역에 결과 넣기 
+		 $("div").html(str);
+		 
+		 
+	 });
+ })
+ 
+	
+	
+</script>
+</head>
+
+<body>
+	<h1>click 이벤트</h1>
+<form>
+	취미 : 
+	   <input type="checkbox"  name="hobby" value="등산">등산
+	   <input type="checkbox"  name="hobby" value="낚시">낚시
+	   <input type="checkbox"  name="hobby" value="수영">수영
+	<p/>
+	성별 : 
+	 <input type="radio" name="gender" value="남자"/> 남자
+	 <input type="radio" name="gender" value="여자"/> 여자
+	
+	 <input type="button" value="확인"  />
+ </form>	
+<h2>선택 결과</h2>
+<div></div>
+
+</body>
+</html>
+
+
+
+
+

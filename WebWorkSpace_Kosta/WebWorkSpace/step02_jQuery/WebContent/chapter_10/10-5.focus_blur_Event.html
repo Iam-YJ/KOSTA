@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+
+<script src="../js/jquery-3.5.1.js"></script>
+
+<script>
+	$(function(){
+		$("[name=name]")
+		.focus(function(){
+			$(this).css("border","red 5px solid");
+		})
+		.blur(function(){
+			$(this).css("border","gray 5px solid");
+			
+			//text박스의 값을 읽어서 div 영역 넣기
+			var textValue = $(this).val();
+			//alert(textValue);
+			
+			//document.getElementById("result").innerHTML = textValue;  //자바스크립트 스타일 
+			//document.getElementById("result").innerText = textValue;  //자바스크립트 스타일 
+			
+			//$("#result").html(textValue); //제이쿼리 스타일 
+			$("#result").text(textValue); //제이쿼리 스타일
+			
+			// text 박스 지우기 
+			$(this).val("");
+			
+			console.log("this : "+this);
+			console.log("this : "+$(this));
+			
+			
+			
+		});
+	})
+	
+</script>
+</head>
+<body>
+<h1>focus 와 blur 이벤트</h1>
+
+<form>
+   이름 : <input type="text" name="name">	
+ </form>	
+
+<hr>
+<div id="result"></div>
+</body>
+</html>
+
+
+
+
+
+

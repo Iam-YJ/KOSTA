@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>New Web Project</title>
+		
+	</head>
+	<script>
+	// 우편번호를 선택하면 선택한 value를 가져와서 앞자리 3, 3, 나머지자리수를 
+	// 분리해서 opener창에 값을 전달한다
+	// 현재 창을 닫기
+	function zipCheck(th){
+		var addr = th.value;
+		//값 가져오기
+		var faddr = addr.substring(0,3);
+		var eaddr = addr.substring(4,7);
+		var nam = addr.substring(7);
+		
+		opener.document.member.zip1.value = faddr;
+		opener.document.member.zip2.value = eaddr;
+		opener.document.member.addr.value = nam;
+		self.close(); //현재 창 닫기 
+		
+	}
+	
+	</script>
+	
+	<body>
+	  
+	  <form name="f">
+	  	우편번호 
+	  	<select onchange="zipCheck(this)">
+	  	  <option value="0">-- 주소 선택 --</option>	
+	  	  <option value="123-333 서울시 구로구 구로1동">
+	  	  	123-333 서울시 구로구 구로1동
+	  	  </option>
+	  	  <option value="222-222 서울시 청담동 청담3동">
+	  	  	222-222 서울시 청담동 청담3동
+	  	  </option>
+	  	  <option value="444-444 부산시 대구동 대로2동">
+	  	  	444-444 부산시 대구동 대로2동
+	  	  </option>
+	  	  <option value="555-221 경기도 성남시 분당구 분당1동">
+	  	  	555-221 경기도 성남시 분당구 분당1동
+	  	  </option>
+	  	</select>
+	  	
+	  </form>	
+	
+	</body>
+</html>
+

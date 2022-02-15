@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+  table{width: 800px; height:600px ;border: 1px red solid;
+      border-collapse:collapse; 
+      }
+  th,td{border: 1px gray solid;}
+  table tr:first-child {
+	  height:100px; 
+   }
+   
+   table tr:last-child {
+	  height:50px; 
+   }
+   
+   table tr td:first-child {
+	 width: 200px;
+}
+</style>
+
+<script type="text/javascript">
+  function urlChange(){
+	  //기능...
+	  
+	  //이동시킨다.
+	  //top.center.location.href="ex01_imgMove.html";
+	  center.location.href="ex01_imgMove.html";
+  }
+</script>
+
+</head>
+<body>
+<table>
+ <tr>
+ <td colspan="2">
+   <a href="ex02_MemberForm.html" target="center">회원가입</a> &nbsp;&nbsp;&nbsp;
+   <a href="#" onclick="urlChange()">다음</a> &nbsp;&nbsp;&nbsp;
+ </td>
+ </tr>
+ <tr>
+  <td><iframe src="ex04_left.html" name="left" width="100%" height="100%" frameborder="0"></iframe></td>
+  <td><iframe src="" name="center" width="100%" height="100%" frameborder="0"></iframe></td>
+ </tr>
+ <tr>
+   <td colspan="2">Programmer 장희정</td>
+ </tr>
+
+</table>
+
+</body>
+</html>

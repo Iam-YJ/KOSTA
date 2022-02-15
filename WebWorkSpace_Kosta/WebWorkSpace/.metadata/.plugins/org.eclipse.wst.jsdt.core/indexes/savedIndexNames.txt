@@ -1,0 +1,12 @@
+INDEX VERSION 1.4+C:\Edu\2Â÷\WebWorkSpace_Kosta\WebWorkSpace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1774694485.index
+1072415860.index
+3332209737.index
+2268105476.index
+3764120751.index
+1697869242.index
+861616862.index
+2497361018.index
+2736801054.index
+1282017090.index
+3006667581.index

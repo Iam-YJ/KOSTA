@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta  charset="UTF-8"/>
+    <title>load 메서드</title>
+	<style>
+		div{width:300px;height:200px;
+		    background-color:yellow; 
+		}
+	</style>
+    
+  <script type="text/javascript" src="../js/jquery-3.5.1.js"></script>
+     
+     <script>
+      $(function(){
+    	  $("#btn").click(function(){
+    		//  var params = "name="+$("#name").val()+"&message=ajax 재미있따";
+    		
+    		//params의 정보를 json 형태로 전송 -> {key:value, key:value, .. }
+    		
+    		var params = {name:$("#name").val() , message:"ajax 최고 화장실가고시퍼"};
+    		
+    		$("#display").load("13-2.serverPage.jsp",params , function(){
+    			  //ajax 통신 완료 후에 해야 할 일 작성
+    			  alert("성공");
+    		  });
+    		  //parameter로 정보 받으려고 jsp로 만드는 것 
+    	  });
+      })
+     </script>
+     
+    
+    
+</head>
+<body>
+	<h3>소스 13-2 $(selector).load(url , [params] , [callbackFun]) 함수 </h3>
+	<input type="text" id="name" value="장희정" />
+    <input type="button" id="btn" value="load함수 요청" />
+    <div id="display">요청결과 출력영역</div>
+</body>
+</html>
+
+
+
+
+
+
+

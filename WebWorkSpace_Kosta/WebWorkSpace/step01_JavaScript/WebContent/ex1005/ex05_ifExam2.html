@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+ table{width: 600px; height: 200px; border: 5px red solid; 
+        border-collapse:collapse;}
+ th,td{border:1px gray solid;}
+ table tr:first-child {background-color:pink}
+ td{text-align: center;}
+</style>
+<script type="text/javascript">
+//javaScript안에서 html + 기능 모두 작성
+
+var name = prompt("이름은 ? " , "장희정");
+var kor = parseInt(prompt("국어점수? " , 80));
+var eng = parseInt(prompt("영어점수 ? " , 80));
+var math = parseInt(prompt("수학점수 ? " , 80));
+
+//총점
+var total = kor + eng + math;
+
+//평균
+var avg = total / 3;  //
+
+//등급
+var grade;
+if(avg>=90) grade="수";
+else if(avg>=80) grade="우";
+else if(avg>=70) grade="미";
+else if(avg>=60) grade="양";
+else grade="가";
+
+//출력 
+document.write("<table>");
+document.write("<tr>");
+
+document.write(`<th>이름</th><th>국어</th><th>영어</th>
+<th>영어</th><th>영어</th><th>영어</th><th>영어</th>`);//그레이브악센트문법
+document.write("</tr>");
+document.write("<tr>");
+document.write("<td>"+name+"</td>");
+document.write(`<td>${kor}</td>`);
+document.write(`<td>${eng}</td>`);
+document.write(`<td>${math}</td>`);
+document.write(`<td>${total}</td>`);
+document.write(`<td>${avg}</td>`);
+document.write(`<td>${grade}</td>`);
+document.write("</tr>");
+document.write("</table>");  
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+

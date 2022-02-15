@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+</head>
+<body>
+	<h3>JavaScript 변수의 개념 - var & let & const</h3>
+	<script>
+		//자바스크립트 문법 적용 - JavaScript 영역
+		var a;
+		var b = 101;
+		var c = "희정";
+		d = 3.14 // var 키워드 생략 
+
+		//브라우저에 출력
+		document.write("<h4>");
+		document.write("a = " + a + ", " + (typeof a) + "<br>");
+		document.write("b = " + b + ", " + (typeof b) + "<br>");
+		document.write("c = " + c + ", " + (typeof c) + "<br>");
+		document.write("d = " + d + ", " + (typeof d) + "<br>");
+
+		//값 변경 
+		a = new String("배고프다");
+		b = "뭐 먹지";
+		c = 20;
+		d = new Array(3);
+
+		document.write("<hr>");
+		document.write("a = " + a + ", " + (typeof a) + "<br>");
+		document.write("b = " + b + ", " + (typeof b) + "<br>");
+		document.write("c = " + c + ", " + (typeof c) + "<br>");
+		document.write("d = " + d + ", " + (typeof d) + "<br>");
+
+		document.write("</h4>");
+
+		var a = "되니?"; //같은 이름의 변수를 여러번 선언가능 
+
+		//함수 작성
+		function test(a, b) {
+			var a = 10; //지역변수
+			var addr = "판교"; //지역변수
+			name = "나영"; // var를 생략하면 무조건 전역변수 
+
+			document.write("지역변수-----<br>")
+			document.write("a = " + a + ", " + (typeof a) + "<br>");
+			document.write("addr = " + addr + ", " + (typeof addr) + "<br>");
+			document.write("age = " + age + ", " + (typeof age) + "<br>");
+
+			var age = 10;
+			document.write("age = " + age + ", " + (typeof age) + "<br>");
+
+			document.write("name = " + name + ", " + (typeof name) + "<hr>");
+
+			var age;
+		}
+
+		//함수 호출
+	</script>
+	<h3>함수 호출해보자</h3>
+
+	<script>
+		//함수 호출
+		test();
+
+		document.write("함수 호출 후(Global 영역  = 전역변수 )-----<br>")
+		document.write("a = " + a + ", " + (typeof a) + "<br>");
+		//document.write("addr = " + addr + ", " + (typeof addr) + "<br>");
+		// 지역변수이므로 접근불가 
+		document.write("name = " + name + ", " + (typeof name) + "<hr>");
+	</script>
+
+</body>
+</html>
